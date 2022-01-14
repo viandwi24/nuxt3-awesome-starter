@@ -9,7 +9,7 @@
     <div class="flex flex-col z-10">
       <div class="text-center">
         <span
-          v-for="item in ['nuxt3', 'awesome', 'starter']"
+          v-for="item in ['nuxt 3', 'awesome', 'starter']"
           class="linear-wipe-text drop-shadow-xl text-5xl lg:text-9xl block font-bold uppercase"
           :key="item"
         >
@@ -17,7 +17,8 @@
         </span>
       </div>
       <div class="flex space-x-4 justify-center mt-10">
-        <Button size="lg" text="Github" class="font-extrabold" href="https://github.com/viandwi24" />
+        <Button size="lg" text="Nuxt 3" class="font-extrabold" href="https://v3.nuxtjs.org" />
+        <Button size="lg" text="Github" type="secondary" class="font-extrabold" href="https://github.com/viandwi24/nuxt3-awesome-starter" />
       </div>
     </div>
   </div>
@@ -25,7 +26,7 @@
 
 <script lang="ts">
 export default defineComponent({
-  layout: 'page'
+  layout: 'page',
 })
 </script>
 
