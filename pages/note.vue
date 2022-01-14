@@ -4,6 +4,9 @@
       <div class="text-3xl font-bold">
         NOTE
       </div>
+      <div>
+        <div v-for="i in 30" :key="i" class="text-6xl">JUST BLANK PAGE WITH TITLE</div>
+      </div>
     </section>
   </div>
 </template>
