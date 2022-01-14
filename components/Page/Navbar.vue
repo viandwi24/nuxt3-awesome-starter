@@ -68,7 +68,6 @@ function stickyOnScroll(el: HTMLElement, offset: number) {
   window.addEventListener('scroll', onScroll)
   onUnmounted(() => {
     window.removeEventListener('scroll', onScroll)
-    console.log("123")
   })
 }
 </script>

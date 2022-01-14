@@ -6,6 +6,20 @@
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
-    "nuxt3": "latest"
+    "@iconify/json": "^1.1.456",
+    "@nuxtjs/svg": "^0.3.0",
+    "@pinia/nuxt": "^0.1.8",
+    "autoprefixer": "^10.4.2",
+    "nuxt3": "latest",
+    "pinia": "^2.0.9",
+    "postcss": "^8.4.5",
+    "sass": "^1.47.0",
+    "sass-loader": "^12.4.0",
+    "tailwind-config-viewer": "^1.6.3",
+    "tailwindcss": "^3.0.13",
+    "unplugin-icons": "^0.13.0",
+    "unplugin-vue-components": "^0.17.11",
+    "vue-feather": "^1.1.1",
+    "@headlessui/vue": "^1.4.3"
   }
 }

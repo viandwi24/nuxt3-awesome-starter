@@ -9,13 +9,14 @@ export function ThemeManager() {
   const getRealtimeTheme = (): ITheme => {
     const now = new Date()
     const hour = now.getHours()
-    const isNight = hour >= 22 || hour <= 6
+    const minute = now.getMinutes()
+    const isNight = ((hour >= 17 && minute >= 30) || (hour <= 5 && minute <= 30))
     return isNight ? 'dark' : 'light'
   }
 
   // state
-  const themeSetting = useState<IThemeSettingOptions>('theme.setting', () => getUserSetting())
-  const themeCurrent = useState<ITheme>('theme.current', () => getSystemTheme())
+  const themeSetting = useState<IThemeSettingOptions>('theme.setting', () => (process.client) ? getUserSetting() : 'light')
+  const themeCurrent = useState<ITheme>('theme.current', () => (process.client) ? getSystemTheme() : 'light')
 
   // wathcers
   watch(themeSetting, (themeSetting) => {
@@ -28,6 +29,16 @@ export function ThemeManager() {
       themeCurrent.value = themeSetting
     }
   })
+  const onThemeSystemChange = () => {
+    if (themeSetting.value === 'system') {
+      themeCurrent.value = getSystemTheme()
+    }
+  }
+  const onRealtimeCheck = () => {
+    if (themeSetting.value === 'realtime') {
+      themeCurrent.value = getRealtimeTheme()
+    }
+  }
 
   // init theme
   const init = () => {
@@ -40,12 +51,18 @@ export function ThemeManager() {
   const destroyLayout = () => document.body.classList.remove(...bodyClasses)
 
   // lifecycle
-  // onBeforeMount(() => init())
+  let intervalCheckTime: NodeJS.Timer
+  onBeforeMount(() => init())
   onMounted(() => {
-    init()
     applyLayout()
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", onThemeSystemChange)
+    intervalCheckTime = setInterval(onRealtimeCheck, 1000)
   })
-  onBeforeUnmount(() => destroyLayout())
+  onBeforeUnmount(() => {
+    destroyLayout()
+    window.matchMedia("(prefers-color-scheme: dark)").removeEventListener("change", onThemeSystemChange)
+    if (intervalCheckTime) clearInterval(intervalCheckTime)
+  })
 
   return {
     themeSetting,
