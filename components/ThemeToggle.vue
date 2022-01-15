@@ -1,6 +1,6 @@
 <template>
-  <div class="flex items-center border-l ml-6 pl-6 border-gray-900/10 dark:border-gray-50/[0.2]">
-    <Listbox v-model="themeSetting">
+  <div class="flex items-center">
+    <Listbox v-if="currentStyle === 'dropdown-right-top'" v-model="themeSetting">
       <ListboxLabel class="sr-only">Theme</ListboxLabel>
       <ListboxButton type="button">
         <span class="flex justify-center items-center dark:hidden">
@@ -35,6 +35,13 @@
         </ListboxOption>
       </ListboxOptions>
     </Listbox>
+    <select v-if="currentStyle === 'select-box'" v-model="themeSetting" class="w-full px-2 pr-3 py-1 outline-none rounded border bg-transparent text-gray-700 dark:text-gray-300 border-gray-900/10 dark:border-gray-50/[0.2]
+">
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+      <option value="system">System</option>
+      <option value="realtime">Realtime</option>
+    </select>
   </div>
 </template>
 
@@ -47,14 +54,25 @@ import {
   ListboxOption,
 } from '@headlessui/vue'
 import { IThemeSettingOptions, ITheme } from '~~/utils/theme'
+
 export default defineComponent({
+  props: {
+    type: {
+      type: String,
+      default: 'dropdown-right-top',
+    },
+  },
   components: {
     Listbox, ListboxButton, ListboxLabel, ListboxOptions, ListboxOption,
   },
-  setup() {
+  setup(props) {
     const themeSetting = useState<IThemeSettingOptions>('theme.setting')
+
+    const currentStyle = toRef(props, 'type')
+
     return {
       themeSetting,
+      currentStyle,
     }
   }
 })

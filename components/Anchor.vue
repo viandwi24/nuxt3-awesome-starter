@@ -1,5 +1,10 @@
 <template>
-  <NuxtLink tag="a" :to="to" class="transition-all duration-300 dark:hover:text-white hover:text-gray-900 hover:underline">
+  <NuxtLink
+    tag="a"
+    :to="to"
+    :class="`transition-all duration-300 dark:hover:text-white hover:text-gray-900 hover:underline ${$attrs.class}`"
+    v-bind="$attrs"
+  >
     <slot />
   </NuxtLink>
 </template>
@@ -7,10 +12,6 @@
 <script lang="ts">
 export default defineComponent({
   props: {
-    class: {
-      type: String,
-      default: ''
-    },
     href: {
       type: String,
       default: '#'
