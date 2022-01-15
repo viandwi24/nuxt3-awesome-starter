@@ -5,7 +5,7 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 > Nuxt 3 is still in beta and is not recommended for production use.
 
 
-![Preview](https://github.com/viandwi24/nuxt3-awesome-starter/blob/main/assets/images/preview.png?raw=true)
+![Preview](https://github.com/viandwi24/nuxt3-awesome-starter/blob/main/assets/images/preview.png?raw=true)![Preview On Mobile](https://github.com/viandwi24/nuxt3-awesome-starter/blob/main/assets/images/preview_mobile.png?raw=true)
 
 ## Demo
 [Demo](https://nuxt3-awesome-starter.vercel.app/)
@@ -19,6 +19,19 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 - [x] 🪝 Built-in Component UI
 - [ ] Localization
 - [ ] Lint & Prettier
+
+## Built-in Components
+- [x] Footer
+- [x] Button
+- [x] Anchor (link)
+- [x] Navbar
+  - [x] Navbar Builder
+  - [x] Drawer (on mobile)
+  - [x] Options (on mobile)
+- [x] Action Sheet
+- [ ] Theme Toggle / Switcher
+- [ ] Modal
+- [ ] Alert
 
 ## Notes
 ### Styles
@@ -39,7 +52,7 @@ ThemeManager is a plugin that allows you to switch between themes. this lib in :
 ```vue
 <!-- /path/to/app.vue -->
 <script lang="ts" setup>
-import { AppSetup } from './utils/app';
+import { AppSetup } from '~/utils/app';
 // app setup
 AppSetup()
 </script>
@@ -47,7 +60,7 @@ AppSetup()
 To change theme, you can direct set theme from state `theme.setting`, example :
 ```vue
 <script lang="ts" setup>
-import { IThemeSettingOptions } from '~~/utils/theme'
+import { IThemeSettingOptions } from '~/utils/theme'
 const themeSetting = useState<IThemeSettingOptions>('theme.setting')
 themeSetting.value = 'dark'
 </script>
