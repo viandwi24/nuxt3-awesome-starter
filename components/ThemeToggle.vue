@@ -58,10 +58,8 @@ export default defineComponent({
       institution: 'SMKN 1 MOJOKERTO',
     }
     const themeSetting = useState<IThemeSettingOptions>('theme.setting')
-    const themeCurrent = useState<ITheme>('theme.current')
     return {
       themeSetting,
-      themeCurrent,
     }
   }
 })

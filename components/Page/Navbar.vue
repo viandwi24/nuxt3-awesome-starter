@@ -22,6 +22,7 @@
             <nav class="text-sm leading-6 font-semibold text-gray-600 dark:text-gray-300">
               <ul class="flex items-center space-x-8">
                 <li><Anchor :to="{ name: 'note' }">Note</Anchor></li>
+                <li><Anchor :to="{ name: 'test' }">Test</Anchor></li>
                 <li><Anchor :to="{ name: 'about' }">About</Anchor></li>
                 <li><Button text="Github" size="xs" class="font-extrabold" href="https://github.com/viandwi24" /></li>
               </ul>

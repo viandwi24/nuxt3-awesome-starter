@@ -11,11 +11,11 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 [Demo](https://nuxt3-awesome-starter.vercel.app/)
 
 ## Features
-- [x] 💨  [Tailwind CSS v3](https://tailwindcss.com/)
+- [x] 💨 [Tailwind CSS v3](https://tailwindcss.com/)
 - [x] ✨ [Headless UI](https://headlessui.dev/)
-- [x] 🔔  [Icon Pack Component (unplugin-icons)](https://icones.js.org/)
-- [ ] [Vue Store (Pinia)](https://pinia.vuejs.org/)
-- [x] 🌙  Switch Theme (light, dark, system, realtime)
+- [x] 🔔 [Icon Pack Component (unplugin-icons)](https://icones.js.org/)
+- [x] 🛹 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
+- [x] 🌙 Switch Theme (light, dark, system, realtime)
 - [x] 🪝 Built-in Component UI
 - [ ] Localization
 - [ ] Lint & Prettier
@@ -30,7 +30,36 @@ and you can add custom styles in :
 ```
 /path/to/assets/sass/app.scss
 ```
-### Icons How to use
+### Theme (Dark Mode)
+ThemeManager is a plugin that allows you to switch between themes. this lib in :
+```
+/path/to/utils/theme.ts
+```
+`Thememanager` is a function-class construct when app.vue before mounted. theme construct inside `AppSetup()` in `/path/to/app.vue` :
+```vue
+<!-- /path/to/app.vue -->
+<script lang="ts" setup>
+import { AppSetup } from './utils/app';
+// app setup
+AppSetup()
+</script>
+```
+To change theme, you can direct set theme from state `theme.setting`, example :
+```vue
+<script lang="ts" setup>
+import { IThemeSettingOptions } from '~~/utils/theme'
+const themeSetting = useState<IThemeSettingOptions>('theme.setting')
+themeSetting.value = 'dark'
+</script>
+```
+When you change state `theme.setting`, it will automatically change theme.
+
+Theme Setting have 4 options :
+- `light`
+- `dark`
+- `system` (operating system theme)
+- `realtime` (realtime theme, if 05:30 - 17:30, it will change to light theme, otherwise dark)
+### Icons
 This project using unplugin-icons for auto generate and import icon as component.
 
 You can see collection icon list in : [https://icones.js.org/](https://icones.js.org/)
@@ -80,7 +109,6 @@ npm install
 # yarn
 yarn install
 ```
-
 ### Development
 
 Start the development server on http://localhost:3000
@@ -92,7 +120,6 @@ npm run dev
 # yarn
 yarn dev
 ```
-
 ### Production
 
 Build the application for production:
