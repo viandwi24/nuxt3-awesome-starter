@@ -4,7 +4,7 @@
       <div class="text-3xl font-bold mb-4">
         COUNTER TEST
       </div>
-      <div>
+      <div class="flex items-center space-x-4">
         <div>Counter : {{ counter.count }}</div>
         <Button text="Increment" type="secondary" size="sm" @click.prevent="counter.increment" />
       </div>

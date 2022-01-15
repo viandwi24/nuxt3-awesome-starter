@@ -1,17 +1,15 @@
 <template>
-  <div>
-    <NuxtLink v-if="to" tag="a" :to="to" :class="`${defaultStyle} ${selectedStyle} ${selectedSize}`">
-      <slot>{{ text }}</slot>
-    </NuxtLink>
-    <a 
-      v-else
-      :class="`${defaultStyle} ${selectedStyle} ${selectedSize}`"
-      :href="href"
-      @click="onClick"
-    >
-      <slot>{{ text }}</slot>
-    </a>
-  </div>
+  <NuxtLink v-if="to" tag="a" :to="to" :class="`${defaultStyle} ${selectedStyle} ${selectedSize}`">
+    <slot>{{ text }}</slot>
+  </NuxtLink>
+  <a 
+    v-else
+    :class="`${defaultStyle} ${selectedStyle} ${selectedSize}`"
+    :href="href"
+    @click="onClick"
+  >
+    <slot>{{ text }}</slot>
+  </a>
 </template>
 
 <script lang="ts">
@@ -43,8 +41,8 @@ export default defineComponent({
     // styles
     const defaultStyle = `
       cursor-pointer
-      border transition-all duration-300
-      focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:ring-offset-gray-50 
+      border transition-color duration-300
+      focus:outline-none focus:ring-1 focus:ring-offset-1 focus:dark:ring-offset-gray-50 focus:dark:ring-gray-400 focus:ring-gray-600/[0.6] focus:ring-offset-gray-800/[0.6]
       w-full flex items-center justify-center sm:w-auto
     `
     const styles = reactive({

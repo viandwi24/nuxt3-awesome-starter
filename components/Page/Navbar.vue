@@ -22,7 +22,7 @@
             <nav class="text-sm leading-6 font-semibold text-gray-600 dark:text-gray-300">
               <ul class="flex items-center space-x-8">
                 <li v-for="(item, i) in menus" :key="i">
-                  <Anchor v-if="item.type === 'link'" :to="item.route ? item.route : ''">{{ item.text }}</Anchor>
+                  <Anchor v-if="item.type === 'link'" :to="item.route ? item.route : ''" class="hover:no-underline hover:text-slate-900 hover:dark:text-white">{{ item.text }}</Anchor>
                   <Button v-else-if="item.type === 'button'" :text="item.text" size="xs" class="font-extrabold"  :href="item.href ? item.href : false" />
                 </li>
               </ul>
@@ -89,7 +89,8 @@ export default defineComponent({
     ])
 
     onMounted(() => {
-      stickyOnScroll(navbar.value as HTMLElement, 0)
+      const { onScroll } = stickyOnScroll(navbar.value as HTMLElement, 0)
+      setTimeout(() => onScroll(), 50)
     })
     
     const toggleDrawer = () => showDrawer.value = !showDrawer.value
@@ -105,7 +106,7 @@ export default defineComponent({
 })
 
 function stickyOnScroll(el: HTMLElement, offset: number) {
-  const onScroll = (e) => {
+  const onScroll = () => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop
     if (scrollTop > offset) {
       el.classList.add('sticky')
@@ -119,5 +120,9 @@ function stickyOnScroll(el: HTMLElement, offset: number) {
   onUnmounted(() => {
     window.removeEventListener('scroll', onScroll)
   })
+
+  return {
+    onScroll,
+  }
 }
 </script>
