@@ -10,7 +10,7 @@ export function ThemeManager() {
     const now = new Date()
     const hour = now.getHours()
     const minute = now.getMinutes()
-    const isNight = ((hour >= 17 && minute >= 30) || (hour <= 5 && minute <= 30))
+    const isNight = ((hour >= 17) || (hour <= 5))
     return isNight ? 'dark' : 'light'
   }
 

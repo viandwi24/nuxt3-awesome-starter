@@ -58,7 +58,7 @@ Theme Setting have 4 options :
 - `light`
 - `dark`
 - `system` (operating system theme)
-- `realtime` (realtime theme, if 05:30 - 17:30, it will change to light theme, otherwise dark)
+- `realtime` (realtime theme, if 05:00 - 17:00, it will change to light theme, otherwise dark)
 ### Icons
 This project using unplugin-icons for auto generate and import icon as component.
 
