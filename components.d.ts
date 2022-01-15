@@ -4,9 +4,11 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    'IconFaSolid:ellipsisV': typeof import('~icons/fa-solid/ellipsis-v')['default']
     'IconSimpleIcons:nuxtdotjs': typeof import('~icons/simple-icons/nuxtdotjs')['default']
     'IconUil:bars': typeof import('~icons/uil/bars')['default']
     'IconUil:clock': typeof import('~icons/uil/clock')['default']
+    'IconUil:draggabledots': typeof import('~icons/uil/draggabledots')['default']
     'IconUil:laptop': typeof import('~icons/uil/laptop')['default']
     'IconUil:moon': typeof import('~icons/uil/moon')['default']
     'IconUil:sun': typeof import('~icons/uil/sun')['default']
