@@ -67,7 +67,7 @@
 </template>
 
 <script lang="ts">
-import { IApp } from "~~/utils/app"
+import { IApp } from "~/utils/app"
 
 export interface IMenuItem {
   type: 'link' | 'button'
@@ -80,7 +80,7 @@ export default defineComponent({
   setup() {
     const app = useState<IApp>('app')
     const navbar = ref(null)
-    const showDrawer = ref(false)
+    const showDrawer = useState<boolean>('page.navbar.showDrawer', () => false)
     const menus: IMenuItem[] = reactive([
       { type: 'link', text: 'Note', route: { name: 'note' } },
       { type: 'link', text: 'Test', route: { name: 'test' } },
