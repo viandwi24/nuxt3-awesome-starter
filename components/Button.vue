@@ -1,5 +1,5 @@
 <template>
-  <div class="inline-block">
+  <div>
     <NuxtLink v-if="to" tag="a" :to="to" :class="`${defaultStyle} ${selectedStyle} ${selectedSize}`">
       <slot>{{ text }}</slot>
     </NuxtLink>

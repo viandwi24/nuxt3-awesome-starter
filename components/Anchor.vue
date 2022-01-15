@@ -1,25 +1,38 @@
 <template>
-  <NuxtLink
-    tag="a"
-    :to="to"
-    :class="`transition-all duration-300 dark:hover:text-white hover:text-gray-900 hover:underline ${$attrs.class}`"
-    v-bind="$attrs"
-  >
-    <slot />
-  </NuxtLink>
+  <div>
+    <NuxtLink
+      v-if="to"
+      tag="a"
+      :to="to"
+      :class="`transition-all duration-300 dark:hover:text-white hover:text-gray-900 hover:underline`"
+    >
+      <slot>{{ text }}</slot>
+    </NuxtLink>
+    <a
+      v-else
+      :class="`transition-all duration-300 dark:hover:text-white hover:text-gray-900 hover:underline`"
+      :href="href"
+    >
+      <slot>{{ text }}</slot>
+    </a>
+  </div>
 </template>
 
 <script lang="ts">
 export default defineComponent({
   props: {
-    href: {
+    text: {
       type: String,
-      default: '#'
+      default: ''
     },
     to: {
       type: [String, Object],
       default: undefined
-    }
+    },
+    href: {
+      type: String,
+      default: ''
+    },
   },
   setup(props) {
     const href = toRef(props, 'href')

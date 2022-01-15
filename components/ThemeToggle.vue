@@ -10,7 +10,7 @@
           <IconUil:moon />
         </span>
       </ListboxButton>
-      <ListboxOptions class="p-1 absolute z-50 top-full right-0 bg-white rounded-lg ring-1 ring-gray-900/10 shadow-lg overflow-hidden w-36 py-1 text-sm text-gray-700 font-semibold dark:bg-gray-800 dark:ring-0 dark:highlight-white/5 dark:text-gray-300">
+      <ListboxOptions class="p-1 absolute z-50 top-full right-0 outline-none bg-white rounded-lg ring-1 ring-gray-900/10 shadow-lg overflow-hidden w-36 py-1 text-sm text-gray-700 font-semibold dark:bg-gray-800 dark:ring-0 dark:highlight-white/5 dark:text-gray-300">
         <ListboxOption 
           v-for="theme in [
             { key: 'light', text: 'Light' },

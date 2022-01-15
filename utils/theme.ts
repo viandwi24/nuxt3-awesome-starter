@@ -45,21 +45,14 @@ export function ThemeManager() {
     themeSetting.value = getUserSetting()
   }
 
-  // inject html
-  const bodyClasses = ['antialiased', 'text-gray-800', 'dark:text-gray-200', 'bg-white', 'dark:bg-gray-900']
-  const applyLayout = () => document.body.classList.add(...bodyClasses)
-  const destroyLayout = () => document.body.classList.remove(...bodyClasses)
-
   // lifecycle
   let intervalCheckTime: NodeJS.Timer
   onBeforeMount(() => init())
   onMounted(() => {
-    applyLayout()
     window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", onThemeSystemChange)
     intervalCheckTime = setInterval(onRealtimeCheck, 1000)
   })
   onBeforeUnmount(() => {
-    destroyLayout()
     window.matchMedia("(prefers-color-scheme: dark)").removeEventListener("change", onThemeSystemChange)
     if (intervalCheckTime) clearInterval(intervalCheckTime)
   })
