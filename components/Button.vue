@@ -13,7 +13,6 @@
 </template>
 
 <script lang="ts">
-import { RouteLocationRaw } from 'vue-router'
 export default defineComponent({
   props: {
     text: {
@@ -29,7 +28,7 @@ export default defineComponent({
       default: 'md'
     },
     to: {
-      type: Object as () => RouteLocationRaw,
+      type: Object,
       default: undefined
     },
     href: {

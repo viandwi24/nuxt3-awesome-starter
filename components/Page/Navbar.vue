@@ -44,26 +44,30 @@
         </div>
       </div>
     </div>
+    <ClientOnly>
+      <Teleport to="#app-after">
+        <Transition name="slide-fade" mode="out-in">
+          <div v-if="showDrawer" class="fixed md:hidden bg-gray-100 dark:bg-slate-800 pt-16 top-0 left-0 w-screen h-screen z-30">
+            <div class="px-4 py-2 relative">
+              <nav class="leading-6 font-semibold text-gray-600 dark:text-gray-300">
+                <ul class="flex flex-col">
+                  <li v-for="(item, i) in menus" :key="i" class="flex w-full" :class="{ 'pb-2 mb-2 border-b border-gray-900/10 dark:border-gray-50/[0.2]': (item.type === 'link') }">
+                    <Anchor v-if="item.type === 'link'" :to="item.route ? item.route : ''" class="flex-1 hover:no-underline">{{ item.text }}</Anchor>
+                    <Button v-else-if="item.type === 'button'" :text="item.text" size="xs" class="flex-1 font-extrabold" :href="item.href ? item.href : false" />
+                  </li>
+                </ul>
+              </nav>
+              <!-- theme toggle -->
+              <div class="mt-6 text-sm font-bold">Theme</div>
+              <div class="mt-2">
+                <ThemeToggle type="select-box" />
+              </div>
+            </div>
+          </div>
+        </Transition>
+      </Teleport>
+    </ClientOnly>
   </div>
-  <Teleport v-if="showDrawer" to="#app-after">
-    <div class="fixed md:hidden bg-gray-100 dark:bg-slate-800 pt-16 top-0 left-0 w-screen h-screen z-30">
-      <div class="px-4 py-2 relative">
-        <nav class="text-lg leading-6 font-semibold text-gray-600 dark:text-gray-300">
-          <ul class="flex flex-col">
-            <li v-for="(item, i) in menus" :key="i" class="flex w-full">
-              <Anchor v-if="item.type === 'link'" :to="item.route ? item.route : ''" class="flex-1 pb-2 mb-2 border-b border-gray-900/10 dark:border-gray-50/[0.2] hover:no-underline">{{ item.text }}</Anchor>
-              <Button v-else-if="item.type === 'button'" :text="item.text" size="xs" class="flex-1 font-extrabold"  :href="item.href ? item.href : false" />
-            </li>
-          </ul>
-        </nav>
-        <!-- theme toggle -->
-        <div class="mt-6 text-sm font-bold">Theme</div>
-        <div class="mt-2">
-          <ThemeToggle type="select-box" />
-        </div>
-      </div>
-    </div>
-  </Teleport>
 </template>
 
 <script lang="ts">
@@ -126,3 +130,17 @@ function stickyOnScroll(el: HTMLElement, offset: number) {
   }
 }
 </script>
+
+<style lang="scss">
+.slide-fade-enter-active {
+  transition: all .3s ease-out;
+}
+.slide-fade-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+</style>

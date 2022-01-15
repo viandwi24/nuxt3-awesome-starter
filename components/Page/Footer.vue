@@ -18,6 +18,6 @@
 </template>
 
 <script lang="ts" setup>
-import { IApp } from "~~/utils/app"
+import { IApp } from "~/utils/app"
 const app = useState<IApp>('app')
 </script>
