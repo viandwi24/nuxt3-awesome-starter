@@ -52,11 +52,6 @@ export default defineComponent({
     Listbox, ListboxButton, ListboxLabel, ListboxOptions, ListboxOption,
   },
   setup() {
-    const app = {
-      name: 'LSP APP',
-      version: '4.5',
-      institution: 'SMKN 1 MOJOKERTO',
-    }
     const themeSetting = useState<IThemeSettingOptions>('theme.setting')
     return {
       themeSetting,

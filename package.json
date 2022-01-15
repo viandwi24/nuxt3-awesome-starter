@@ -6,7 +6,9 @@
     "start": "node .output/server/index.mjs"
   },
   "devDependencies": {
+    "@headlessui/vue": "^1.4.3",
     "@iconify/json": "^1.1.456",
+    "@intlify/nuxt3": "^0.1.10",
     "@nuxtjs/svg": "^0.3.0",
     "@pinia/nuxt": "^0.1.8",
     "autoprefixer": "^10.4.2",
@@ -18,8 +20,6 @@
     "tailwind-config-viewer": "^1.6.3",
     "tailwindcss": "^3.0.13",
     "unplugin-icons": "^0.13.0",
-    "unplugin-vue-components": "^0.17.11",
-    "vue-feather": "^1.1.1",
-    "@headlessui/vue": "^1.4.3"
+    "unplugin-vue-components": "^0.17.11"
   }
 }

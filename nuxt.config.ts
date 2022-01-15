@@ -42,7 +42,8 @@ export default defineNuxtConfig({
     buildModules: [
         '@nuxtjs/svg',
         '@pinia/nuxt',
-        'unplugin-icons/nuxt'
+        'unplugin-icons/nuxt',
+        '@intlify/nuxt3',
     ],
 
     // auto import components
