@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Html :class="`${(theme === 'dark' ? 'dark' : '')}`" />
+    <Html :class="`${(theme === 'dark' ? 'dark' : '')}`" lang="en" />
     <NuxtPage />
   </div>
 </template>
