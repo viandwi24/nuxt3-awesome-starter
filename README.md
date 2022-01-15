@@ -4,8 +4,9 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 > **WARNING** \
 > Nuxt 3 is still in beta and is not recommended for production use.
 
-
-![Preview](https://github.com/viandwi24/nuxt3-awesome-starter/blob/main/assets/images/preview.png?raw=true)![Preview On Mobile](https://github.com/viandwi24/nuxt3-awesome-starter/blob/main/assets/images/preview_mobile.png?raw=true)
+.             |  .
+:-------------------------:|:-------------------------:
+![Preview](https://github.com/viandwi24/nuxt3-awesome-starter/blob/main/assets/images/preview.png?raw=true) | ![Preview On Mobile](https://github.com/viandwi24/nuxt3-awesome-starter/blob/main/assets/images/preview_mobile.png?raw=true)
 
 ## Demo
 [Demo](https://nuxt3-awesome-starter.vercel.app/)
