@@ -37,6 +37,8 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
     - [x] Title
   - [x] Body
     - [x] Section
+- [x] Dashboard Layout
+    - [x] Sidebar
 - [ ] Modal
 - [ ] Alert
 
