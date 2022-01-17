@@ -1,7 +1,6 @@
 <template>
   <BuilderNavbar>
     <template #menu>
-      <!-- menu -->
       <div class="relative hidden lg:flex items-center ml-auto">
         <nav class="text-sm leading-6 font-semibold text-gray-600 dark:text-gray-300">
           <ul class="flex items-center space-x-8">
@@ -11,7 +10,6 @@
             </li>
           </ul>
         </nav>
-        <!-- theme toggle -->
         <div class="border-l ml-6 pl-6 border-gray-900/10 dark:border-gray-50/[0.2]">
           <ThemeToggle />
         </div>
@@ -29,7 +27,6 @@
               </li>
             </ul>
           </nav>
-          <!-- theme toggle -->
           <div class="mt-6 text-sm font-bold">Theme</div>
           <div class="mt-2">
             <ThemeToggle type="select-box" />
@@ -53,9 +50,10 @@ export interface IMenuItem {
 export default defineComponent({
   setup() {
     const menus: IMenuItem[] = reactive([
-      { type: 'link', text: 'Note', route: { name: 'note' } },
+      { type: 'link', text: 'Blank', route: { name: 'blank' } },
       { type: 'link', text: 'Test', route: { name: 'test' } },
       { type: 'link', text: 'About', route: { name: 'about' } },
+      { type: 'link', text: 'Dashboard', route: { name: 'dashboard' } },
       { type: 'button', text: 'Github', href: 'https://github.com/viandwi24' },
     ])
 

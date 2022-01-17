@@ -4,22 +4,22 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 > **WARNING** \
 > Nuxt 3 is still in beta and is not recommended for production use.
 
-.             |  .
-:-------------------------:|:-------------------------:
-![Preview](https://github.com/viandwi24/nuxt3-awesome-starter/blob/main/assets/images/preview.png?raw=true) | ![Preview On Mobile](https://github.com/viandwi24/nuxt3-awesome-starter/blob/main/assets/images/preview_mobile.png?raw=true)
-
-## Demo
-[Demo](https://nuxt3-awesome-starter.vercel.app/)
-
 ## Features
 - [x] 💨 [Tailwind CSS v3](https://tailwindcss.com/)
 - [x] ✨ [Headless UI](https://headlessui.dev/)
 - [x] 🔔 [Icon Pack Component (unplugin-icons)](https://icones.js.org/)
 - [x] 🛹 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
 - [x] 🌙 Switch Theme (light, dark, system, realtime)
-- [x] 🪝 Built-in Component UI
+- [x] 🪝 Built-in Component & Layout
 - [ ] Localization
 - [ ] Lint & Prettier
+
+.             |  .
+:-------------------------:|:-------------------------:
+![Preview](https://github.com/viandwi24/nuxt3-awesome-starter/blob/main/assets/images/preview.png?raw=true) | ![Preview On Mobile](https://github.com/viandwi24/nuxt3-awesome-starter/blob/main/assets/images/preview_mobile.png?raw=true)
+
+## Demo
+[Demo](https://nuxt3-awesome-starter.vercel.app/)
 
 ## Built-in Components
 - [x] Footer
@@ -30,7 +30,13 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
   - [x] Drawer (on mobile)
   - [x] Options (on mobile)
 - [x] Action Sheet
-- [ ] Theme Toggle / Switcher
+- [x] Theme Toggle / Switcher
+- [x] Page Layout
+  - [x] Wrapper
+  - [x] Header
+    - [x] Title
+  - [x] Body
+    - [x] Section
 - [ ] Modal
 - [ ] Alert
 

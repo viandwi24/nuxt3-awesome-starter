@@ -10,27 +10,29 @@
       <div class="py-4 lg:px-8 mx-4 lg:mx-0">
         <div class="relative flex items-center">
           <!-- drawer:toggle -->
-          <div v-if="$slots['drawer']" class="md:hidden">
-            <button class="flex items-center focus:outline-none py-1 px-2" @click="toggleDrawer()">
-              <span class="text-gray-600 dark:text-gray-300 text-xl">
+          <div v-if="$slots['drawer']" class="lg:hidden">
+            <button class="flex items-center focus:outline-none mr-2" @click="toggleDrawer()">
+              <span class="text-gray-600 dark:text-gray-300 text-lg">
                 <IconUil:bars v-if="!showDrawer" />
                 <IconUil:times v-else />
               </span>
             </button>
           </div>
           <!-- title -->
-          <NuxtLink tag="a" class="mr-3 flex-none overflow-hidden md:w-auto font-bold text-gray-900 dark:text-gray-200" :to="{ name: 'index' }">
-            <span class="sr-only">home</span>
-            <span class="flex items-center">
-              <IconSimpleIcons:nuxtdotjs class="inline-block mr-2 text-xl text-green-600" />
-              {{ app.name }}
-            </span>
-          </NuxtLink>
+          <slot name="title">
+            <NuxtLink tag="a" class="mr-3 flex-none overflow-hidden md:w-auto text-lg font-bold text-gray-900 dark:text-gray-200" :to="{ name: 'index' }">
+              <span class="sr-only">home</span>
+              <span class="flex items-center">
+                <IconSimpleIcons:nuxtdotjs class="inline-block mr-2 text-xl text-green-600" />
+                {{ app.name }}
+              </span>
+            </NuxtLink>
+          </slot>
           <!-- menu -->
           <slot name="menu" />
           <!-- options:toggle -->
-          <div v-if="$slots['options']" class="flex-1 flex justify-end md:hidden">
-            <button class="flex items-center focus:outline-none py-1 px-2" @click="toggleOptions()">
+          <div v-if="$slots['options']" class="flex-1 flex justify-end lg:hidden">
+            <button class="flex items-center focus:outline-none" @click="toggleOptions()">
               <span class="text-gray-600 dark:text-gray-300 text-sm">
                 <icon-fa-solid:ellipsis-v />
               </span>
@@ -43,8 +45,8 @@
       <Teleport to="#app-after">
         <!-- drawer -->
         <Transition name="slide-fade-from-up" mode="out-in">
-          <div v-if="showDrawer && $slots['drawer']" class="fixed md:hidden bg-gray-100 dark:bg-slate-800 pt-16 top-0 left-0 w-screen h-screen z-30">
-            <div class="px-4 py-2 relative">
+          <div v-if="showDrawer && $slots['drawer']" class="fixed lg:hidden bg-gray-100 dark:bg-slate-800 pt-16 top-0 left-0 w-screen h-screen z-30 flex flex-col">
+            <div class="flex-1 flex flex-col relative overflow-y-auto">
               <slot name="drawer" :toggleDrawer="toggleDrawer" />
             </div>
           </div>
@@ -82,7 +84,7 @@ export default defineComponent({
     const showOptions = useState<boolean>('navbar.showOptions', () => false)
 
     onMounted(() => {
-      const { onScroll } = stickyOnScroll(navbar.value as HTMLElement, 0)
+      const { onScroll } = useSticky(navbar.value, 0)
       setTimeout(() => onScroll(), 50)
     })
     
@@ -105,27 +107,6 @@ export default defineComponent({
     }
   }
 })
-
-function stickyOnScroll(el: HTMLElement, offset: number) {
-  const onScroll = () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-    if (scrollTop > offset) {
-      el.classList.add('sticky')
-    } else {
-      el.classList.remove('sticky')
-    }
-  }
-
-  // lifecycle hooks
-  window.addEventListener('scroll', onScroll)
-  onUnmounted(() => {
-    window.removeEventListener('scroll', onScroll)
-  })
-
-  return {
-    onScroll,
-  }
-}
 </script>
 
 <style lang="scss">
