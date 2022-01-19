@@ -1,9 +1,6 @@
 # Nuxt 3 Awesome Starter
 a Nuxt 3 starter template or boilerplate with a lot of useful features. and integrated with TailwindCSS 3.
 
-> **WARNING** \
-> Nuxt 3 is still in beta and is not recommended for production use.
-
 ## Features
 - [x] 💨 [Tailwind CSS v3](https://tailwindcss.com/)
 - [x] ✨ [Headless UI](https://headlessui.dev/)
@@ -20,6 +17,10 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 
 ## Demo
 [Demo](https://nuxt3-awesome-starter.vercel.app/)
+
+
+> **WARNING** \
+> Nuxt 3 is still in beta and is not recommended for production use.
 
 ## Built-in Components
 - [x] Footer
@@ -120,38 +121,13 @@ Example :
 ```
 
 
-## Nuxt 3 Development Notes
-### Setup
-Make sure to install the dependencies
-
-```bash
-# npm
-npm install
-
-# yarn
-yarn install
-```
-### Development
-
-Start the development server on http://localhost:3000
-
-```bash
-# npm
-npm run dev
-
-# yarn
-yarn dev
-```
-### Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build && npm run start
-
-# yarn
-yarn build && yarn start
-```
+## Quick Start
+* Clone this project to your computer `git clone https://github.com/viandwi24/nuxt3-awesome-starter`
+* Install dependencies `npm install`
+* Run `npm run dev` to start development server and open `http://localhost:3000` in your browser
+* Run `npm run build` to build project and `npm run start` to start production server
 
 Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
+
+## License
+This project is licensed under the MIT license, Copyright (c) 2022 Alfian Dwi Nugraha. For more information see the [LICENSE](LICENSE.md) file.
