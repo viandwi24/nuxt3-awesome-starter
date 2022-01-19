@@ -38,8 +38,7 @@
   </BuilderNavbar>
 </template>
 
-<script lang="ts">
-
+<script lang="ts" setup>
 export interface IMenuItem {
   type: 'link' | 'button'
   text: string
@@ -47,19 +46,11 @@ export interface IMenuItem {
   route?: any
 }
 
-export default defineComponent({
-  setup() {
-    const menus: IMenuItem[] = reactive([
-      { type: 'link', text: 'Blank', route: { name: 'blank' } },
-      { type: 'link', text: 'Test', route: { name: 'test' } },
-      { type: 'link', text: 'About', route: { name: 'about' } },
-      { type: 'link', text: 'Dashboard', route: { name: 'dashboard' } },
-      { type: 'button', text: 'Github', href: 'https://github.com/viandwi24' },
-    ])
-
-    return {
-      menus,
-    }
-  }
-})
+const menus: IMenuItem[] = reactive([
+  { type: 'link', text: 'Blank', route: { name: 'blank' } },
+  { type: 'link', text: 'Test', route: { name: 'test' } },
+  { type: 'link', text: 'About', route: { name: 'about' } },
+  { type: 'link', text: 'Dashboard', route: { name: 'dashboard' } },
+  { type: 'button', text: 'Github', href: 'https://github.com/viandwi24' },
+])
 </script>

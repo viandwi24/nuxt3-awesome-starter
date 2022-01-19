@@ -1,6 +1,6 @@
 <template>
   <div ref="sidebar" :class="{ 'fixed top-0 hidden pt-16 lg:flex lg:w-60 xl:w-80 h-screen': mode === 'normal', 'relative flex-1 flex flex-col w-full': mode === 'mobile' }">
-    <div class="flex-1 overflow-y-auto px-4 py-4">
+    <div class="flex-1 overflow-y-auto pr-4 py-4">
       <ul>
         <li v-for="i in 29" :key="i">
           <a href="/docs/installation" class="group flex items-center mb-4">

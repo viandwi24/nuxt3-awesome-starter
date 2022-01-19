@@ -6,7 +6,7 @@
     supports-backdrop-blur:bg-white/60 bg-white/[0.7] dark:bg-slate-900/[0.7]
     "
   >
-    <div class="max-w-8xl mx-auto">
+    <div class="max-w-8xl w-full mx-auto">
       <div class="py-4 lg:px-8 mx-4 lg:mx-0">
         <div class="relative flex items-center">
           <!-- drawer:toggle -->
