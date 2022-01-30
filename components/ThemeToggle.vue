@@ -35,9 +35,13 @@
         </ListboxOption>
       </ListboxOptions>
     </Listbox>
-    <select v-if="currentStyle === 'select-box'" v-model="themeSetting" class="w-full px-2 pr-3 py-1 outline-none rounded border bg-transparent text-gray-700 dark:text-gray-300 border-gray-900/10 dark:border-gray-50/[0.2]
-">
-      <option value="light">Light</option>
+    <select v-if="currentStyle === 'select-box'" v-model="themeSetting" class="w-full px-2 pr-3 py-1 outline-none rounded border bg-transparent text-gray-700 dark:text-gray-300 border-gray-900/10 dark:border-gray-50/[0.2]">
+      <option value="light">Light</option>{
+    type: {
+      type: String,
+      default: 'dropdown-right-top',
+    },
+  }
       <option value="dark">Dark</option>
       <option value="system">System</option>
       <option value="realtime">Realtime</option>
@@ -45,7 +49,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import {
   Listbox,
   ListboxButton,
@@ -53,27 +57,17 @@ import {
   ListboxOptions,
   ListboxOption,
 } from '@headlessui/vue'
-import { IThemeSettingOptions, ITheme } from '~~/utils/theme'
+import { IThemeSettingOptions, ITheme } from '~/utils/theme'
 
-export default defineComponent({
-  props: {
-    type: {
-      type: String,
-      default: 'dropdown-right-top',
-    },
+// micro compiler
+const props = defineProps({
+  type: {
+    type: String,
+    default: 'dropdown-right-top',
   },
-  components: {
-    Listbox, ListboxButton, ListboxLabel, ListboxOptions, ListboxOption,
-  },
-  setup(props) {
-    const themeSetting = useState<IThemeSettingOptions>('theme.setting')
-
-    const currentStyle = toRef(props, 'type')
-
-    return {
-      themeSetting,
-      currentStyle,
-    }
-  }
 })
+
+// state
+const themeSetting = useState<IThemeSettingOptions>('theme.setting')
+const currentStyle = toRef(props, 'type')
 </script>

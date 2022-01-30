@@ -23,30 +23,26 @@
   </Teleport>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import {
   TransitionRoot,
   TransitionChild,
 } from '@headlessui/vue'
-export default defineComponent({
-  components: {
-    TransitionRoot,
-    TransitionChild,
-  },
-  emits: ["onClose"],
-  setup(_props, { emit }) {
-    const show = ref(false)
-    const close = () => {
-      emit('onClose')
-    }
-    onMounted(() => {
-      show.value = true
-    })
-    return {
-      close,
-      show,
-    }
-  }
+
+// micro compiler
+const emit = defineEmits(['onClose'])
+
+// state
+const show = ref(false)
+
+// methods
+const close = () => {
+  emit('onClose')
+}
+
+// lifecycle
+onMounted(() => {
+  show.value = true
 })
 </script>
 

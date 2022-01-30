@@ -16,29 +16,24 @@
   </a>
 </template>
 
-<script lang="ts">
-export default defineComponent({
-  props: {
-    text: {
-      type: String,
-      default: ''
-    },
-    to: {
-      type: [String, Object],
-      default: undefined
-    },
-    href: {
-      type: String,
-      default: ''
-    },
+<script lang="ts" setup>
+// micro compiler
+const props = defineProps({
+  text: {
+    type: String,
+    default: ''
   },
-  setup(props) {
-    const href = toRef(props, 'href')
-    const to = toRef(props, 'to')
-    return {
-      href,
-      to,
-    }
-  }
+  to: {
+    type: [String, Object],
+    default: undefined
+  },
+  href: {
+    type: String,
+    default: ''
+  },
 })
+
+// state
+const href = toRef(props, 'href')
+const to = toRef(props, 'to')
 </script>

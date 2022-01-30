@@ -61,52 +61,27 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import { IApp } from "~/utils/app"
-import {
-  Dialog,
-  DialogOverlay,
-  DialogTitle,
-  DialogDescription,
-} from "@headlessui/vue";
 
-export default defineComponent({
-  components: {
-    Dialog,
-    DialogOverlay,
-    DialogTitle,
-    DialogDescription,
-  },
-  setup() {
-    const app = useState<IApp>('app')
-    const navbar = ref(null)
-    const showDrawer = useState<boolean>('navbar.showDrawer', () => false)
-    const showOptions = useState<boolean>('navbar.showOptions', () => false)
+const app = useState<IApp>('app')
+const navbar = ref(null)
+const showDrawer = useState<boolean>('navbar.showDrawer', () => false)
+const showOptions = useState<boolean>('navbar.showOptions', () => false)
 
-    onMounted(() => {
-      const { onScroll } = useSticky(navbar.value, 0)
-      setTimeout(() => onScroll(), 50)
-    })
-    
-    const toggleDrawer = () => showDrawer.value = !showDrawer.value
-    const toggleOptions = (show?: boolean) => {
-      if (show) {
-        showOptions.value = show
-      } else {
-        showOptions.value = !showOptions.value
-      }
-    }
-
-    return {
-      app,
-      navbar,
-      showOptions,
-      showDrawer,
-      toggleDrawer,
-      toggleOptions,
-    }
-  }
+onMounted(() => {
+  const { onScroll } = useSticky(navbar.value, 0)
+  setTimeout(() => onScroll(), 50)
 })
+
+const toggleDrawer = () => showDrawer.value = !showDrawer.value
+const toggleOptions = (show?: boolean) => {
+  if (show) {
+    showOptions.value = show
+  } else {
+    showOptions.value = !showOptions.value
+  }
+}
 </script>
 
 <style lang="scss">

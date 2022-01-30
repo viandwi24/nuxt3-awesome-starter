@@ -4,13 +4,11 @@
   </div>
 </template>
 
-<script lang="ts">
-export default defineComponent({
-  props: {
-    text: {
-      type: String,
-      default: '',
-    },
-  },
+<script lang="ts" setup>
+defineProps({
+  text: {
+    type: String,
+    default: ''
+  }
 })
 </script>
