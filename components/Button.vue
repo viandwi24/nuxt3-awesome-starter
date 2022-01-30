@@ -41,7 +41,7 @@ const defaultStyle = `
   cursor-pointer
   border transition-color duration-300
   focus:outline-none focus:ring-1 focus:ring-offset-1 focus:dark:ring-offset-gray-50 focus:dark:ring-gray-400 focus:ring-gray-600/[0.6] focus:ring-offset-gray-800/[0.6]
-  w-full flex items-center justify-center sm:w-auto
+  flex items-center justify-center
 `
 const styles = reactive({
   primary: "text-white bg-gray-800 hover:bg-white hover:text-gray-800 hover:border-gray-900 dark:text-gray-800 dark:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-100 dark:border-white",
