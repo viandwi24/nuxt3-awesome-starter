@@ -11,8 +11,8 @@
   </PageWrapper>
 </template>
 
-<script lang="ts">
-export default defineComponent({
-  layout: 'page'
+<script lang="ts" setup>
+definePageMeta({
+  layout: 'page',
 })
 </script>

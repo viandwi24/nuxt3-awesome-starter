@@ -12,17 +12,12 @@
   </PageWrapper>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import { useCounter } from "~/store/counter"
 
-export default defineComponent({
-  layout: 'page',
-  setup() {
-    const counter = useCounter()
+const counter = useCounter()
 
-    return {
-      counter,
-    }
-  }
+definePageMeta({
+  layout: 'page',
 })
 </script>

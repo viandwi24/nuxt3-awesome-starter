@@ -17,8 +17,8 @@
   </PageWrapper> 
 </template>
 
-<script lang="ts">
-export default defineComponent({
-  layout: 'dashboard'
+<script lang="ts" setup>
+definePageMeta({
+  layout: 'dashboard',
 })
 </script>
