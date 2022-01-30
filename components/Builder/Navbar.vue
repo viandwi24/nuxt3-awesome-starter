@@ -1,7 +1,7 @@
 <template>
   <div ref="navbar" class="
     top-0 z-40 w-full backdrop-blur flex-none
-    ransition-colors duration-500 lg:z-50
+    ransition-colors duration-300 lg:z-50
     border-b border-gray-900/10 dark:border-gray-50/[0.2]
     supports-backdrop-blur:bg-white/60 bg-white/[0.7] dark:bg-slate-900/[0.7]
     "
