@@ -20,7 +20,7 @@
     "@nuxtjs/svg": "^0.3.0",
     "@pinia/nuxt": "^0.1.8",
     "autoprefixer": "^10.4.2",
-    "nuxt3": "latest",
+    "nuxt3": "^3.0.0-27389502.88da719",
     "pinia": "^2.0.9",
     "postcss": "^8.4.5",
     "sass": "^1.47.0",
