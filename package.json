@@ -11,7 +11,9 @@
   "scripts": {
     "dev": "nuxi dev",
     "build": "nuxi build",
-    "start": "node .output/server/index.mjs"
+    "start": "node .output/server/index.mjs",
+    "lint": "eslint --ext \".ts,.js,.vue\" --ignore-path .gitignore .",
+    "lintfix": "eslint --fix --ext \".ts,.js,.vue\" --ignore-path .gitignore ."
   },
   "devDependencies": {
     "@headlessui/vue": "^1.4.3",
@@ -28,6 +30,14 @@
     "tailwind-config-viewer": "^1.6.3",
     "tailwindcss": "^3.0.13",
     "unplugin-icons": "^0.13.0",
-    "unplugin-vue-components": "^0.17.11"
+    "unplugin-vue-components": "^0.17.11",
+    "@nuxtjs/eslint-config-typescript": "^7.0.2",
+    "@nuxtjs/eslint-module": "^3.0.2",
+    "eslint": "^8.3.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-nuxt": "^3.0.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.5.0",
+    "typescript": "^4.5.2"
   }
 }

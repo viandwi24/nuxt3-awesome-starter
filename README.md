@@ -9,7 +9,8 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 - [x] 🌙 Switch Theme (light, dark, system, realtime)
 - [x] 🪝 Built-in Component & Layout
 - [ ] Localization
-- [ ] Lint & Prettier
+- [x] Eslint & Prettier
+- [ ] Http Request (axios ?)
 
 .             |  .
 :-------------------------:|:-------------------------:
@@ -38,6 +39,8 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
     - [x] Title
   - [x] Body
     - [x] Section
+      - [x] Section Wrapper
+      - [x] Section Title
 - [x] Dashboard Layout
     - [x] Sidebar
 - [ ] Modal

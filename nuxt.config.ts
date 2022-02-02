@@ -44,9 +44,10 @@ export default defineNuxtConfig({
 
     // build modules
     buildModules: [
-        '@nuxtjs/svg',
+        '@nuxtjs/eslint-module',
         '@pinia/nuxt',
         'unplugin-icons/nuxt',
+        '@nuxtjs/svg',
         '@intlify/nuxt3',
     ],
 
