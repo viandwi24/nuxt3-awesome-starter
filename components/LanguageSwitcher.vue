@@ -42,8 +42,9 @@
         v-for="lang in availableLocales"
         :key="lang.iso"
         :value="lang.iso"
+        class="flex items-center space-x-2"
       >
-        {{ lang.name }}
+        {{ lang.flag }} {{ lang.name }} ({{ lang.iso }})
       </option>
     </select>
   </div>

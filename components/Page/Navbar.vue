@@ -66,6 +66,12 @@
           <div class="mt-2">
             <ThemeToggle type="select-box" />
           </div>
+          <div class="mt-6 text-sm font-bold">
+            {{ $t('components.LanguageSwitcher.changeLanguage') }}
+          </div>
+          <div class="mt-2">
+            <LanguageSwitcher type="select-box" />
+          </div>
         </ActionSheetBody>
         <Button
           text="Close"

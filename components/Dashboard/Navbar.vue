@@ -12,8 +12,9 @@
           <IconUil:angle-down />
         </div>
         <div
-          class="border-l ml-6 pl-6 border-gray-900/10 dark:border-gray-50/[0.2]"
+          class="flex space-x-4 border-l ml-6 pl-6 border-gray-900/10 dark:border-gray-50/[0.2]"
         >
+          <LanguageSwitcher />
           <ThemeToggle />
         </div>
       </div>
@@ -25,6 +26,12 @@
           <div class="mt-6 text-sm font-bold">Theme</div>
           <div class="mt-2">
             <ThemeToggle type="select-box" />
+          </div>
+          <div class="mt-6 text-sm font-bold">
+            {{ $t('components.LanguageSwitcher.changeLanguage') }}
+          </div>
+          <div class="mt-2">
+            <LanguageSwitcher type="select-box" />
           </div>
         </ActionSheetBody>
         <Button
