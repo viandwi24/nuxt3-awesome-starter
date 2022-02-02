@@ -1,6 +1,6 @@
 <template>
   <input
-    v-model="value"
+    v-model="modelValue"
     type="text"
     :class="`${defaultStyle} ${selectedSize}`"
     :placeholder="placeholder"
@@ -11,7 +11,7 @@
 <script lang="ts" setup>
 // compiler macro
 const props = defineProps({
-  value: {
+  modelValue: {
     type: String,
     default: '',
   },
@@ -24,7 +24,7 @@ const props = defineProps({
     default: 'md',
   },
 })
-const emit = defineEmits(['update:value'])
+const emit = defineEmits(['update:modelValue'])
 
 // state:styles
 const defaultStyle = `
@@ -41,9 +41,9 @@ const sizeStyles = reactive({
 })
 
 // state
-const value = useSyncProps<string>(props, 'value', emit)
+const modelValue = useSyncProps<string>(props, 'modelValue', emit)
 const selectedSize = computed(() => sizeStyles[props.size] || sizeStyles.md)
 
 // methods
-const onInput = () => emit('update:value', value.value)
+const onInput = () => emit('update:modelValue', modelValue.value)
 </script>

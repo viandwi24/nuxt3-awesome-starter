@@ -16,5 +16,3 @@ declare module 'vue' {
     'IconUil:times': typeof import('~icons/uil/times')['default']
   }
 }
-
-export {}
