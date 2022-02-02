@@ -1,11 +1,11 @@
 <template>
   <input
-    type="text"
-    @input="onInput"
     v-model="value"
+    type="text"
     :class="`${defaultStyle} ${selectedSize}`"
     :placeholder="placeholder"
-  >
+    @input="onInput"
+  />
 </template>
 
 <script lang="ts" setup>
@@ -13,15 +13,15 @@
 const props = defineProps({
   value: {
     type: String,
-    default: ''
+    default: '',
   },
   placeholder: {
     type: String,
-    default: ''
+    default: '',
   },
   size: {
     type: String,
-    default: 'md'
+    default: 'md',
   },
 })
 const emit = defineEmits(['update:value'])
@@ -34,10 +34,10 @@ const defaultStyle = `
   dark:border-gray-50/[0.2] dark:focus:border-gray-400
 `
 const sizeStyles = reactive({
-  lg: "h-12 px-8 text-lg rounded-lg",
-  md: "h-10 px-6 text-base rounded",
-  sm: "h-8 px-4 text-sm rounded",
-  xs: "h-7 px-4 text-xs rounded",
+  lg: 'h-12 px-8 text-lg rounded-lg',
+  md: 'h-10 px-6 text-base rounded',
+  sm: 'h-8 px-4 text-sm rounded',
+  xs: 'h-7 px-4 text-xs rounded',
 })
 
 // state

@@ -1,8 +1,13 @@
 <template>
-  <NuxtLink v-if="to" tag="a" :to="to" :class="`${defaultStyle} ${selectedStyle} ${selectedSize}`">
+  <NuxtLink
+    v-if="to"
+    tag="a"
+    :to="to"
+    :class="`${defaultStyle} ${selectedStyle} ${selectedSize}`"
+  >
     <slot>{{ text }}</slot>
   </NuxtLink>
-  <a 
+  <a
     v-else
     :class="`${defaultStyle} ${selectedStyle} ${selectedSize}`"
     :href="href"
@@ -16,23 +21,23 @@
 const props = defineProps({
   text: {
     type: String,
-    default: ''
+    default: '',
   },
   type: {
     type: String,
-    default: 'primary'
+    default: 'primary',
   },
   size: {
     type: String,
-    default: 'md'
+    default: 'md',
   },
   to: {
     type: Object,
-    default: undefined
+    default: undefined,
   },
   href: {
     type: String,
-    default: ''
+    default: '',
   },
 })
 
@@ -44,14 +49,16 @@ const defaultStyle = `
   flex items-center justify-center
 `
 const styles = reactive({
-  primary: "text-white bg-gray-800 hover:bg-white hover:text-gray-800 hover:border-gray-900 dark:text-gray-800 dark:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-100 dark:border-white",
-  secondary: "text-gray-800 bg-white hover:border-gray-900  dark:border-gray-900 dark:text-white dark:bg-gray-800 dark:hover:border-white",
+  primary:
+    'text-white bg-gray-800 hover:bg-white hover:text-gray-800 hover:border-gray-900 dark:text-gray-800 dark:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-100 dark:border-white',
+  secondary:
+    'text-gray-800 bg-white hover:border-gray-900  dark:border-gray-900 dark:text-white dark:bg-gray-800 dark:hover:border-white',
 })
 const sizes = reactive({
-  lg: "h-12 px-8 text-lg rounded-lg",
-  md: "h-10 px-6 text-base rounded",
-  sm: "h-8 px-4 text-sm rounded",
-  xs: "h-7 px-4 text-xs rounded",
+  lg: 'h-12 px-8 text-lg rounded-lg',
+  md: 'h-10 px-6 text-base rounded',
+  sm: 'h-8 px-4 text-sm rounded',
+  xs: 'h-7 px-4 text-xs rounded',
 })
 
 // state

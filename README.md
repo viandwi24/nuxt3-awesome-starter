@@ -10,6 +10,7 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 - [x] 🪝 Built-in Component & Layout
 - [ ] Localization
 - [x] Eslint & Prettier
+- [x] Husky & Commitlint
 - [ ] Http Request (axios ?)
 
 .             |  .

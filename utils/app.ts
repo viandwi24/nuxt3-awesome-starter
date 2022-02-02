@@ -1,4 +1,4 @@
-import { ThemeManager } from "./theme"
+import { ThemeManager } from './theme'
 
 export interface IApp {
   name: string
@@ -14,8 +14,8 @@ export function AppSetup() {
     name: 'Nuxt 3 Awesome Starter',
     author: {
       name: 'viandwi24',
-      link: 'https://github.com/viandwi24'
-    }
+      link: 'https://github.com/viandwi24',
+    },
   }
   useState('app', () => app)
 

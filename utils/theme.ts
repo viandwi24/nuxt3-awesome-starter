@@ -4,19 +4,24 @@ export type ITheme = 'dark' | 'light'
 
 export function ThemeManager() {
   // methods
-  const getUserSetting = (): IThemeSettingOptions => (localStorage.getItem('theme.setting') as IThemeSettingOptions) || 'system'
-  const getSystemTheme = (): ITheme => window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  const getUserSetting = (): IThemeSettingOptions =>
+    (localStorage.getItem('theme.setting') as IThemeSettingOptions) || 'system'
+  const getSystemTheme = (): ITheme =>
+    window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
   const getRealtimeTheme = (): ITheme => {
     const now = new Date()
     const hour = now.getHours()
-    const minute = now.getMinutes()
-    const isNight = ((hour >= 17) || (hour <= 5))
+    const isNight = hour >= 17 || hour <= 5
     return isNight ? 'dark' : 'light'
   }
 
   // state
-  const themeSetting = useState<IThemeSettingOptions>('theme.setting', () => (process.client) ? getUserSetting() : 'light')
-  const themeCurrent = useState<ITheme>('theme.current', () => (process.client) ? getSystemTheme() : 'light')
+  const themeSetting = useState<IThemeSettingOptions>('theme.setting', () =>
+    process.client ? getUserSetting() : 'light'
+  )
+  const themeCurrent = useState<ITheme>('theme.current', () =>
+    process.client ? getSystemTheme() : 'light'
+  )
 
   // wathcers
   watch(themeSetting, (themeSetting) => {
@@ -49,11 +54,15 @@ export function ThemeManager() {
   let intervalCheckTime: NodeJS.Timer
   onBeforeMount(() => init())
   onMounted(() => {
-    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", onThemeSystemChange)
+    window
+      .matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change', onThemeSystemChange)
     intervalCheckTime = setInterval(onRealtimeCheck, 1000)
   })
   onBeforeUnmount(() => {
-    window.matchMedia("(prefers-color-scheme: dark)").removeEventListener("change", onThemeSystemChange)
+    window
+      .matchMedia('(prefers-color-scheme: dark)')
+      .removeEventListener('change', onThemeSystemChange)
     if (intervalCheckTime) clearInterval(intervalCheckTime)
   })
 

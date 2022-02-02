@@ -6,7 +6,7 @@ export interface ICounterState {
 
 export const useCounter = defineStore('counter', {
   state: (): ICounterState => ({
-    count: 0
+    count: 0,
   }),
   actions: {
     increment() {
@@ -20,6 +20,6 @@ export const useCounter = defineStore('counter', {
     },
     increment2x() {
       this.count *= 2
-    }
-  }
+    },
+  },
 })

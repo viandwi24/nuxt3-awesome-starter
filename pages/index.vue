@@ -1,24 +1,41 @@
 <template>
   <PageWrapper class="flex justify-center items-center">
     <div class="background-overlay">
-      <div class="absolute top-0 left-0 translate-x-64 translate-y-4 h-14 w-14 rounded-full bg-gray-900 dark:bg-white"></div>
-      <div class="absolute hidden md:block top-0 left-0 translate-x-18 translate-y-20 h-28 w-28 rounded-full bg-blue-600 linear-wipe"></div>
-      <div class="absolute hidden md:block bottom-0 right-0 -translate-x-4 -translate-y-40 h-16 w-16 rounded bg-purple-600 linear-wipe"></div>
+      <div
+        class="absolute top-0 left-0 translate-x-64 translate-y-4 h-14 w-14 rounded-full bg-gray-900 dark:bg-white"
+      ></div>
+      <div
+        class="absolute hidden md:block top-0 left-0 translate-x-18 translate-y-20 h-28 w-28 rounded-full bg-blue-600 linear-wipe"
+      ></div>
+      <div
+        class="absolute hidden md:block bottom-0 right-0 -translate-x-4 -translate-y-40 h-16 w-16 rounded bg-purple-600 linear-wipe"
+      ></div>
       <div class="absolute bottom-0 right-0 triangle-shape"></div>
     </div>
     <div class="flex flex-col z-10">
       <div class="text-center">
         <span
           v-for="item in ['nuxt 3', 'awesome', 'starter']"
-          class="linear-wipe-text drop-shadow-xl text-5xl lg:text-9xl block font-bold uppercase"
           :key="item"
+          class="linear-wipe-text drop-shadow-xl text-5xl lg:text-9xl block font-bold uppercase"
         >
           {{ item }}
         </span>
       </div>
       <div class="flex space-x-4 justify-center mt-10">
-        <Button size="lg" text="Nuxt 3" class="font-extrabold" href="https://v3.nuxtjs.org" />
-        <Button size="lg" text="Github" type="secondary" class="font-extrabold" href="https://github.com/viandwi24/nuxt3-awesome-starter" />
+        <Button
+          size="lg"
+          text="Nuxt 3"
+          class="font-extrabold"
+          href="https://v3.nuxtjs.org"
+        />
+        <Button
+          size="lg"
+          text="Github"
+          type="secondary"
+          class="font-extrabold"
+          href="https://github.com/viandwi24/nuxt3-awesome-starter"
+        />
       </div>
     </div>
   </PageWrapper>
@@ -34,7 +51,13 @@ definePageMeta({
 .linear-wipe-text {
   $color1: theme('colors.blue.500');
   $color2: theme('colors.purple.500');
-  background: linear-gradient(to right, $color1 20%, $color2 40%, $color2 60%, $color1 80%);
+  background: linear-gradient(
+    to right,
+    $color1 20%,
+    $color2 40%,
+    $color2 60%,
+    $color1 80%
+  );
   background-size: 200% auto;
   color: #000;
   background-clip: text;
