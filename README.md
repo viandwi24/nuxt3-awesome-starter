@@ -9,9 +9,10 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 - [x] ✨ [Headless UI](https://headlessui.dev/)
 - [x] 🔔 [Icon Pack Component (unplugin-icons)](https://icones.js.org/)
 - [x] 🛹 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
+- [x] 🚩 [Localization (i18n) by @intlify](https://github.com/intlify/nuxt3)
 - [x] 🌙 Switch Theme (light, dark, system, realtime)
+- [x] 🇮🇩 Language Switcher
 - [x] 🪝 Built-in Component & Layout
-- [x] Localization
 - [x] Eslint & Prettier
 - [x] Husky & Commitlint
 - [ ] Http Request (axios ?)
@@ -26,14 +27,14 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 ## Table of Contents
 - [Nuxt 3 Awesome Starter](#nuxt-3-awesome-starter)
   * [Built-in Components](#built-in-components)
+  * [Quick Start](#quick-start)
   * [Notes](#notes)
     + [Styles](#styles)
     + [Theme (Dark Mode)](#theme--dark-mode-)
+    + [Localization](#localization)
     + [Icons](#icons)
     + [Precommit and Postmerge](#precommit-and-postmerge)
-  * [Quick Start](#quick-start)
   * [License](#license)
-
 
 ## Built-in Components
 - [x] Footer
@@ -57,6 +58,14 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
     - [x] Sidebar
 - [ ] Modal
 - [ ] Alert
+
+## Quick Start
+* Clone this project to your computer `git clone https://github.com/viandwi24/nuxt3-awesome-starter`
+* Install dependencies `npm install`
+* Run `npm run dev` to start development server and open `http://localhost:3000` in your browser
+* Run `npm run build` to build project and `npm run start` to start production server
+
+Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
 
 ## Notes
 ### Styles
@@ -97,6 +106,28 @@ Theme Setting have 4 options :
 - `dark`
 - `system` (operating system theme)
 - `realtime` (realtime theme, if 05:00 - 17:00, it will change to light theme, otherwise dark)
+### Localization
+Localization is a plugin that allows you to switch between languages. this lib in :
+```
+/path/to/utils/lang.ts
+```
+`LanguageManager` is a function-class construct when app.vue before mounted.
+this lib depend on [@intlify/nuxt3](https://github.com/intlify/nuxt3)
+lang construct inside `AppSetup()` in `/path/to/app.vue` :
+<!-- /path/to/app.vue -->
+<script lang="ts" setup>
+import { AppSetup } from '~/utils/app';
+// app setup
+AppSetup()
+</script>
+To change language, you can direct set language from state `lang.setting`, example :
+```vue
+<script lang="ts" setup>
+const langSetting = useState<string>('locale.setting')
+langSetting.value = 'en'
+</script>
+```
+When you change state `locale.setting`, it will automatically change language.
 ### Icons
 This project using unplugin-icons for auto generate and import icon as component.
 
@@ -137,19 +168,10 @@ Example :
 ### Precommit and Postmerge
 This project using husky and commitlint for precommit and postmerge.
 when you commit, it will check your commit message and running "yarn lint-staged" to check your staged files.
-configuration in : `.husky/pre-commit` and `commitlint.config.js`
+configuration in : `/path/to/.husky/pre-commit` and `/path/to/commitlint.config.js`
 
 And when Postmerge, it will run "yarn" to automatically install new dependencies.
-configuration in `.husky/post-merge`
-
-
-## Quick Start
-* Clone this project to your computer `git clone https://github.com/viandwi24/nuxt3-awesome-starter`
-* Install dependencies `npm install`
-* Run `npm run dev` to start development server and open `http://localhost:3000` in your browser
-* Run `npm run build` to build project and `npm run start` to start production server
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
+configuration in `/path/to/.husky/post-merge`
 
 ## License
 This project is licensed under the MIT license, Copyright (c) 2022 Alfian Dwi Nugraha. For more information see the [LICENSE](LICENSE.md) file.

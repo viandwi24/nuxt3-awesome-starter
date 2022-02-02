@@ -5,6 +5,7 @@
 declare module 'vue' {
   export interface GlobalComponents {
     'IconFaSolid:ellipsisV': typeof import('~icons/fa-solid/ellipsis-v')['default']
+    'IconLa:language': typeof import('~icons/la/language')['default']
     'IconSimpleIcons:nuxtdotjs': typeof import('~icons/simple-icons/nuxtdotjs')['default']
     'IconUil:angleDown': typeof import('~icons/uil/angle-down')['default']
     'IconUil:apps': typeof import('~icons/uil/apps')['default']
@@ -16,3 +17,5 @@ declare module 'vue' {
     'IconUil:times': typeof import('~icons/uil/times')['default']
   }
 }
+
+export {}

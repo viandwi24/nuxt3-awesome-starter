@@ -1,6 +1,13 @@
-import { defineNuxtConfig } from 'nuxt3'
+import { defineNuxtConfig, NuxtConfig } from 'nuxt3'
 import ViteComponents from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
+import { IntlifyModuleOptions } from '@intlify/nuxt3'
+
+export interface NuxtIntlifyConfig {
+  intlify: IntlifyModuleOptions
+}
+
+export type NuxtConfigMerged = NuxtConfig & NuxtIntlifyConfig
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
@@ -62,4 +69,14 @@ export default defineNuxtConfig({
       }),
     ],
   },
-})
+
+  // localization - i18n config
+  intlify: {
+    localeDir: 'locales',
+    vueI18n: {
+      locale: 'en',
+    },
+  },
+
+  // merge IntlifyModuleOptions to nuxt config
+} as NuxtConfigMerged)

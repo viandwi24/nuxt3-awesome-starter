@@ -1,0 +1,12 @@
+{
+  "components": {
+    "LanguageSwitcher": {
+      "changeLanguage": "Change language"
+    }
+  },
+  "pages": {
+    "index": {
+      "title": "nuxt3 awesome starter"
+    }
+  }
+}

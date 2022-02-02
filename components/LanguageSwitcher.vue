@@ -2,49 +2,49 @@
   <div class="flex items-center">
     <Listbox
       v-if="currentStyle === 'dropdown-right-top'"
-      v-model="themeSetting"
+      v-model="localeSetting"
     >
       <ListboxLabel class="sr-only">Theme</ListboxLabel>
       <ListboxButton type="button">
-        <span class="flex justify-center items-center dark:hidden">
-          <IconUil:sun />
-        </span>
-        <span class="justify-center items-center hidden dark:flex">
-          <IconUil:moon />
+        <span class="justify-center items-center flex">
+          <IconLa:language />
         </span>
       </ListboxButton>
       <ListboxOptions
         class="p-1 absolute z-50 top-full right-0 outline-none bg-white rounded-lg ring-1 ring-gray-900/10 shadow-lg overflow-hidden w-36 py-1 text-sm text-gray-700 font-semibold dark:bg-gray-800 dark:ring-0 dark:highlight-white/5 dark:text-gray-300"
       >
         <ListboxOption
-          v-for="theme in availableThemes"
-          :key="theme.key"
-          :value="theme.key"
+          v-for="lang in availableLocales"
+          :key="lang.iso"
+          :value="lang.iso"
           :class="{
             'py-2 px-2 flex items-center cursor-pointer': true,
             'text-sky-500 bg-gray-50 dark:bg-gray-600/30':
-              themeSetting === theme.key,
+              localeSetting === lang.iso,
           }"
         >
           <span class="text-sm mr-2">
-            <IconUil:sun v-if="theme.key === 'light'" />
-            <IconUil:moon v-else-if="theme.key === 'dark'" />
-            <IconUil:laptop v-else-if="theme.key === 'system'" />
-            <IconUil:clock v-else-if="theme.key === 'realtime'" />
+            {{ lang.flag }}
           </span>
-          {{ theme.text }}
+          <span class="flex-1 truncate">
+            {{ lang.name }}
+            <span class="text-xs">({{ lang.iso }})</span>
+          </span>
         </ListboxOption>
       </ListboxOptions>
     </Listbox>
     <select
       v-if="currentStyle === 'select-box'"
-      v-model="themeSetting"
+      v-model="localeSetting"
       class="w-full px-2 pr-3 py-1 outline-none rounded border bg-transparent text-gray-700 dark:text-gray-300 border-gray-900/10 dark:border-gray-50/[0.2]"
     >
-      <option value="light">Light</option>
-      <option value="dark">Dark</option>
-      <option value="system">System</option>
-      <option value="realtime">Realtime</option>
+      <option
+        v-for="lang in availableLocales"
+        :key="lang.iso"
+        :value="lang.iso"
+      >
+        {{ lang.name }}
+      </option>
     </select>
   </div>
 </template>
@@ -57,7 +57,7 @@ import {
   ListboxOptions,
   ListboxOption,
 } from '@headlessui/vue'
-import { IThemeSettingOptions, availableThemes } from '~/utils/theme'
+import { availableLocales } from '~/utils/lang'
 
 // micro compiler
 const props = defineProps({
@@ -68,6 +68,6 @@ const props = defineProps({
 })
 
 // state
-const themeSetting = useState<IThemeSettingOptions>('theme.setting')
 const currentStyle = toRef(props, 'type')
+const localeSetting = useState<string>('locale.setting')
 </script>

@@ -1,0 +1,12 @@
+{
+  "components": {
+    "LanguageSwitcher": {
+      "changeLanguage": "Ganti Bahasa"
+    }
+  },
+  "pages": {
+    "index": {
+      "title": "nuxt3 starter luar biasa"
+    }
+  }
+}
