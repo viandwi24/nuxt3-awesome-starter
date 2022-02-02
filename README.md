@@ -1,6 +1,9 @@
 # Nuxt 3 Awesome Starter
 a Nuxt 3 starter template or boilerplate with a lot of useful features. and integrated with TailwindCSS 3.
 
+> **WARNING** \
+> Nuxt 3 is still in beta and is not recommended for production use.
+
 ## Features
 - [x] 💨 [Tailwind CSS v3](https://tailwindcss.com/)
 - [x] ✨ [Headless UI](https://headlessui.dev/)
@@ -8,7 +11,7 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 - [x] 🛹 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
 - [x] 🌙 Switch Theme (light, dark, system, realtime)
 - [x] 🪝 Built-in Component & Layout
-- [ ] Localization
+- [x] Localization
 - [x] Eslint & Prettier
 - [x] Husky & Commitlint
 - [ ] Http Request (axios ?)
@@ -20,9 +23,17 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 ## Demo
 [Demo](https://nuxt3-awesome-starter.vercel.app/)
 
+## Table of Contents
+- [Nuxt 3 Awesome Starter](#nuxt-3-awesome-starter)
+  * [Built-in Components](#built-in-components)
+  * [Notes](#notes)
+    + [Styles](#styles)
+    + [Theme (Dark Mode)](#theme--dark-mode-)
+    + [Icons](#icons)
+    + [Precommit and Postmerge](#precommit-and-postmerge)
+  * [Quick Start](#quick-start)
+  * [License](#license)
 
-> **WARNING** \
-> Nuxt 3 is still in beta and is not recommended for production use.
 
 ## Built-in Components
 - [x] Footer
@@ -123,6 +134,13 @@ Example :
 // use icon from collection "Unicons" and name icon is "sun"
 <IconUil:sun />
 ```
+### Precommit and Postmerge
+This project using husky and commitlint for precommit and postmerge.
+when you commit, it will check your commit message and running "yarn lint-staged" to check your staged files.
+configuration in : `.husky/pre-commit` and `commitlint.config.js`
+
+And when Postmerge, it will run "yarn" to automatically install new dependencies.
+configuration in `.husky/post-merge`
 
 
 ## Quick Start
