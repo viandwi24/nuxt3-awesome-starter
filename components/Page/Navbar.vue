@@ -4,6 +4,7 @@
       <div class="relative hidden lg:flex items-center ml-auto">
         <nav
           class="text-sm leading-6 font-semibold text-gray-600 dark:text-gray-300"
+          role="navigation"
         >
           <ul class="flex items-center space-x-8">
             <li v-for="(item, i) in menus" :key="i">

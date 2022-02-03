@@ -15,7 +15,7 @@
     <div class="flex flex-col z-10">
       <div class="text-center">
         <span
-          v-for="item in $t('pages.index.title').split(' ')"
+          v-for="item in $t('pages.index.title').split(',')"
           :key="item"
           class="linear-wipe-text drop-shadow-xl text-5xl lg:text-9xl block font-bold uppercase"
         >

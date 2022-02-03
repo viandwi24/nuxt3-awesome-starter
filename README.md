@@ -106,6 +106,9 @@ Theme Setting have 4 options :
 - `dark`
 - `system` (operating system theme)
 - `realtime` (realtime theme, if 05:00 - 17:00, it will change to light theme, otherwise dark)
+
+We have state `theme.current`, this state return `light` or `dark` theme. basically it's process from `theme.setting`.
+dont change theme with this state.
 ### Localization
 Localization is a plugin that allows you to switch between languages. this lib in :
 ```
@@ -142,7 +145,7 @@ export default defineNuxtConfig({
 
     vite: {
         plugins: [
-            ViteComponents({
+            UnpluginComponentsVite({
                 dts: true,
                 resolvers: [
                     IconsResolver({

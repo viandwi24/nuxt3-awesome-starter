@@ -1,7 +1,7 @@
 import { defineNuxtConfig, NuxtConfig } from 'nuxt3'
-import ViteComponents from 'unplugin-vue-components/vite'
-import IconsResolver from 'unplugin-icons/resolver'
 import { IntlifyModuleOptions } from '@intlify/nuxt3'
+import UnpluginComponentsVite from 'unplugin-vue-components/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 
 export interface NuxtIntlifyConfig {
   intlify: IntlifyModuleOptions
@@ -19,7 +19,7 @@ export default defineNuxtConfig({
       {
         hid: 'description',
         name: 'description',
-        content: 'Nuxt3 Awesome Starter',
+        content: 'Nuxt 3 Awesome Starter',
       },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
@@ -59,7 +59,7 @@ export default defineNuxtConfig({
   // vite plugins
   vite: {
     plugins: [
-      ViteComponents({
+      UnpluginComponentsVite({
         dts: true,
         resolvers: [
           IconsResolver({
@@ -75,6 +75,8 @@ export default defineNuxtConfig({
     localeDir: 'locales',
     vueI18n: {
       locale: 'en',
+      fallbackLocale: 'en',
+      availableLocales: ['en', 'id', 'ja'],
     },
   },
 

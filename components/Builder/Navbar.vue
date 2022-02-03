@@ -10,9 +10,13 @@
           <div v-if="$slots['drawer']" class="lg:hidden">
             <button
               class="flex items-center focus:outline-none mr-2"
+              aria-label="Toggle Drawer Menu"
               @click="toggleDrawer()"
             >
-              <span class="text-gray-600 dark:text-gray-300 text-lg">
+              <span
+                class="text-gray-600 dark:text-gray-300 text-lg"
+                aria-hidden="true"
+              >
                 <IconUil:bars v-if="!showDrawer" />
                 <IconUil:times v-else />
               </span>
@@ -43,9 +47,13 @@
           >
             <button
               class="flex items-center focus:outline-none"
+              aria-label="Toggle Options Menu"
               @click="toggleOptions()"
             >
-              <span class="text-gray-600 dark:text-gray-300 text-sm">
+              <span
+                class="text-gray-600 dark:text-gray-300 text-sm"
+                aria-hidden="true"
+              >
                 <icon-fa-solid:ellipsis-v />
               </span>
             </button>
@@ -110,5 +118,12 @@ const toggleOptions = (show?: boolean) => {
 .slide-fade-from-up-leave-to {
   transform: translateY(-20px);
   opacity: 0;
+}
+
+a.router-link-active {
+  font-weight: bold;
+}
+a.router-link-exact-active {
+  @apply text-slate-900 dark:text-white;
 }
 </style>
