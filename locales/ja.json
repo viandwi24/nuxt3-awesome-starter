@@ -1,0 +1,13 @@
+{
+    "components": {
+      "LanguageSwitcher": {
+        "changeLanguage": "言語を変えてください"
+      }
+    },
+    "pages": {
+      "index": {
+        "title": "nuxt 3,素晴らしい,スターター"
+      }
+    }
+  }
+  
