@@ -29,7 +29,7 @@ export const availableLocales: ILocales = {
 export function LanguageManager() {
   // composable
   const { locale } = useI18n()
-  const localeUserSetting = useLocalStorage('locale', 'en')
+  const localeUserSetting = useCookie('locale')
 
   // methods
   const getSystemLocale = (): string =>
@@ -39,7 +39,7 @@ export function LanguageManager() {
 
   // state
   const localeSetting = useState<string>('locale.setting', () =>
-    process.client ? getUserLocale() : 'en'
+    getUserLocale()
   )
 
   // watchers
@@ -52,6 +52,7 @@ export function LanguageManager() {
   const init = () => {
     localeSetting.value = getUserLocale()
   }
+  locale.value = localeSetting.value
 
   // lifecycle
   onBeforeMount(() => init())

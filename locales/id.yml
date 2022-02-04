@@ -1,0 +1,6 @@
+components:
+  LanguageSwitcher:
+    changeLanguage: Ganti Bahasa
+pages:
+  index:
+    title: nuxt 3,permulaan,luar biasa

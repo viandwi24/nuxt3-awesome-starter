@@ -14,16 +14,17 @@ export const availableThemes: {
 
 export function ThemeManager() {
   // composable
-  const themeUserSetting = useLocalStorage<IThemeSettingOptions>(
-    'theme',
-    'light'
-  )
+  const themeUserSetting = useCookie<IThemeSettingOptions>('theme')
 
   // methods
   const getUserSetting = (): IThemeSettingOptions =>
     themeUserSetting.value || 'system'
   const getSystemTheme = (): ITheme =>
-    window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+    window
+      ? window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light'
+      : 'light'
   const getRealtimeTheme = (): ITheme => {
     const now = new Date()
     const hour = now.getHours()
@@ -33,14 +34,14 @@ export function ThemeManager() {
 
   // state
   const themeSetting = useState<IThemeSettingOptions>('theme.setting', () =>
-    process.client ? getUserSetting() : 'light'
+    getUserSetting()
   )
   const themeCurrent = useState<ITheme>('theme.current', () =>
     process.client ? getSystemTheme() : 'light'
   )
 
   // wathcers
-  watch(themeSetting, (themeSetting) => {
+  const onThemeSettingChange = (themeSetting: IThemeSettingOptions) => {
     themeUserSetting.value = themeSetting
     if (themeSetting === 'realtime') {
       themeCurrent.value = getRealtimeTheme()
@@ -49,7 +50,8 @@ export function ThemeManager() {
     } else {
       themeCurrent.value = themeSetting
     }
-  })
+  }
+  watch(themeSetting, (val) => onThemeSettingChange(val))
   const onThemeSystemChange = () => {
     if (themeSetting.value === 'system') {
       themeCurrent.value = getSystemTheme()
@@ -65,6 +67,7 @@ export function ThemeManager() {
   const init = () => {
     themeSetting.value = getUserSetting()
   }
+  onThemeSettingChange(themeSetting.value)
 
   // lifecycle
   let intervalCheckTime: NodeJS.Timer

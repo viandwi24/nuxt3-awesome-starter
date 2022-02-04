@@ -1,0 +1,6 @@
+components:
+  LanguageSwitcher:
+    changeLanguage: Change language
+pages:
+  index:
+    title: nuxt 3,awesome,starter
