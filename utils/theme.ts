@@ -13,9 +13,15 @@ export const availableThemes: {
 ]
 
 export function ThemeManager() {
+  // composable
+  const themeUserSetting = useLocalStorage<IThemeSettingOptions>(
+    'theme',
+    'light'
+  )
+
   // methods
   const getUserSetting = (): IThemeSettingOptions =>
-    (localStorage.getItem('theme.setting') as IThemeSettingOptions) || 'system'
+    themeUserSetting.value || 'system'
   const getSystemTheme = (): ITheme =>
     window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
   const getRealtimeTheme = (): ITheme => {
@@ -35,7 +41,7 @@ export function ThemeManager() {
 
   // wathcers
   watch(themeSetting, (themeSetting) => {
-    localStorage.setItem('theme.setting', themeSetting)
+    themeUserSetting.value = themeSetting
     if (themeSetting === 'realtime') {
       themeCurrent.value = getRealtimeTheme()
     } else if (themeSetting === 'system') {

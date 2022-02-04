@@ -10,6 +10,7 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 - [x] 🔔 [Icon Pack Component (unplugin-icons)](https://icones.js.org/)
 - [x] 🛹 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
 - [x] 🚩 [Localization (i18n) by @intlify](https://github.com/intlify/nuxt3)
+- [x] 📦 [Vue Composition Collection (Vueuse)](https://vueuse.org/)
 - [x] 🌙 Switch Theme (light, dark, system, realtime)
 - [x] 🇮🇩 Language Switcher
 - [x] 🪝 Built-in Component & Layout

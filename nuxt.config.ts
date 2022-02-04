@@ -1,13 +1,15 @@
-import { defineNuxtConfig, NuxtConfig } from 'nuxt3'
+import { defineNuxtConfig } from 'nuxt3'
 import { IntlifyModuleOptions } from '@intlify/nuxt3'
+import { VueUseNuxtOptions } from '@vueuse/nuxt'
 import UnpluginComponentsVite from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 
-export interface NuxtIntlifyConfig {
-  intlify: IntlifyModuleOptions
+declare module '@nuxt/schema' {
+  interface NuxtConfig {
+    vueuse?: VueUseNuxtOptions
+    intlify?: IntlifyModuleOptions
+  }
 }
-
-export type NuxtConfigMerged = NuxtConfig & NuxtIntlifyConfig
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
@@ -51,6 +53,7 @@ export default defineNuxtConfig({
     'unplugin-icons/nuxt',
     '@nuxtjs/svg',
     '@intlify/nuxt3',
+    '@vueuse/nuxt',
   ],
 
   // auto import components
@@ -80,5 +83,8 @@ export default defineNuxtConfig({
     },
   },
 
-  // merge IntlifyModuleOptions to nuxt config
-} as NuxtConfigMerged)
+  // vueuse
+  vueuse: {
+    ssrHandlers: true,
+  },
+})
