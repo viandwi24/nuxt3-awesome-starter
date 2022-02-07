@@ -3,8 +3,11 @@
     ref="navbar"
     class="top-0 z-40 w-full backdrop-blur flex-none ransition-colors duration-300 lg:z-50 border-b border-gray-900/10 dark:border-gray-50/[0.2] supports-backdrop-blur:bg-white/60 bg-white/[0.7] dark:bg-slate-900/[0.7]"
   >
+    <div id="navbar-banner" class="banner">
+      <slot name="banner" />
+    </div>
     <div class="max-w-8xl w-full mx-auto">
-      <div class="py-4 lg:px-8 mx-4 lg:mx-0">
+      <div class="py-3 lg:px-8 mx-4 lg:mx-0">
         <div class="relative flex items-center">
           <!-- drawer:toggle -->
           <div v-if="$slots['drawer']" class="lg:hidden">
@@ -26,13 +29,13 @@
           <slot name="title">
             <NuxtLink
               tag="a"
-              class="mr-3 flex-none overflow-hidden md:w-auto text-lg font-bold text-gray-900 dark:text-gray-200"
+              class="mr-3 flex-none overflow-hidden md:w-auto text-md font-bold text-gray-900 dark:text-gray-200"
               :to="{ name: 'index' }"
             >
               <span class="sr-only">home</span>
               <span class="flex items-center">
                 <IconSimpleIcons:nuxtdotjs
-                  class="inline-block mr-2 text-xl text-green-600"
+                  class="inline-block mr-2 text-lg text-green-600"
                 />
                 {{ app.name }}
               </span>

@@ -3,9 +3,11 @@
     <Listbox
       v-if="currentStyle === 'dropdown-right-top'"
       v-model="localeSetting"
+      as="div"
+      class="relative flex items-center"
     >
       <ListboxLabel class="sr-only">Theme</ListboxLabel>
-      <ListboxButton type="button">
+      <ListboxButton type="button" title="Change Language">
         <span class="justify-center items-center flex">
           <IconLa:language />
         </span>
@@ -19,8 +21,10 @@
           :value="lang.iso"
           :class="{
             'py-2 px-2 flex items-center cursor-pointer': true,
-            'text-sky-500 bg-gray-50 dark:bg-gray-600/30':
+            'text-sky-500 bg-gray-100 dark:bg-gray-600/30':
               localeSetting === lang.iso,
+            'hover:bg-gray-50 dark:hover:bg-gray-700/30':
+              localeSetting !== lang.iso,
           }"
         >
           <span class="text-sm mr-2">

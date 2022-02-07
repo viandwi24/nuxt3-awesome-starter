@@ -64,8 +64,8 @@
 </template>
 
 <script lang="ts" setup>
-import { useCounter } from '~/store/counter'
-import { useIdentity } from '~/store/identity'
+import { useCounter } from '~/stores/counter'
+import { useIdentity } from '~/stores/identity'
 
 const counter = useCounter()
 const identity = useIdentity()

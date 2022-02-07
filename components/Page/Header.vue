@@ -1,7 +1,7 @@
 <template>
-  <section class="mb-4">
+  <div class="lg:px-8 px-4 mb-4">
     <slot />
-  </section>
+  </div>
 </template>
 
 <script lang="ts">

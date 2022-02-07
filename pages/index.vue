@@ -17,7 +17,7 @@
         <span
           v-for="(item, i) in $t('pages.index.title').split(',')"
           :key="i"
-          class="linear-wipe-text drop-shadow-xl text-5xl lg:text-9xl block font-bold uppercase"
+          class="linear-wipe-text drop-shadow-xl text-5xl xl:text-8xl 2xl:text-9xl block font-bold uppercase"
         >
           {{ item }}
         </span>

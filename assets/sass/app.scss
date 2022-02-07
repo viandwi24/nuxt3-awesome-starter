@@ -21,7 +21,9 @@ body,
   border-radius: 9999px;
   background-color: theme('colors.slate.300');
 }
-
+::-webkit-scrollbar-thumb:hover {
+  background-color: theme('colors.slate.400');
+}
 html.dark {
   ::-webkit-scrollbar-track {
     background: theme('colors.slate.800');
@@ -30,5 +32,8 @@ html.dark {
   ::-webkit-scrollbar-thumb {
     border-color: theme('colors.slate.800');
     background-color: theme('colors.slate.500');
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: theme('colors.slate.400');
   }
 }

@@ -3,13 +3,13 @@
     v-if="to"
     tag="a"
     :to="to"
-    :class="`transition-all duration-300 dark:hover:text-white hover:text-gray-900 hover:underline`"
+    :class="`transition-colors duration-300 dark:hover:text-white hover:text-gray-900 hover:underline`"
   >
     <slot>{{ text }}</slot>
   </NuxtLink>
   <a
     v-else
-    :class="`transition-all duration-300 dark:hover:text-white hover:text-gray-900 hover:underline`"
+    :class="`transition-colors duration-300 dark:hover:text-white hover:text-gray-900 hover:underline`"
     :href="href"
   >
     <slot>{{ text }}</slot>

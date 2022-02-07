@@ -30,8 +30,8 @@ const emit = defineEmits(['update:modelValue'])
 const defaultStyle = `
   block w-full border outline-none 
   transition-color duration-300 
-  bg-transparent border-gray-900/10 focus:border-gray-90
-  dark:border-gray-50/[0.2] dark:focus:border-gray-400
+  bg-transparent border-gray-900/10 focus:border-gray-900
+  dark:border-gray-50/[0.2] dark:focus:border-white
 `
 const sizeStyles = reactive({
   lg: 'h-12 px-8 text-lg rounded-lg',
