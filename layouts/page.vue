@@ -4,7 +4,7 @@
     <div id="app-before"></div>
     <div class="flex flex-col min-h-screen">
       <slot name="header">
-        <PageNavbar />
+        <LazyPageNavbar />
       </slot>
       <div class="flex-1 w-full flex flex-col">
         <div
@@ -14,7 +14,7 @@
         </div>
       </div>
       <slot name="footer">
-        <PageFooter />
+        <LazyPageFooter />
       </slot>
     </div>
     <slot name="app-after" />

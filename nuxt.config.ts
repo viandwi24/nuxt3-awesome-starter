@@ -4,6 +4,7 @@ import { VueUseNuxtOptions } from '@vueuse/nuxt'
 import UnpluginComponentsVite from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
 
+// types
 declare module '@nuxt/schema' {
   interface NuxtConfig {
     vueuse?: VueUseNuxtOptions
@@ -11,18 +12,38 @@ declare module '@nuxt/schema' {
   }
 }
 
+// metas
+const seo = {
+  title: 'Nuxt 3 Awesome Starter',
+  description:
+    'a Nuxt 3 starter template or boilerplate with a lot of useful features. Nuxt3 + Tailwindcss 3',
+}
+const generateMetaSeo = () => {
+  const metas = [
+    { key: 'description', content: seo.description },
+    { key: 'og:title', content: seo.title },
+    { key: 'og:description', content: seo.description },
+    { key: 'og:image', content: 'https://nuxt.js.org/img/logo.png' },
+    { key: 'og:image:width', content: '1200' },
+    { key: 'og:image:height', content: '630' },
+    { key: 'og:type', content: 'website' },
+  ]
+  return metas.map((meta) => ({
+    hid: meta.key,
+    name: meta.key,
+    property: meta.key,
+    content: meta.content,
+  }))
+}
+
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
   // meta
   meta: {
-    title: 'Nuxt 3 Awesome Starter',
+    title: seo.title,
     meta: [
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Nuxt 3 Awesome Starter',
-      },
+      ...generateMetaSeo(),
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
