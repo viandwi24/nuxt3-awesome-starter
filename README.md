@@ -5,7 +5,7 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 > Nuxt 3 is still in beta and is not recommended for production use.
 
 ## Features
-- [x] 💨 [Tailwind CSS v3](https://tailwindcss.com/)
+- [x] 💨 [Tailwind CSS v3 & Tailwind Config Viewer](https://tailwindcss.com/)
 - [x] ✨ [Headless UI](https://headlessui.dev/)
 - [x] 🔔 [Icon Pack Component (unplugin-icons)](https://icones.js.org/)
 - [x] 🛹 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
@@ -18,12 +18,29 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 - [x] Husky & Commitlint
 - [ ] Http Request (axios ?)
 
-.             |  .
-:-------------------------:|:-------------------------:
-![Preview](https://github.com/viandwi24/nuxt3-awesome-starter/blob/main/assets/images/preview.png?raw=true) | ![Preview On Mobile](https://github.com/viandwi24/nuxt3-awesome-starter/blob/main/assets/images/preview_mobile.png?raw=true)
-
-## Demo
-[Demo](https://nuxt3-awesome-starter.vercel.app/)
+## Preview
+<div style="display: flex;">
+  <div style="width: 75.5%;">
+    <img src="https://github.com/viandwi24/nuxt3-awesome-starter/blob/main/assets/images/preview.gif?raw=true" alt="Preview" title="Preview">
+  </div>
+  <div style="width: 24.5%;">
+    <img src="https://github.com/viandwi24/nuxt3-awesome-starter/blob/main/assets/images/preview_mobile.gif?raw=true" alt="Preview" title="Preview">
+  </div>
+</div>
+<p align="center">
+  <br>
+  <a href="https://nuxt3-awesome-starter.vercel.app/" target="_blank">
+    Live Demo (nuxt3-awesome-starter.vercel.app)
+  </a>
+  <br><br>
+  <a href="https://codesandbox.io/s/github/viandwi24/nuxt3-awesome-starter" title="Open In Code Sandbox">
+    <img src="https://img.shields.io/badge/Open%20in-CodeSandbox-blue?style=flat-square&logo=codesandboxg" alt="Open In Code Sandbox">
+  </a>
+  <br>
+  <a href="https://stackblitz.com/github/viandwi24/nuxt3-awesome-starter" title="Open In Stackblitz">
+    <img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt="Open In Stackblitz">
+  </a>
+</p>
 
 ## Table of Contents
 - [Nuxt 3 Awesome Starter](#nuxt-3-awesome-starter)
