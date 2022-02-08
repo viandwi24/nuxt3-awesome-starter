@@ -32,7 +32,7 @@ const props = defineProps({
     default: 'md',
   },
   to: {
-    type: Object,
+    type: [String, Object],
     default: undefined,
   },
   href: {

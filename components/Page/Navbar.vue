@@ -68,7 +68,8 @@
               >
                 <Anchor
                   v-if="item.type === 'link'"
-                  :to="item.route ? item.route : ''"
+                  :to="item.route ? item.route : undefined"
+                  :href="item.href ? item.href : undefined"
                   class="flex-1 hover:no-underline"
                   >{{ item.text }}</Anchor
                 >
@@ -77,6 +78,7 @@
                   :text="item.text"
                   size="xs"
                   class="flex-1 font-extrabold"
+                  :to="item.route ? item.route : undefined"
                   :href="item.href ? item.href : undefined"
                 />
               </li>

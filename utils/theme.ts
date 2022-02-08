@@ -19,12 +19,17 @@ export function ThemeManager() {
   // methods
   const getUserSetting = (): IThemeSettingOptions =>
     themeUserSetting.value || 'system'
-  const getSystemTheme = (): ITheme =>
-    window
-      ? window.matchMedia('(prefers-color-scheme: dark)').matches
-        ? 'dark'
-        : 'light'
-      : 'light'
+  const getSystemTheme = (): ITheme => {
+    try {
+      return window
+        ? window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light'
+        : 'dark'
+    } catch (error) {
+      return 'dark'
+    }
+  }
   const getRealtimeTheme = (): ITheme => {
     const now = new Date()
     const hour = now.getHours()

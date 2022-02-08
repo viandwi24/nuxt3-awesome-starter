@@ -32,8 +32,13 @@ export function LanguageManager() {
   const localeUserSetting = useCookie('locale')
 
   // methods
-  const getSystemLocale = (): string =>
-    window ? window.navigator.language.substring(0, 2) : 'en'
+  const getSystemLocale = (): string => {
+    try {
+      return window ? window.navigator.language.substring(0, 2) : 'en'
+    } catch (error) {
+      return 'en'
+    }
+  }
   const getUserLocale = (): string =>
     localeUserSetting.value || getSystemLocale()
 
