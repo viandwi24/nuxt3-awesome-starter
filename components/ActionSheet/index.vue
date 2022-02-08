@@ -39,7 +39,8 @@ const show = ref(false)
 
 // methods
 const close = () => {
-  emit('onClose')
+  show.value = false
+  setTimeout(() => emit('onClose'), 1000)
 }
 
 // lifecycle

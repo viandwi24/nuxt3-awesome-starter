@@ -80,7 +80,11 @@
 
         <!-- options -->
         <div v-if="showOptions && $slots['options']">
-          <slot name="options" :toggleOptions="toggleOptions" />
+          <slot
+            name="options"
+            :toggleOptions="toggleOptions"
+            :showOptions="showOptions"
+          />
         </div>
       </Teleport>
     </ClientOnly>
