@@ -54,6 +54,7 @@ export default defineNuxtConfig({
     '@nuxtjs/svg',
     '@intlify/nuxt3',
     '@vueuse/nuxt',
+    '~/modules/tailwind-viewer',
   ],
 
   // auto import components
