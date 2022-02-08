@@ -13,7 +13,7 @@
       <div class="absolute bottom-0 right-0 triangle-shape"></div>
     </div>
     <div class="flex flex-col z-10">
-      <div class="text-center">
+      <h1 class="text-center">
         <span
           v-for="(item, i) in $t('pages.index.title').split(',')"
           :key="i"
@@ -21,7 +21,7 @@
         >
           {{ item }}
         </span>
-      </div>
+      </h1>
       <div class="flex space-x-4 justify-center mt-10">
         <Button
           size="lg"
