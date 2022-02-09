@@ -1,7 +1,7 @@
 <template>
   <PageWrapper>
     <PageHeader>
-      <PageTitle text="Dashboard" />
+      <PageTitle :text="$t('pages.dashboard.index.title')" class="capitalize" />
     </PageHeader>
     <PageBody>
       <PageSection>
@@ -12,8 +12,8 @@
         </p>
       </PageSection>
       <PageSection>
-        <div v-for="i in 30" :key="i" class="text-6xl">
-          JUST BLANK PAGE WITH TITLE
+        <div v-for="i in 30" :key="i" class="text-6xl uppercase">
+          {{ $t('pages.blank.just_blank_page_with_title') }}
         </div>
       </PageSection>
     </PageBody>

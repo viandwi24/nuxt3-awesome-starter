@@ -6,8 +6,13 @@
       as="div"
       class="relative flex items-center"
     >
-      <ListboxLabel class="sr-only">Theme</ListboxLabel>
-      <ListboxButton type="button" title="Change Theme">
+      <ListboxLabel class="sr-only">
+        {{ $t('components.theme_switcher.theme') }}
+      </ListboxLabel>
+      <ListboxButton
+        type="button"
+        :title="$t('components.theme_switcher.change_theme')"
+      >
         <span class="flex justify-center items-center dark:hidden">
           <IconUil:sun />
         </span>

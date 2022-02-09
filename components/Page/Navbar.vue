@@ -1,11 +1,15 @@
 <template>
   <BuilderNavbar>
     <template #banner>
-      <div class="text-white text-xs text-center py-1 px-4 lg:px-8 bg-blue-500">
-        <span class="mr-1">Hello, Welcome to {{ app.name }}!</span>
+      <div
+        class="text-white text-xs text-center py-1 px-4 lg:px-8 bg-blue-500 capitalize"
+      >
+        <span class="mr-1">
+          {{ $t('banners.welcome', { app_name: app.name }) }}
+        </span>
         <Anchor
           class="underline font-bold"
-          text="Learn more"
+          :text="$t('others.learn_more')"
           href="https://github.com/viandwi24/nuxt3-awesome-starter"
         />
       </div>
@@ -22,14 +26,14 @@
                 v-if="item.type === 'link'"
                 :to="item.route ? item.route : undefined"
                 :href="item.href ? item.href : undefined"
-                class="hover:no-underline hover:text-slate-900 hover:dark:text-white"
+                class="hover:no-underline hover:text-slate-900 hover:dark:text-white capitalize"
                 >{{ item.text }}</Anchor
               >
               <Button
                 v-else-if="item.type === 'button'"
                 :text="item.text"
                 size="xs"
-                class="font-extrabold"
+                class="font-extrabold capitalize"
                 :to="item.route ? item.route : undefined"
                 :href="item.href ? item.href : undefined"
               />
@@ -84,12 +88,14 @@
               </li>
             </ul>
           </nav>
-          <div class="mt-6 text-sm font-bold">Theme</div>
+          <div class="mt-6 text-sm font-bold capitalize">
+            {{ $t('components.theme_switcher.change_theme') }}
+          </div>
           <div class="mt-2">
             <ThemeToggle type="select-box" />
           </div>
-          <div class="mt-6 text-sm font-bold">
-            {{ $t('components.LanguageSwitcher.changeLanguage') }}
+          <div class="mt-6 text-sm font-bold capitalize">
+            {{ $t('components.language_switcher.change_language') }}
           </div>
           <div class="mt-2">
             <LanguageSwitcher type="select-box" />
@@ -123,11 +129,16 @@ export interface IMenuItem {
   route?: any
 }
 
+const { t } = useLang()
 const app = useState<IApp>('app')
-const menus: IMenuItem[] = reactive([
-  { type: 'link', text: 'Blank', route: { name: 'blank' } },
-  { type: 'link', text: 'Test', route: { name: 'test' } },
-  { type: 'link', text: 'About', route: { name: 'about' } },
-  { type: 'button', text: 'Dashboard', route: { name: 'dashboard' } },
+const menus = computed((): IMenuItem[] => [
+  { type: 'link', text: t('pages.blank.nav'), route: { name: 'blank' } },
+  { type: 'link', text: t('pages.test.nav'), route: { name: 'test' } },
+  { type: 'link', text: t('pages.about.nav'), route: { name: 'about' } },
+  {
+    type: 'button',
+    text: t('pages.dashboard.nav'),
+    route: { name: 'dashboard' },
+  },
 ])
 </script>

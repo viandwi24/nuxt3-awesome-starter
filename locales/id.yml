@@ -1,6 +1,35 @@
 components:
-  LanguageSwitcher:
-    changeLanguage: Ganti Bahasa
+  language_switcher:
+    change_language: ganti bahasa
+  theme_switcher:
+    theme: tema
+    change_theme: ganti tema
 pages:
   index:
     title: nuxt 3,permulaan,luar biasa
+  blank:
+    nav: kosong
+    title: halaman kosong
+    just_blank_page_with_title: hanya halaman kosong dengan judul
+  test:
+    nav: pengujian
+    title: pengujian
+    counter: penghitung
+    increment: tambah
+    decrement: kurang
+    reset: reset ulang
+    identity: identitas
+    full_name: nama lengkap
+  about:
+    nav: tentang
+    title: tentang penulis
+  dashboard:
+    nav: dashboard
+    title: dashboard
+    index:
+      nav: beranda 
+      title: beranda
+banners:
+  welcome: halo, selamat datang di %{app_name}!
+others:
+  learn_more: lihat selengkapnya

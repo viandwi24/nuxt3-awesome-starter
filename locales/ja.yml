@@ -1,6 +1,35 @@
 components:
-  LanguageSwitcher:
-    changeLanguage: 言語を変えてください
+  language_switcher:
+    change_language: 言語を変えてください
+  theme_switcher:
+    theme: テーマ
+    change_theme: テーマを変えてください
 pages:
   index:
     title: nuxt 3,素晴らしい,スターター
+  blank:
+    nav: 空白
+    title: 空白ページ
+    just_blank_page_with_title: 空白ページのみにタイトル
+  test:
+    nav: テスト
+    title: テスト
+    counter: カウンター
+    increment: 増加
+    decrement: 減少
+    reset: リセット
+    identity: 識別
+    full_name: 全名
+  about:
+    nav: このサイトについて
+    title: このサイトについて
+  dashboard:
+    nav: ダッシュボード
+    title: ダッシュボード
+    index:
+      nav: ホーム
+      title: ホーム
+banners:
+  welcome: こんにちは, %{app_name} へようこそ!
+others:
+  learn_more: 続きを読む

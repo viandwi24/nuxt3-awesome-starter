@@ -10,7 +10,10 @@
     <div class="flex-1 overflow-y-auto pl-4 lg:pl-0 pr-4 py-4">
       <ul>
         <li v-for="i in 29" :key="i">
-          <a href="" class="group flex items-center mb-4">
+          <Anchor
+            :to="{ name: 'dashboard' }"
+            class="group flex items-center mb-4 hover:no-underline"
+          >
             <div
               class="mr-4 p-1.5 rounded-md ring-1 ring-slate-900/5 shadow-sm group-hover:shadow group-hover:ring-slate-900/10 dark:ring-0 dark:shadow-none dark:group-hover:shadow-none dark:group-hover:highlight-white/10 group-hover:shadow-sky-200 dark:highlight-white/10"
               :class="{
@@ -23,16 +26,16 @@
               <IconUil:apps class="text-xs" />
             </div>
             <span
-              class="text-sm font-semibold"
+              class="text-sm font-semibold capitalize"
               :class="{
                 'font-extrabold text-sky-500 dark:text-sky-400': i === 1,
               }"
-              >Dashboard</span
             >
-          </a>
+              {{ $t('pages.dashboard.index.nav') }}
+            </span>
+          </Anchor>
         </li>
       </ul>
-      awewae
     </div>
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <PageWrapper class="flex flex-col justify-center items-center">
     <PageHeader>
-      <PageTitle text="About" />
+      <PageTitle :text="$t('pages.about.title')" class="capitalize" />
     </PageHeader>
     <PageBody>
       <div class="flex flex-col items-center">
