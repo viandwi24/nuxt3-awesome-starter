@@ -3,11 +3,13 @@ import { IntlifyModuleOptions } from '@intlify/nuxt3'
 import { VueUseNuxtOptions } from '@vueuse/nuxt'
 import UnpluginComponentsVite from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
+import { ModuleOptions as WindiModuleOptions } from 'nuxt-windicss'
 
 declare module '@nuxt/schema' {
   interface NuxtConfig {
     vueuse?: VueUseNuxtOptions
     intlify?: IntlifyModuleOptions
+    windicss?: WindiModuleOptions
   }
 }
 
@@ -36,25 +38,18 @@ export default defineNuxtConfig({
   // build
   build: {
     transpile: ['@headlessui/vue'],
-    postcss: {
-      postcssOptions: {
-        plugins: {
-          tailwindcss: {},
-          autoprefixer: {},
-        },
-      },
-    },
   },
 
   // build modules
   buildModules: [
+    'nuxt-windicss',
     '@nuxtjs/eslint-module',
     '@pinia/nuxt',
     'unplugin-icons/nuxt',
     '@nuxtjs/svg',
     '@intlify/nuxt3',
     '@vueuse/nuxt',
-    '~/modules/tailwind-viewer',
+    // '~/modules/tailwind-viewer',
   ],
 
   // auto import components
@@ -87,5 +82,16 @@ export default defineNuxtConfig({
   // vueuse
   vueuse: {
     ssrHandlers: true,
+  },
+
+  // windicss
+  windicss: {
+    analyze: {
+      server: {
+        port: 4000,
+        open: false,
+      },
+    },
+    scan: true,
   },
 })

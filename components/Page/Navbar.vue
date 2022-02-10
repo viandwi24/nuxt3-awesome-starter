@@ -46,7 +46,7 @@
           <LanguageSwitcher />
           <ThemeToggle />
           <Anchor
-            class="hover:no-underline hover:text-slate-900 hover:dark:text-white text-lg"
+            class="hover:no-underline hover:text-slate-900 hover:dark:text-white text-lg flex self-center items-center"
             href="https://github.com/viandwi24/nuxt3-awesome-starter"
             title="Github"
           >
@@ -74,14 +74,14 @@
                   v-if="item.type === 'link'"
                   :to="item.route ? item.route : undefined"
                   :href="item.href ? item.href : undefined"
-                  class="flex-1 hover:no-underline"
+                  class="flex-1 hover:no-underline capitalize"
                   >{{ item.text }}</Anchor
                 >
                 <Button
                   v-else-if="item.type === 'button'"
                   :text="item.text"
                   size="xs"
-                  class="flex-1 font-extrabold"
+                  class="flex-1 font-extrabold capitalize"
                   :to="item.route ? item.route : undefined"
                   :href="item.href ? item.href : undefined"
                 />

@@ -1,7 +1,7 @@
 <template>
   <div
     ref="navbar"
-    class="top-0 z-40 w-full backdrop-blur flex-none ransition-colors duration-300 lg:z-50 border-b border-gray-900/10 dark:border-gray-50/[0.2] supports-backdrop-blur:bg-white/60 bg-white/[0.7] dark:bg-slate-900/[0.7]"
+    class="backdrop-filter backdrop-blur top-0 z-40 w-full flex-none ransition-colors duration-300 lg:z-50 border-b border-gray-900/10 dark:border-gray-50/[0.2] bg-white/[0.7] dark:bg-slate-900/[0.7]"
   >
     <div id="navbar-banner" class="banner">
       <slot name="banner" />
@@ -10,14 +10,17 @@
       <div class="py-3 lg:px-8 mx-4 lg:mx-0">
         <div class="relative flex items-center">
           <!-- drawer:toggle -->
-          <div v-if="$slots['drawer']" class="lg:hidden">
+          <div
+            v-if="$slots['drawer']"
+            class="lg:hidden flex items-center self-center justify-center mr-2"
+          >
             <button
-              class="flex items-center focus:outline-none mr-2"
+              class="flex items-center focus:outline-none"
               aria-label="Toggle Drawer Menu"
               @click="toggleDrawer()"
             >
               <span
-                class="text-gray-600 dark:text-gray-300 text-lg"
+                class="flex items-center text-gray-600 dark:text-gray-300 text-lg"
                 aria-hidden="true"
               >
                 <IconUil:bars v-if="!showDrawer" />
@@ -54,7 +57,7 @@
               @click="toggleOptions()"
             >
               <span
-                class="text-gray-600 dark:text-gray-300 text-sm"
+                class="flex items-center text-gray-600 dark:text-gray-300 text-sm"
                 aria-hidden="true"
               >
                 <icon-fa-solid:ellipsis-v />
