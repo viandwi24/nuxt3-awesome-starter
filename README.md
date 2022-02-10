@@ -5,7 +5,7 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 > Nuxt 3 is still in beta and is not recommended for production use.
 
 ## Features
-- [x] 💨 [Tailwind CSS v3 & Tailwind Config Viewer](https://tailwindcss.com/)
+- [x] 💨 [Tailwind CSS v3](https://tailwindcss.com/) with [Windicss](https://windicss.org/)
 - [x] ✨ [Headless UI](https://headlessui.dev/)
 - [x] 🔔 [Icon Pack Component (unplugin-icons)](https://icones.js.org/)
 - [x] 🛹 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
@@ -89,10 +89,7 @@ Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
 
 ## Notes
 ### Styles
-Tailwindcss import in :
-```
-/path/to/assets/sass/vendor.scss
-```
+Tailwindcss import managed by windicss.
 and you can add custom styles in :
 ```
 /path/to/assets/sass/app.scss
