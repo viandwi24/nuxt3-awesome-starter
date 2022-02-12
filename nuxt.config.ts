@@ -49,7 +49,6 @@ export default defineNuxtConfig({
     '@nuxtjs/svg',
     '@intlify/nuxt3',
     '@vueuse/nuxt',
-    // '~/modules/tailwind-viewer',
   ],
 
   // auto import components
@@ -87,6 +86,9 @@ export default defineNuxtConfig({
   // windicss
   windicss: {
     analyze: {
+      analysis: {
+        interpretUtilities: false,
+      },
       server: {
         port: 4000,
         open: false,
