@@ -32,7 +32,7 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 <p align="center">
   <br>
   <a href="https://nuxt3-awesome-starter.vercel.app/" target="_blank">
-    Live Demo (nuxt3-awesome-starter.vercel.app)
+    Live Demo
   </a>
   <br><br>
   <a href="https://codesandbox.io/s/github/viandwi24/nuxt3-awesome-starter" title="Open In Code Sandbox">
