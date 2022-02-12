@@ -1,15 +1,11 @@
 import { defineNuxtConfig } from 'nuxt3'
 import { IntlifyModuleOptions } from '@intlify/nuxt3'
-import { VueUseNuxtOptions } from '@vueuse/nuxt'
 import UnpluginComponentsVite from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
-import { ModuleOptions as WindiModuleOptions } from 'nuxt-windicss'
 
 declare module '@nuxt/schema' {
   interface NuxtConfig {
-    vueuse?: VueUseNuxtOptions
     intlify?: IntlifyModuleOptions
-    windicss?: WindiModuleOptions
   }
 }
 

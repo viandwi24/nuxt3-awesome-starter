@@ -3,7 +3,9 @@
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
     "types": [
-      "nuxt-windicss"
+      "nuxt-windicss",
+      "@vueuse/nuxt",
+      "@intlify/nuxt3"
     ]
   }
 }
