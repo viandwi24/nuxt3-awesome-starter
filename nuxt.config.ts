@@ -40,8 +40,8 @@ export default defineNuxtConfig({
   buildModules: [
     'nuxt-windicss',
     '@nuxtjs/eslint-module',
-    '@pinia/nuxt',
     'unplugin-icons/nuxt',
+    '@pinia/nuxt',
     '@nuxtjs/svg',
     '@intlify/nuxt3',
     '@vueuse/nuxt',
