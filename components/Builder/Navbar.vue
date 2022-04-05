@@ -134,6 +134,11 @@ a.router-link-active {
   font-weight: bold;
 }
 a.router-link-exact-active {
-  @apply text-slate-900 dark:text-white;
+  color: theme('colors.slate.900');
+}
+html.dark {
+  a.router-link-exact-active {
+    color: theme('colors.white');
+  }
 }
 </style>
