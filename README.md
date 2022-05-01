@@ -2,6 +2,7 @@
 a Nuxt 3 starter template or boilerplate with a lot of useful features. and integrated with TailwindCSS 3.
 
 > **WARNING** \
+> Nuxt 3 now in RC version (Release Candidate)
 > Nuxt 3 is still in beta and is not recommended for production use.
 
 ## Features

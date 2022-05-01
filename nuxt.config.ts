@@ -1,4 +1,4 @@
-import { defineNuxtConfig } from 'nuxt3'
+import { defineNuxtConfig } from 'nuxt'
 import { IntlifyModuleOptions } from '@intlify/nuxt3'
 import UnpluginComponentsVite from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
@@ -44,7 +44,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/svg',
     '@intlify/nuxt3',
-    '@vueuse/nuxt',
+    // '@vueuse/nuxt',
   ],
 
   // auto import components
