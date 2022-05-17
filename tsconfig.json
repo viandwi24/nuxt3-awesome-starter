@@ -6,7 +6,8 @@
     "types": [
       "nuxt-windicss",
       // "@vueuse/nuxt",
-      "@intlify/nuxt3"
+      "@intlify/nuxt3",
+      "@pinia/nuxt"
     ]
   }
 }
