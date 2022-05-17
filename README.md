@@ -2,8 +2,9 @@
 a Nuxt 3 starter template or boilerplate with a lot of useful features. and integrated with TailwindCSS 3.
 
 > **WARNING** \
-> Nuxt 3 now in RC version (Release Candidate)  
-> Nuxt 3 is still in beta and is not recommended for production use.
+> Nuxt 3 now in RC version (Release Candidate) [But i'm still using from nuxt3 latest version]  
+> Nuxt 3 is still in beta and is not recommended for production use.  
+> Breaking changes tracker can be found [here](https://github.com/nuxt/framework/discussions/2883)
 
 ## Features
 - [x] 💨 [Tailwind CSS v3](https://tailwindcss.com/) with [Windicss](https://windicss.org/)
@@ -17,7 +18,11 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 - [x] 🪝 Built-in Component & Layout
 - [x] Eslint & Prettier
 - [x] Husky & Commitlint
-- [ ] Http Request (axios ?)
+
+## To Do
+- [ ] Adding simple Unit Test
+- [ ] Adding HTTP Client
+- [ ] Configurable Theme (colors, fonts, etc)
 
 ## Preview
 <table align="center">
@@ -47,15 +52,29 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 
 ## Table of Contents
 - [Nuxt 3 Awesome Starter](#nuxt-3-awesome-starter)
-  * [Built-in Components](#built-in-components)
-  * [Quick Start](#quick-start)
-  * [Notes](#notes)
-    + [Styles](#styles)
-    + [Theme (Dark Mode)](#theme--dark-mode-)
-    + [Localization](#localization)
-    + [Icons](#icons)
-    + [Precommit and Postmerge](#precommit-and-postmerge)
-  * [License](#license)
+  - [Features](#features)
+  - [To Do](#to-do)
+  - [Preview](#preview)
+  - [Table of Contents](#table-of-contents)
+  - [Quick Start](#quick-start)
+  - [Built-in Components](#built-in-components)
+  - [Notes](#notes)
+    - [Styles](#styles)
+    - [Theme (Dark Mode)](#theme-dark-mode)
+    - [Localization](#localization)
+    - [Icons](#icons)
+    - [Precommit and Postmerge](#precommit-and-postmerge)
+  - [License](#license)
+
+## Quick Start
+* This project using `yarn` as package manager.
+* Clone this project to your computer `git clone https://github.com/viandwi24/nuxt3-awesome-starter`
+* Install dependencies `yarn install`
+* Run `yarn dev` to start development server and open `http://localhost:3000` in your browser
+* Run `yarn build` to build project and `yarn start` to start production server
+
+Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
+
 
 ## Built-in Components
 - [x] Footer
@@ -79,15 +98,7 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
     - [x] Sidebar
 - [ ] Modal
 - [ ] Alert
-
-## Quick Start
-* This project using `yarn` as package manager.
-* Clone this project to your computer `git clone https://github.com/viandwi24/nuxt3-awesome-starter`
-* Install dependencies `yarn install`
-* Run `yarn dev` to start development server and open `http://localhost:3000` in your browser
-* Run `yarn build` to build project and `yarn start` to start production server
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
+- [ ] 
 
 ## Notes
 ### Styles

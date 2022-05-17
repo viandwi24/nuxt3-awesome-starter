@@ -1,6 +1,13 @@
-node_modules
 *.log
-.nuxt
 nuxt.d.ts
-.output
+
+# private config
 .env
+
+# deps
+node_modules
+
+# build or generate
+.nuxt
+dist
+.output
