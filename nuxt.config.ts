@@ -29,7 +29,13 @@ export default defineNuxtConfig({
   },
 
   // css
-  css: ['~/assets/sass/vendor.scss', '~/assets/sass/app.scss'],
+  css: [
+    'virtual:windi-base.css',
+    'virtual:windi-components.css',
+    'virtual:windi-utilities.css',
+    '~/assets/sass/vendor.scss',
+    '~/assets/sass/app.scss',
+  ],
 
   // plugins
   plugins: ['~/plugins/navbar.ts'],
@@ -47,7 +53,7 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxtjs/svg',
     '@intlify/nuxt3',
-    // '@vueuse/nuxt',
+    '@vueuse/nuxt',
   ],
 
   // experimental features

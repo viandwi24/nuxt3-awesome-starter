@@ -28,7 +28,7 @@ const MyTheme = {
 
 export default defineConfig({
   darkMode: 'class',
-  attributify: true,
+  attributify: false,
   extract: {
     include: [
       './components/**/*.{vue,js}',
