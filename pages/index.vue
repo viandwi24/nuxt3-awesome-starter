@@ -1,7 +1,33 @@
 <script lang="ts" setup>
+const { t } = useLang()
+
+// meta
 definePageMeta({
   layout: 'page',
 })
+
+// vars
+const titlesText = computed<string[]>(() => t('pages.index.title').split(','))
+const leadingsText = computed(() => [
+  {
+    text: titlesText.value[0],
+    startColor: '#007CF0',
+    endColor: '#00DFD8',
+    delay: 0,
+  },
+  {
+    text: titlesText.value[1],
+    startColor: '#7928CA',
+    endColor: '#FF0080',
+    delay: 2,
+  },
+  {
+    text: titlesText.value[2],
+    startColor: '#FF4D4D',
+    endColor: '#F9CB28',
+    delay: 4,
+  },
+])
 </script>
 
 <template>
@@ -21,11 +47,12 @@ definePageMeta({
     <div class="flex flex-col z-10">
       <h1 class="text-center">
         <span
-          v-for="(item, i) in $t('pages.index.title').split(',')"
+          v-for="(item, i) in leadingsText"
           :key="i"
-          class="linear-wipe-text drop-shadow-xl text-5xl xl:text-8xl 2xl:text-9xl block font-bold uppercase"
+          :style="`--content: '${item.text}'; --start-color: ${item.startColor}; --end-color: ${item.endColor}; --delay: ${item.delay}s`"
+          class="animated-text-bg drop-shadow-xl text-5xl xl:text-8xl 2xl:text-9xl block font-black uppercase"
         >
-          {{ item }}
+          <span class="animated-text-fg">{{ item.text }}</span>
         </span>
       </h1>
       <div class="flex space-x-4 justify-center mt-10">
@@ -48,29 +75,83 @@ definePageMeta({
 </template>
 
 <style lang="scss">
-.linear-wipe-text {
-  $color1: theme('colors.blue.500');
-  $color2: theme('colors.purple.500');
-  background: linear-gradient(
-    to right,
-    $color1 20%,
-    $color2 40%,
-    $color2 60%,
-    $color1 80%
-  );
-  background-size: 200% auto;
-  color: #000;
+$padding: 0.05em;
+.animated-text-bg {
+  position: relative;
+  display: block;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  content: var(--content);
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: theme('colors.slate.800');
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  padding-left: $padding;
+  padding-right: $padding;
+  &:before {
+    content: var(--content);
+    position: absolute;
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: theme('colors.slate.800');
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    padding-left: $padding;
+    padding-right: $padding;
+  }
+}
+.animated-text-fg {
   background-clip: text;
-  text-fill-color: transparent;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: shine 20s ease infinite;
-  @keyframes shine {
-    to {
-      background-position: 200% center;
+  padding-left: $padding;
+  padding-right: $padding;
+  background-image: linear-gradient(
+    90deg,
+    var(--start-color),
+    var(--end-color)
+  );
+  position: relative;
+  opacity: 0;
+  z-index: 1;
+  animation: anim-fg 8s infinite;
+  animation-delay: var(--delay);
+  @keyframes anim-fg {
+    0% {
+      opacity: 1;
+    }
+    16% {
+      opacity: 1;
+    }
+    33% {
+      opacity: 0;
+    }
+    83% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 }
+html.dark {
+  .animated-text-bg {
+    color: theme('colors.gray.100');
+    &:before {
+      color: theme('colors.gray.100');
+    }
+  }
+}
+
 .triangle-shape {
   width: 0;
   height: 0;
