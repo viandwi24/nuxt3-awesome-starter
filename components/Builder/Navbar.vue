@@ -103,6 +103,7 @@ const showDrawer = useState<boolean>('navbar.showDrawer', () => false)
 const showOptions = useState<boolean>('navbar.showOptions', () => false)
 
 onMounted(() => {
+  if (!navbar.value) return
   const { onScroll } = useSticky(navbar.value, 0)
   setTimeout(() => onScroll(), 50)
 })
