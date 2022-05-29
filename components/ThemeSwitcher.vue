@@ -1,3 +1,26 @@
+<script lang="ts" setup>
+import {
+  Listbox,
+  ListboxButton,
+  ListboxLabel,
+  ListboxOptions,
+  ListboxOption,
+} from '@headlessui/vue'
+import { IThemeSettingOptions, availableThemes } from '~/utils/theme'
+
+// micro compiler
+const props = defineProps({
+  type: {
+    type: String,
+    default: 'dropdown-right-top',
+  },
+})
+
+// state
+const themeSetting = useState<IThemeSettingOptions>('theme.setting')
+const currentStyle = toRef(props, 'type')
+</script>
+
 <template>
   <div class="flex items-center">
     <Listbox
@@ -12,6 +35,7 @@
       <ListboxButton
         type="button"
         :title="$t('components.theme_switcher.change_theme')"
+        class="transition-colors duration-300"
       >
         <span class="flex justify-center items-center dark:hidden">
           <IconUil:sun />
@@ -60,26 +84,3 @@
     </select>
   </div>
 </template>
-
-<script lang="ts" setup>
-import {
-  Listbox,
-  ListboxButton,
-  ListboxLabel,
-  ListboxOptions,
-  ListboxOption,
-} from '@headlessui/vue'
-import { IThemeSettingOptions, availableThemes } from '~/utils/theme'
-
-// micro compiler
-const props = defineProps({
-  type: {
-    type: String,
-    default: 'dropdown-right-top',
-  },
-})
-
-// state
-const themeSetting = useState<IThemeSettingOptions>('theme.setting')
-const currentStyle = toRef(props, 'type')
-</script>

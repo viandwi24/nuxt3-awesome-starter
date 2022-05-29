@@ -1,3 +1,9 @@
+<script lang="ts" setup>
+definePageMeta({
+  layout: 'page',
+})
+</script>
+
 <template>
   <PageWrapper>
     <PageHeader>
@@ -12,9 +18,3 @@
     </PageBody>
   </PageWrapper>
 </template>
-
-<script lang="ts" setup>
-definePageMeta({
-  layout: 'page',
-})
-</script>

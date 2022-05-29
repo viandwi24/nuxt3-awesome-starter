@@ -15,7 +15,7 @@
           class="flex space-x-4 border-l ml-6 pl-6 border-gray-900/10 dark:border-gray-50/[0.2]"
         >
           <LanguageSwitcher />
-          <ThemeToggle />
+          <ThemeSwitcher />
           <Anchor
             class="hover:no-underline hover:text-slate-900 hover:dark:text-white text-lg flex self-center items-center"
             href="https://github.com/viandwi24/nuxt3-awesome-starter"
@@ -34,7 +34,7 @@
             {{ $t('components.theme_switcher.change_theme') }}
           </div>
           <div class="mt-2">
-            <ThemeToggle type="select-box" />
+            <ThemeSwitcher type="select-box" />
           </div>
           <div class="mt-6 text-sm font-bold capitalize">
             {{ $t('components.language_switcher.change_language') }}

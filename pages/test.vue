@@ -1,3 +1,15 @@
+<script lang="ts" setup>
+import { useCounter } from '~/stores/counter'
+import { useIdentity } from '~/stores/identity'
+
+const counter = useCounter()
+const identity = useIdentity()
+
+definePageMeta({
+  layout: 'page',
+})
+</script>
+
 <template>
   <PageWrapper>
     <PageHeader>
@@ -68,15 +80,3 @@
     </PageBody>
   </PageWrapper>
 </template>
-
-<script lang="ts" setup>
-import { useCounter } from '~/stores/counter'
-import { useIdentity } from '~/stores/identity'
-
-const counter = useCounter()
-const identity = useIdentity()
-
-definePageMeta({
-  layout: 'page',
-})
-</script>

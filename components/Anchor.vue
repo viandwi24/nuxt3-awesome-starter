@@ -1,21 +1,3 @@
-<template>
-  <NuxtLink
-    v-if="to"
-    tag="a"
-    :to="to"
-    :class="`transition-colors duration-300 dark:hover:text-white hover:text-gray-900 hover:underline`"
-  >
-    <slot>{{ text }}</slot>
-  </NuxtLink>
-  <a
-    v-else
-    :class="`transition-colors duration-300 dark:hover:text-white hover:text-gray-900 hover:underline`"
-    :href="href"
-  >
-    <slot>{{ text }}</slot>
-  </a>
-</template>
-
 <script lang="ts" setup>
 // micro compiler
 const props = defineProps({
@@ -37,3 +19,21 @@ const props = defineProps({
 const href = toRef(props, 'href')
 const to = toRef(props, 'to')
 </script>
+
+<template>
+  <NuxtLink
+    v-if="to"
+    tag="a"
+    :to="to"
+    :class="`transition-colors duration-300 dark:hover:text-white hover:text-gray-900 hover:underline`"
+  >
+    <slot>{{ text }}</slot>
+  </NuxtLink>
+  <a
+    v-else
+    :class="`transition-colors duration-300 dark:hover:text-white hover:text-gray-900 hover:underline`"
+    :href="href"
+  >
+    <slot>{{ text }}</slot>
+  </a>
+</template>

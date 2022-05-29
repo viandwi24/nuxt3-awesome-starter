@@ -1,3 +1,9 @@
+<script lang="ts" setup>
+definePageMeta({
+  layout: 'dashboard',
+})
+</script>
+
 <template>
   <PageWrapper>
     <PageHeader>
@@ -19,9 +25,3 @@
     </PageBody>
   </PageWrapper>
 </template>
-
-<script lang="ts" setup>
-definePageMeta({
-  layout: 'dashboard',
-})
-</script>

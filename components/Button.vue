@@ -1,22 +1,3 @@
-<template>
-  <NuxtLink
-    v-if="to"
-    tag="a"
-    :to="to"
-    :class="`${defaultStyle} ${selectedStyle} ${selectedSize}`"
-  >
-    <slot>{{ text }}</slot>
-  </NuxtLink>
-  <a
-    v-else
-    :class="`${defaultStyle} ${selectedStyle} ${selectedSize}`"
-    :href="href"
-    @click="onClick"
-  >
-    <slot>{{ text }}</slot>
-  </a>
-</template>
-
 <script lang="ts" setup>
 const props = defineProps({
   text: {
@@ -48,13 +29,17 @@ const defaultStyle = `
   focus:outline-none focus:ring-1 focus:ring-offset-1 focus:dark:ring-offset-gray-50 focus:dark:ring-gray-400 focus:ring-gray-600/[0.6] focus:ring-offset-gray-800/[0.6]
   flex items-center justify-center
 `
-const styles = reactive({
+const styles = reactive<{
+  [key: string]: string
+}>({
   primary:
     'text-white bg-gray-800 hover:bg-white hover:text-gray-800 hover:border-gray-900 dark:text-gray-800 dark:bg-gray-100 dark:hover:bg-gray-800 dark:hover:text-gray-100 dark:border-white',
   secondary:
     'text-gray-800 bg-white hover:border-gray-900  dark:border-gray-900 dark:text-white dark:bg-gray-800 dark:hover:border-white',
 })
-const sizes = reactive({
+const sizes = reactive<{
+  [key: string]: string
+}>({
   lg: 'h-12 px-8 text-lg rounded-lg',
   md: 'h-10 px-6 text-base rounded',
   sm: 'h-8 px-4 text-sm rounded',
@@ -73,3 +58,22 @@ const onClick = () => {
   }
 }
 </script>
+
+<template>
+  <NuxtLink
+    v-if="to"
+    tag="a"
+    :to="to"
+    :class="`${defaultStyle} ${selectedStyle} ${selectedSize}`"
+  >
+    <slot>{{ text }}</slot>
+  </NuxtLink>
+  <a
+    v-else
+    :class="`${defaultStyle} ${selectedStyle} ${selectedSize}`"
+    :href="href"
+    @click="onClick"
+  >
+    <slot>{{ text }}</slot>
+  </a>
+</template>

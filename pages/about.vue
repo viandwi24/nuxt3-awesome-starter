@@ -1,3 +1,9 @@
+<script lang="ts" setup>
+definePageMeta({
+  layout: 'page',
+})
+</script>
+
 <template>
   <PageWrapper class="flex flex-col justify-center items-center">
     <PageHeader>
@@ -22,9 +28,3 @@
     </PageBody>
   </PageWrapper>
 </template>
-
-<script lang="ts" setup>
-definePageMeta({
-  layout: 'page',
-})
-</script>

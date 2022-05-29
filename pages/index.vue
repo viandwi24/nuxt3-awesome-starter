@@ -1,3 +1,9 @@
+<script lang="ts" setup>
+definePageMeta({
+  layout: 'page',
+})
+</script>
+
 <template>
   <PageWrapper class="flex justify-center items-center">
     <div class="background-overlay">
@@ -40,12 +46,6 @@
     </div>
   </PageWrapper>
 </template>
-
-<script lang="ts" setup>
-definePageMeta({
-  layout: 'page',
-})
-</script>
 
 <style lang="scss">
 .linear-wipe-text {

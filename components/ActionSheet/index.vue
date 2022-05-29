@@ -1,3 +1,24 @@
+<script lang="ts" setup>
+import { TransitionRoot, TransitionChild } from '@headlessui/vue'
+
+// micro compiler
+const emit = defineEmits(['onClose'])
+
+// state
+const show = ref(false)
+
+// methods
+const close = () => {
+  show.value = false
+  setTimeout(() => emit('onClose'), 1000)
+}
+
+// lifecycle
+onMounted(() => {
+  show.value = true
+})
+</script>
+
 <template>
   <Teleport to="body">
     <TransitionRoot :show="show" appear>
@@ -27,27 +48,6 @@
     </TransitionRoot>
   </Teleport>
 </template>
-
-<script lang="ts" setup>
-import { TransitionRoot, TransitionChild } from '@headlessui/vue'
-
-// micro compiler
-const emit = defineEmits(['onClose'])
-
-// state
-const show = ref(false)
-
-// methods
-const close = () => {
-  show.value = false
-  setTimeout(() => emit('onClose'), 1000)
-}
-
-// lifecycle
-onMounted(() => {
-  show.value = true
-})
-</script>
 
 <style lang="scss">
 .slide-fade-from-bottom-enter-active {
