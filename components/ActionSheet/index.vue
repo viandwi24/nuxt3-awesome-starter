@@ -10,12 +10,12 @@ const show = ref(false)
 // methods
 const close = () => {
   show.value = false
-  setTimeout(() => emit('onClose'), 1000)
+  setTimeout(() => emit('onClose'), 100)
 }
 
 // lifecycle
 onMounted(() => {
-  show.value = true
+  setTimeout(() => (show.value = true), 100)
 })
 </script>
 

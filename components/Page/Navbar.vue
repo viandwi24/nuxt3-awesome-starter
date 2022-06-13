@@ -26,7 +26,7 @@ const menus = computed((): IMenuItem[] => [
   <BuilderNavbar>
     <template #banner>
       <div
-        class="text-white text-xs text-center py-1 px-4 lg:px-8 bg-blue-500 capitalize"
+        class="text-white text-xs text-center py-1 px-4 lg:px-8 bg-primary-500 capitalize"
       >
         <span class="mr-1">
           {{ $t('banners.welcome', { app_name: app.name }) }}
