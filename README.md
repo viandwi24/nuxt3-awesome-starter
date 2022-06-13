@@ -27,6 +27,11 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 ## Preview
 <table align="center">
   <tr>
+    <td align="center" width="100%" colspan="2">
+      <img src="https://github.com/viandwi24/nuxt3-awesome-starter/blob/main/assets/images/preview_new.png?raw=true" alt="Preview" title="Preview">
+    </td>
+  </tr>
+  <tr>
     <td align="center" width="75%">
       <img src="https://github.com/viandwi24/nuxt3-awesome-starter/blob/main/assets/images/preview.gif?raw=true" alt="Preview" title="Preview">
     </td>
@@ -96,8 +101,8 @@ Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
       - [x] Section Title
 - [x] Dashboard Layout
     - [x] Sidebar
+- [x] Alert
 - [ ] Modal
-- [ ] Alert
 - [ ] 
 
 ## Notes
