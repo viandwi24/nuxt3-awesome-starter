@@ -2,7 +2,7 @@ import { defineConfig } from 'windicss/helpers'
 import type { Plugin } from 'windicss/types/interfaces'
 
 // colors
-import colors from 'windicss/colors'
+// import colors from 'windicss/colors'
 
 // plugins
 import TypographyPlugin from 'windicss/plugin/typography'
@@ -12,16 +12,17 @@ import FiltersPlugin from 'windicss/plugin/filters'
 const MyTheme = {
   colors: {
     green: {
-      50: '#f6fbf9',
-      100: '#ecf8f3',
-      200: '#d0ede0',
-      300: '#b3e3cd',
-      400: '#7bcda8',
-      500: '#42b883',
-      600: '#3ba676',
-      700: '#328a62',
-      800: '#286e4f',
-      900: '#205a40',
+      DEFAULT: '#3BA676',
+      '50': '#B4E4CF',
+      '100': '#A5DFC5',
+      '200': '#87D4B2',
+      '300': '#69CA9E',
+      '400': '#4BBF8B',
+      '500': '#3BA676',
+      '600': '#2C7D59',
+      '700': '#1E533B',
+      '800': '#0F2A1E',
+      '900': '#000000',
     },
   },
 }
@@ -46,9 +47,8 @@ export default defineConfig({
         '8xl': '90rem',
       },
       colors: {
-        primary: MyTheme.colors.green[500],
+        primary: MyTheme.colors.green,
         green: MyTheme.colors.green,
-        slate: colors.slate,
       },
     },
   },
