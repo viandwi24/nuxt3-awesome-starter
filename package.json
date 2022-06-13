@@ -23,7 +23,7 @@
     "@commitlint/cli": "^16.1.0",
     "@commitlint/config-conventional": "^16.0.0",
     "@headlessui/vue": "1.5.0",
-    "@iconify/json": "^1.1.456",
+    "@iconify/json": "^2.1.61",
     "@intlify/nuxt3": "^0.1.10",
     "@nuxtjs/eslint-config-typescript": "^7.0.2",
     "@nuxtjs/eslint-module": "3.1.0",

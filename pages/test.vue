@@ -12,52 +12,63 @@ definePageMeta({
 
 <template>
   <PageWrapper>
+    <PageSection>
+      <Alert
+        type="success"
+        title="This is a page for testing purposes"
+        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      />
+    </PageSection>
     <PageHeader>
       <PageTitle :text="$t('pages.test.title')" class="capitalize" />
     </PageHeader>
     <PageBody>
+      <!-- section -->
       <PageSection>
         <PageSectionTitle :text="$t('pages.test.counter')" class="capitalize" />
-        <div
-          class="flex flex-col items-center justify-items-center space-y-2 lg:space-y-0 lg:flex-row lg:space-x-2"
-        >
-          <div>Counter : {{ counter.count }}</div>
-          <Button
-            class="w-full lg:w-auto capitalize"
-            type="secondary"
-            size="sm"
-            :text="$t('pages.test.increment')"
-            @click.prevent="counter.increment"
-          />
-          <Button
-            class="w-full lg:w-auto"
-            type="secondary"
-            size="sm"
-            :text="`${$t('pages.test.increment')} 2x`"
-            @click.prevent="counter.increment2x"
-          />
-          <Button
-            class="w-full lg:w-auto capitalize"
-            type="secondary"
-            size="sm"
-            :text="$t('pages.test.decrement')"
-            @click.prevent="counter.decrement"
-          />
-          <Button
-            class="w-full lg:w-auto capitalize"
-            type="secondary"
-            size="sm"
-            :text="$t('pages.test.reset')"
-            @click.prevent="counter.reset"
-          />
+        <div class="">
+          <div class="mb-2">Counter : {{ counter.count }}</div>
+          <div
+            class="flex flex-col items-center justify-items-center space-y-2 lg:space-y-0 lg:flex-row lg:space-x-2"
+          >
+            <Button
+              class="w-full lg:w-auto capitalize"
+              type="secondary"
+              size="sm"
+              :text="$t('pages.test.increment')"
+              @click.prevent="counter.increment"
+            />
+            <Button
+              class="w-full lg:w-auto"
+              type="secondary"
+              size="sm"
+              :text="`${$t('pages.test.increment')} 2x`"
+              @click.prevent="counter.increment2x"
+            />
+            <Button
+              class="w-full lg:w-auto capitalize"
+              type="secondary"
+              size="sm"
+              :text="$t('pages.test.decrement')"
+              @click.prevent="counter.decrement"
+            />
+            <Button
+              class="w-full lg:w-auto capitalize"
+              type="secondary"
+              size="sm"
+              :text="$t('pages.test.reset')"
+              @click.prevent="counter.reset"
+            />
+          </div>
         </div>
       </PageSection>
+      <!-- section -->
       <PageSection>
         <PageSectionTitle
           :text="$t('pages.test.identity')"
           class="capitalize"
         />
-        <div>
+        <div class="mb-2">
           <span class="capitalize">{{ $t('pages.test.full_name') }} : </span>
           <span>{{ identity.fullName }}</span>
         </div>
