@@ -23,6 +23,16 @@ pages:
   about:
     nav: このサイトについて
     title: このサイトについて
+  setting:
+    nav: 設定
+    title: 設定
+    sections:
+      validate_username:
+        title: githubプロファイルを検証する
+        description: githubユーザー名を入力し、ボタンをクリックして検証します。
+        footer: 詳細については
+        footer_button: 検証
+        footer_link: github users api
   dashboard:
     nav: ダッシュボード
     title: ダッシュボード

@@ -12,18 +12,10 @@ definePageMeta({
 
 <template>
   <PageWrapper>
-    <PageSection>
-      <Alert
-        type="success"
-        title="This is a page for testing purposes"
-        text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-      />
-    </PageSection>
     <PageHeader>
       <PageTitle :text="$t('pages.test.title')" class="capitalize" />
     </PageHeader>
     <PageBody>
-      <!-- section -->
       <PageSection>
         <PageSectionTitle :text="$t('pages.test.counter')" class="capitalize" />
         <div class="">
@@ -62,7 +54,6 @@ definePageMeta({
           </div>
         </div>
       </PageSection>
-      <!-- section -->
       <PageSection>
         <PageSectionTitle
           :text="$t('pages.test.identity')"

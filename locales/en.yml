@@ -23,6 +23,16 @@ pages:
   about:
     nav: about
     title: about
+  setting:
+    nav: setting
+    title: setting
+    sections:
+      validate_username:
+        title: validate github profile
+        description: type your github username and click the button to validate.
+        footer: Learn more about
+        footer_button: validate
+        footer_link: github users api
   dashboard:
     nav: dashboard
     title: dashboard

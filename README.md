@@ -85,12 +85,14 @@ Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
 - [x] Footer
 - [x] Button
 - [x] Anchor (link)
+- [x] Alert
+- [x] Card
+- [x] Action Sheet
+- [x] Theme Toggle / Switcher
 - [x] Navbar
   - [x] Navbar Builder
   - [x] Drawer (on mobile)
   - [x] Options (on mobile)
-- [x] Action Sheet
-- [x] Theme Toggle / Switcher
 - [x] Page Layout
   - [x] Wrapper
   - [x] Header
@@ -101,9 +103,7 @@ Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
       - [x] Section Title
 - [x] Dashboard Layout
     - [x] Sidebar
-- [x] Alert
 - [ ] Modal
-- [ ] 
 
 ## Notes
 ### Styles

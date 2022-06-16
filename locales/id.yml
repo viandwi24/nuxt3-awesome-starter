@@ -23,6 +23,16 @@ pages:
   about:
     nav: tentang
     title: tentang penulis
+  setting:
+    nav: pengaturan
+    title: pengaturan
+    sections:
+      validate_username:
+        title: cek profile github anda
+        description: ketik username github anda dan klik tombol untuk memvalidasi.
+        footer: lebih lanjut tentang
+        footer_button: validasi
+        footer_link: github users api
   dashboard:
     nav: dashboard
     title: dashboard
