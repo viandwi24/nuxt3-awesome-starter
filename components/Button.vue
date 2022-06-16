@@ -18,7 +18,7 @@ const props = defineProps({
   },
   href: {
     type: String,
-    default: '',
+    default: undefined,
   },
 })
 
@@ -27,7 +27,7 @@ const defaultStyle = `
   cursor-pointer
   border transition-color duration-300
   focus:outline-none focus:ring-1 focus:ring-offset-1 focus:dark:ring-offset-gray-50 focus:dark:ring-gray-400 focus:ring-gray-600/[0.6] focus:ring-offset-gray-800/[0.6]
-  flex items-center justify-center
+  flex items-center justify-center font-semibold
 `
 const styles = reactive<{
   [key: string]: string
@@ -52,10 +52,13 @@ const selectedStyle = computed(() => styles[props.type] || styles.primary)
 const selectedSize = computed(() => sizes[props.size] || sizes.lg)
 
 // methods
-const onClick = () => {
+const onClick = (event: MouseEvent) => {
   const router = useRouter()
   if (props.to) {
     router.push(props.to)
+  }
+  if (!props.href) {
+    event.preventDefault()
   }
 }
 </script>
