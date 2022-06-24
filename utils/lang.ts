@@ -24,6 +24,11 @@ export const availableLocales: ILocales = {
     iso: 'ja',
     flag: '🇯🇵',
   },
+  ko: {
+    name: '한국어',
+    iso: 'ko',
+    flag: '🇰🇷',
+  },
 }
 
 export function LanguageManager() {

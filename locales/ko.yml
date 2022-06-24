@@ -1,0 +1,45 @@
+components:
+  language_switcher:
+    change_language: 언어 변경
+  theme_switcher:
+    theme: 주제
+    change_theme: 테마 변경
+pages:
+  index:
+    title: nuxt 3, 굉장한, 스타터
+  blank:
+    nav: 공백
+    title: 빈 페이지
+    just_blank_page_with_title: 제목이 있는 빈 페이지
+  test:
+    nav: 테스트
+    title: 테스트
+    counter: 카운터
+    increment: 증가
+    decrement: 감소
+    reset: 리셋
+    identity: 신분
+    full_name: 전체 이름
+  about:
+    nav: ~에 대한
+    title: ~에 대한
+  setting:
+    nav: 환경
+    title: 환경
+    sections:
+      validate_username:
+        title: github 프로필 확인
+        description: github 사용자 이름을 입력하고 버튼을 클릭하여 확인합니다.
+        footer: 자세히 알아보기
+        footer_button: 확인
+        footer_link: github 사용자 API
+  dashboard:
+    nav: 계기반
+    title: 계기반
+    index:
+      nav: 집
+      title: 집
+banners:
+  welcome: 안녕하세요, %{app_name}에 오신 것을 환영합니다!
+others:
+  learn_more: 더 알아보기
