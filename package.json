@@ -36,7 +36,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.0",
     "lint-staged": "^12.3.3",
-    "nuxt": "npm:nuxt3@3.0.0-rc.3-27584539.9d28c0a",
+    "nuxt": "npm:nuxt3@3.0.0-rc.4-27600153.ad42023",
     "nuxt-windicss": "2.2.8",
     "pinia": "^2.0.9",
     "postcss": "8.4.7",
@@ -52,5 +52,8 @@
     "**/*.{js,ts,vue,html,css,scss}": [
       "yarn lintfix"
     ]
+  },
+  "dependencies": {
+    "nuxt3": "3.0.0-rc.4-27600153.ad42023"
   }
 }
