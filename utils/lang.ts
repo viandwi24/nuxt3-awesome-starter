@@ -34,7 +34,10 @@ export function LanguageManager() {
   // methods
   const getSystemLocale = (): string => {
     try {
-      return window ? window.navigator.language.substring(0, 2) : 'en'
+      const foundLang = window
+        ? window.navigator.language.substring(0, 2)
+        : 'en'
+      return availableLocales[foundLang] ? foundLang : 'en'
     } catch (error) {
       return 'en'
     }
