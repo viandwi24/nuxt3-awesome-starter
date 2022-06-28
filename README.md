@@ -11,7 +11,7 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 - [x] ✨ [Headless UI](https://headlessui.dev/)
 - [x] 🔔 [Icon Pack Component (unplugin-icons)](https://icones.js.org/)
 - [x] 🛹 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
-- [x] 🚩 [Localization (i18n) by @intlify](https://github.com/intlify/nuxt3)
+- [x] 🚩 [Localization (i18n) by @intlify](https://github.com/intlify/nuxt3) & Auto Generate Locales
 - [x] 📦 [Vue Composition Collection (Vueuse)](https://vueuse.org/)
 - [x] 🌙 Switch Theme (light, dark, system, realtime)
 - [x] 🇮🇩 Language Switcher
@@ -67,6 +67,7 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
     - [Styles](#styles)
     - [Theme (Dark Mode)](#theme-dark-mode)
     - [Localization](#localization)
+    - [Generate Locales](#generate-locales)
     - [Icons](#icons)
     - [Precommit and Postmerge](#precommit-and-postmerge)
   - [License](#license)
@@ -166,6 +167,20 @@ langSetting.value = 'en'
 </script>
 ```
 When you change state `locale.setting`, it will automatically change language.
+
+### Generate Locales
+I made an automatic tool to automatically translate to all languages ​​that have been prepared in the ./locales/ folder
+So, you can just update "locales/en.yml" and run this tools, it will automatically translate to all languages.
+
+You can just run :
+```
+yarn generate:locales
+
+# or :
+
+node ./tools/translator.js ./locales en.yml
+```
+
 ### Icons
 This project using unplugin-icons for auto generate and import icon as component.
 

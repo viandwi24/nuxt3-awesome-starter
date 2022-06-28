@@ -6,14 +6,18 @@ components:
     change_theme: change theme
 pages:
   index:
-    title: nuxt 3,awesome,starter
+    title: nuxt 3[]awesome[]starter
+  404:
+    title: page not found
   blank:
     nav: blank
     title: blank page
+    description: this is a blank page
     just_blank_page_with_title: just blank page with title
   test:
     nav: test
     title: testing
+    description: this is a test page
     counter: counter
     increment: increment
     decrement: decrement
@@ -23,9 +27,11 @@ pages:
   about:
     nav: about
     title: about
+    description: this is a about page
   setting:
     nav: setting
     title: setting
+    description: this is a setting page
     sections:
       validate_username:
         title: validate github profile

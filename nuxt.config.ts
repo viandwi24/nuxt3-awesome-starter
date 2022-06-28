@@ -46,7 +46,7 @@ export default defineNuxtConfig({
   },
 
   // modules
-  modules: ['nuxt-windicss', '@intlify/nuxt3', '@vueuse/nuxt'],
+  modules: ['nuxt-windicss', '@intlify/nuxt3', '@vueuse/nuxt', '@nuxt/content'],
 
   // build modules
   buildModules: [

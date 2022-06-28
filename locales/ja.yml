@@ -1,45 +1,51 @@
 components:
   language_switcher:
-    change_language: 言語を変えてください
+    change_language: 言語を変更
   theme_switcher:
     theme: テーマ
-    change_theme: テーマを変えてください
+    change_theme: テーマを変更する
 pages:
+  '404':
+    title: ページが見つかりません
   index:
-    title: nuxt 3,素晴らしい,スターター
+    title: nuxt 3 [] awesome [] starter
   blank:
-    nav: 空白
+    nav: 空欄
     title: 空白ページ
-    just_blank_page_with_title: 空白ページのみにタイトル
+    description: これは空白のページです
+    just_blank_page_with_title: タイトルのある空白のページ
   test:
     nav: テスト
     title: テスト
+    description: これはテストページです
     counter: カウンター
-    increment: 増加
-    decrement: 減少
+    increment: インクリメント
+    decrement: デクリメント
     reset: リセット
-    identity: 識別
-    full_name: 全名
+    identity: 身元
+    full_name: フルネーム
   about:
-    nav: このサイトについて
-    title: このサイトについて
+    nav: 約
+    title: 約
+    description: これは概要ページです
   setting:
     nav: 設定
     title: 設定
+    description: これは設定ページです
     sections:
       validate_username:
         title: githubプロファイルを検証する
         description: githubユーザー名を入力し、ボタンをクリックして検証します。
         footer: 詳細については
         footer_button: 検証
-        footer_link: github users api
+        footer_link: githubユーザーapi
   dashboard:
     nav: ダッシュボード
     title: ダッシュボード
     index:
-      nav: ホーム
-      title: ホーム
+      nav: 家
+      title: 家
 banners:
-  welcome: こんにちは, %{app_name} へようこそ!
+  welcome: こんにちは、％{app_name}へようこそ！
 others:
-  learn_more: 続きを読む
+  learn_more: もっと詳しく知る

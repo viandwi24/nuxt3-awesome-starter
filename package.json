@@ -17,7 +17,8 @@
     "postinstall": "husky install",
     "lint": "eslint --ext \".ts,.js,.vue\" --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext \".ts,.js,.vue\" --ignore-path .gitignore .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "generate:locales": "node tools/translator.js ./locales en.yml"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.1.0",
@@ -25,6 +26,7 @@
     "@headlessui/vue": "1.5.0",
     "@iconify/json": "^2.1.61",
     "@intlify/nuxt3": "0.2.2",
+    "@nuxt/content": "^2.0.1",
     "@nuxtjs/eslint-config-typescript": "^7.0.2",
     "@nuxtjs/eslint-module": "3.1.0",
     "@nuxtjs/svg": "^0.3.0",
@@ -35,6 +37,7 @@
     "eslint-plugin-nuxt": "^3.0.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.0",
+    "js-yaml": "^4.1.0",
     "lint-staged": "^12.3.3",
     "nuxt": "npm:nuxt3@3.0.0-rc.4-27605536.8c2c80e",
     "nuxt-windicss": "2.2.8",
@@ -44,6 +47,7 @@
     "prettier": "^2.5.0",
     "sass": "1.49.9",
     "sass-loader": "^12.4.0",
+    "translate": "^1.4.1",
     "typescript": "^4.5.2",
     "unplugin-icons": "0.14.3",
     "unplugin-vue-components": "0.19.5"

@@ -5,41 +5,47 @@ components:
     theme: tema
     change_theme: ganti tema
 pages:
+  '404':
+    title: halaman tidak ditemukan
   index:
-    title: nuxt 3,permulaan,luar biasa
+    title: nuxt 3[]luar biasa[]pemula
   blank:
     nav: kosong
     title: halaman kosong
+    description: ini adalah halaman kosong
     just_blank_page_with_title: hanya halaman kosong dengan judul
   test:
-    nav: pengujian
+    nav: uji
     title: pengujian
-    counter: penghitung
-    increment: tambah
-    decrement: kurang
-    reset: reset ulang
+    description: ini adalah halaman percobaan
+    counter: menangkal
+    increment: kenaikan
+    decrement: pengurangan
+    reset: mengatur ulang
     identity: identitas
     full_name: nama lengkap
   about:
     nav: tentang
-    title: tentang penulis
+    title: tentang
+    description: ini adalah halaman tentang
   setting:
     nav: pengaturan
     title: pengaturan
+    description: ini adalah halaman pengaturan
     sections:
       validate_username:
-        title: cek profile github anda
-        description: ketik username github anda dan klik tombol untuk memvalidasi.
-        footer: lebih lanjut tentang
-        footer_button: validasi
-        footer_link: github users api
+        title: validasi profil github
+        description: ketik nama pengguna github anda dan klik tombol untuk memvalidasi.
+        footer: belajar lebih tentang
+        footer_button: mengesahkan
+        footer_link: pengguna github api
   dashboard:
-    nav: dashboard
-    title: dashboard
+    nav: dasbor
+    title: dasbor
     index:
-      nav: beranda 
-      title: beranda
+      nav: rumah
+      title: rumah
 banners:
   welcome: halo, selamat datang di %{app_name}!
 others:
-  learn_more: lihat selengkapnya
+  learn_more: belajarlah lagi

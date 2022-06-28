@@ -5,34 +5,40 @@ components:
     theme: 주제
     change_theme: 테마 변경
 pages:
+  '404':
+    title: 페이지를 찾을 수 없습니다
   index:
-    title: nuxt 3, 굉장한, 스타터
+    title: nuxt 3[]멋진[]스타터
   blank:
     nav: 공백
     title: 빈 페이지
+    description: 이것은 빈 페이지입니다
     just_blank_page_with_title: 제목이 있는 빈 페이지
   test:
     nav: 테스트
     title: 테스트
+    description: 이것은 테스트 페이지입니다
     counter: 카운터
     increment: 증가
     decrement: 감소
-    reset: 리셋
-    identity: 신분
+    reset: 초기화
+    identity: 신원
     full_name: 전체 이름
   about:
     nav: ~에 대한
     title: ~에 대한
+    description: 이것은 페이지에 관한 것입니다
   setting:
     nav: 환경
     title: 환경
+    description: 이것은 설정 페이지입니다
     sections:
       validate_username:
         title: github 프로필 확인
-        description: github 사용자 이름을 입력하고 버튼을 클릭하여 확인합니다.
-        footer: 자세히 알아보기
+        description: github 사용자 이름을 입력하고 버튼을 클릭하여 확인하십시오.
+        footer: 에 대해 자세히 알아보기
         footer_button: 확인
-        footer_link: github 사용자 API
+        footer_link: github 사용자 api
   dashboard:
     nav: 계기반
     title: 계기반
