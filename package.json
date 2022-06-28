@@ -24,19 +24,19 @@
     "@commitlint/config-conventional": "^16.0.0",
     "@headlessui/vue": "1.5.0",
     "@iconify/json": "^2.1.61",
-    "@intlify/nuxt3": "^0.1.10",
+    "@intlify/nuxt3": "0.2.2",
     "@nuxtjs/eslint-config-typescript": "^7.0.2",
     "@nuxtjs/eslint-module": "3.1.0",
     "@nuxtjs/svg": "^0.3.0",
     "@pinia/nuxt": "^0.1.8",
-    "@vueuse/nuxt": "8.4.2",
+    "@vueuse/nuxt": "8.7.5",
     "eslint": "^8.3.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-nuxt": "^3.0.0",
     "eslint-plugin-prettier": "^4.0.0",
     "husky": "^7.0.0",
     "lint-staged": "^12.3.3",
-    "nuxt": "npm:nuxt3@3.0.0-rc.4-27600153.ad42023",
+    "nuxt": "npm:nuxt3@3.0.0-rc.4-27605536.8c2c80e",
     "nuxt-windicss": "2.2.8",
     "pinia": "^2.0.9",
     "postcss": "8.4.7",
@@ -52,8 +52,5 @@
     "**/*.{js,ts,vue,html,css,scss}": [
       "yarn lintfix"
     ]
-  },
-  "dependencies": {
-    "nuxt3": "3.0.0-rc.4-27600153.ad42023"
   }
 }
