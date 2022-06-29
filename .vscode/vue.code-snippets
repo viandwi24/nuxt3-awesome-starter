@@ -1,0 +1,31 @@
+{
+  "Generate Nuxt 3 Page": {
+    "prefix": "n3:page",
+    "body": [
+      "<script lang=\"ts\" setup>",
+      "// compiler macro",
+      "definePageMeta({",
+      "  layout: 'page',",
+      "})",
+      "useHead(() => ({",
+      "  title: ${1:${PAGE_TITLE}},",
+      "}))",
+      "</script>",
+      "",
+      "<template>",
+      "  <PageWrapper>",
+      "    <PageHeader>",
+      "      <PageTitle text=\"${1:${PAGE_TITLE}}\" class=\"capitalize\" />",
+      "    </PageHeader>",
+      "    <PageBody>",
+      "      <PageSection>",
+      "        <div>${2:${PAGE_BODY}}</div>",
+      "      </PageSection>",
+      "    </PageBody>",
+      "  </PageWrapper>",
+      "</template>",
+      ""
+    ],
+    "description": "Generate Nuxt 3 Page"
+  }
+}

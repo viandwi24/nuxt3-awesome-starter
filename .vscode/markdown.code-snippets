@@ -1,0 +1,17 @@
+{
+  "Generate Nuxt 3 Content": {
+    "prefix": "n3:content",
+    "body": [
+      "---",
+      "title: '${1:${CONTENT_TITLE}}'",
+      "description: '${2:${CONTENT_DESCRIPTION}}'",
+      "date: '${3:${CONTENT_DATE}}'",
+      "author: '${4:${CONTENT_AUTHOR}}'",
+      "---",
+      "",
+      "${5:${CONTENT_BODY}}",
+      ""
+    ],
+    "description": "Generate Nuxt 3 Content"
+  }
+}
