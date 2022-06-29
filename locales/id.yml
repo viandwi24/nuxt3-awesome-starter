@@ -14,6 +14,11 @@ pages:
     title: halaman kosong
     description: ini adalah halaman kosong
     just_blank_page_with_title: hanya halaman kosong dengan judul
+  post:
+    nav: pos
+    title: pos
+    description: ini adalah halaman posting
+    read_more: baca selengkapnya
   test:
     nav: uji
     title: pengujian

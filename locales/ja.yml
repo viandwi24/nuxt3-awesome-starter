@@ -14,6 +14,11 @@ pages:
     title: 空白ページ
     description: これは空白のページです
     just_blank_page_with_title: タイトルのある空白のページ
+  post:
+    nav: 役職
+    title: 役職
+    description: これは投稿ページです
+    read_more: 続きを読む
   test:
     nav: テスト
     title: テスト

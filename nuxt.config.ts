@@ -106,4 +106,9 @@ export default defineNuxtConfig({
     },
     scan: true,
   },
+
+  // content
+  content: {
+    base: 'content',
+  },
 })
