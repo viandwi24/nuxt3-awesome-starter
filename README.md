@@ -13,7 +13,7 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 - [x] 🛹 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
 - [x] 🚩 [Localization (i18n) by @intlify](https://github.com/intlify/nuxt3) & Auto Generate Locales
 - [x] 📦 [Vue Composition Collection (Vueuse)](https://vueuse.org/)
-- [x] 📚 [Content Management System (Nuxt Content)](https://content.nuxtjs.org/)
+- [x] 📚 [Content Management System (Nuxt Content)](https://content.nuxtjs.org/) [SSR ONLY]
 - [x] 🌙 Switch Theme (light, dark, system, realtime)
 - [x] 🇮🇩 Language Switcher
 - [x] 🪝 Built-in Component & Layout
@@ -66,6 +66,7 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
   - [Quick Start](#quick-start)
   - [Built-in Components](#built-in-components)
   - [Notes](#notes)
+    - [Nuxt Content](#nuxt-content)
     - [Custom Workspace Snippets](#custom-workspace-snippets)
     - [Styles](#styles)
     - [Theme (Dark Mode)](#theme-dark-mode)
@@ -110,6 +111,10 @@ Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
 - [ ] Modal
 
 ## Notes
+### Nuxt Content
+With Nuxt Content, you can just create markdown file (recommended) inside `content` folder.  
+But this is only available for SSR (Server Side Rendering) mode. Static mode still not working, you can see the issue https://github.com/nuxt/content/issues/1202
+
 ### Custom Workspace Snippets
 This workspace including custom snippets for VSCode.
 - **n3:content**  

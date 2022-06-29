@@ -5,14 +5,11 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    'Icon:cil:arrowRight': typeof import('~icons/cil/arrow-right')['default']
     'Icon:ic:baselineArrowRightAlt': typeof import('~icons/ic/baseline-arrow-right-alt')['default']
-    'Icon:ic:baselineArrowRightAltt': typeof import('~icons/ic/baseline-arrow-right-altt')['default']
     'IconBi:exclamationCircleFill': typeof import('~icons/bi/exclamation-circle-fill')['default']
     'IconClarity:timesCircleSolid': typeof import('~icons/clarity/times-circle-solid')['default']
     'IconClarity:timesLine': typeof import('~icons/clarity/times-line')['default']
     'IconFaSolid:ellipsisV': typeof import('~icons/fa-solid/ellipsis-v')['default']
-    'IconIc:baselineArrowRightAlt': typeof import('~icons/ic/baseline-arrow-right-alt')['default']
     'IconLa:language': typeof import('~icons/la/language')['default']
     'IconMdi:checkCircle': typeof import('~icons/mdi/check-circle')['default']
     'IconMdi:githubFace': typeof import('~icons/mdi/github-face')['default']
