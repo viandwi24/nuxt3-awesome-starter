@@ -76,7 +76,26 @@ const leadingsText = computed(() => [
 </template>
 
 <style lang="scss">
-$padding: 0.05em;
+@import '../assets/sass/variables';
+
+@keyframes anim-fg {
+  0% {
+    opacity: 1;
+  }
+  16% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 0;
+  }
+  83% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .animated-text-bg {
   position: relative;
   display: block;
@@ -126,24 +145,8 @@ $padding: 0.05em;
   z-index: 1;
   animation: anim-fg 8s infinite;
   animation-delay: var(--delay);
-  @keyframes anim-fg {
-    0% {
-      opacity: 1;
-    }
-    16% {
-      opacity: 1;
-    }
-    33% {
-      opacity: 0;
-    }
-    83% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
 }
+
 html.dark {
   .animated-text-bg {
     color: theme('colors.gray.100');
