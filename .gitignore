@@ -11,3 +11,6 @@ node_modules
 .nuxt
 dist
 .output
+
+# IDE
+.idea
