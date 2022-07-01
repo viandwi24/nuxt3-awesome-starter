@@ -13,39 +13,59 @@ const props = defineProps({
     type: String,
     default: 'md',
   },
+  type: {
+    type: String,
+    default: 'default',
+  },
 })
 const emit = defineEmits(['update:modelValue'])
 const slots = useSlots()
 
-// state:styles
-const defaultStyle = `
-  outline-none 
-  transition-color duration-300 
-  bg-transparent border border-gray-900/10 dark:border-gray-50/[0.2] 
-  dark:focus:border-white focus:border-gray-900
-`
-const sizeStyles = reactive<{
+// list styles
+const paddingStyles = reactive<{
   [key: string]: string
 }>({
-  lg: 'h-12 px-4 text-lg',
-  md: 'h-10 px-4 text-base',
-  sm: 'h-8 px-4 text-sm',
-  xs: 'h-7 px-4 text-xs',
+  xs: 'px-1 py-0.5',
+  sm: 'px-2 py-1.5',
+  md: 'px-4 py-2',
+  lg: 'px-5 py-3',
 })
-const wrapperSizeStyles = reactive<{
+const fontSizeStyles = reactive<{
   [key: string]: string
 }>({
-  lg: 'rounded-lg',
-  md: 'rounded-lg',
-  sm: 'rounded-lg',
-  xs: 'rounded-lg',
+  xs: 'text-xs',
+  sm: 'text-sm',
+  md: 'text-base',
+  lg: 'text-lg',
 })
+// const onHoverBorderStyles = reactive<{
+//   [key: string]: string
+// }>({
+//   lg: 'rounded-lg',
+//   md: 'rounded',
+//   sm: 'rounded-sm',
+//   xs: 'rounded-xs',
+// })
 
-// state
+// states
 const modelValue = useSyncProps<string>(props, 'modelValue', emit)
-const selectedSize = computed(() => sizeStyles[props.size] || sizeStyles.md)
-const inputRondedStyle = computed(() =>
-  slots.prefix ? 'rounded-r' : 'rounded'
+const havePreEl = computed(
+  () =>
+    typeof slots.prefix !== 'undefined' ||
+    typeof slots['prefix-disabled'] !== 'undefined'
+)
+const haveSuEl = computed(() => typeof slots.suffix !== 'undefined')
+const selectedBorderStyle = computed(
+  () => 'border-gray-900/10 dark:border-gray-50/[0.2]'
+)
+const selectedOnHoverBorderStyle = computed(
+  () => 'dark:focus:border-white focus:border-gray-900'
+)
+const selectedPaddingStyle = computed(
+  () => paddingStyles[props.size] || paddingStyles.md
+)
+const selectedFontSizeStyle = computed(
+  () => fontSizeStyles[props.size] || fontSizeStyles.md
 )
 
 // methods
@@ -53,19 +73,37 @@ const onInput = () => emit('update:modelValue', modelValue.value)
 </script>
 
 <template>
-  <div :class="`flex relative overflow-hidden ${wrapperSizeStyles}`">
+  <div :class="`text-input-container relative flex`">
+    <div
+      v-if="slots['prefix-disabled']"
+      :class="`flex rounded-l bg-gray-100 dark:bg-slate-800 text-gray-500 border ${selectedBorderStyle}`"
+    >
+      <slot name="prefix-disabled" />
+    </div>
     <div
       v-if="slots.prefix"
-      :class="`px-4 py-2 rounded-l ${defaultStyle} ${selectedSize} bg-gray-100 dark:bg-slate-800 text-gray-500`"
+      :class="`flex rounded-l border ${selectedBorderStyle}`"
     >
       <slot name="prefix" />
     </div>
-    <input
-      v-model="modelValue"
-      type="text"
-      :class="`flex-1 block w-full ${inputRondedStyle} ${defaultStyle} ${selectedSize}`"
-      :placeholder="placeholder"
-      @input="onInput"
-    />
+    <div class="text-input-wrapper relative flex flex-1">
+      <input
+        :class="`text-input flex-1 bg-transparent outline-none border ${
+          havePreEl ? '' : 'rounded-l'
+        } ${
+          haveSuEl ? '' : 'rounded-r'
+        } ${selectedBorderStyle} ${selectedOnHoverBorderStyle} ${selectedPaddingStyle} ${selectedFontSizeStyle}`"
+        :type="type"
+        :value="modelValue"
+        :placeholder="placeholder"
+        @input="onInput"
+      />
+    </div>
+    <div
+      v-if="slots.suffix"
+      :class="`flex rounded-r border ${selectedBorderStyle}`"
+    >
+      <slot name="suffix" />
+    </div>
   </div>
 </template>

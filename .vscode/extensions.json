@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "Vue.volar"
+        "Vue.volar",
+        "Nuxt.mdc"
     ]
 }

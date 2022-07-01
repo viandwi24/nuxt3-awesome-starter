@@ -32,6 +32,7 @@ const defaultStyle = `
 const styles = reactive<{
   [key: string]: string
 }>({
+  none: '',
   primary: 'text-white bg-primary-500 hover:bg-primary-400 border-primary-500',
   secondary:
     'text-slate-800 bg-gray-200 border-gray-200 hover:bg-gray-300 dark:text-white dark:border-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700',
@@ -41,9 +42,9 @@ const styles = reactive<{
 const sizes = reactive<{
   [key: string]: string
 }>({
-  lg: 'h-12 px-8 text-lg rounded-lg',
+  lg: 'h-13 px-8 text-lg rounded-lg',
   md: 'h-10 px-6 text-base rounded',
-  sm: 'h-8 px-4 text-sm rounded',
+  sm: 'h-9 px-4 text-sm rounded',
   xs: 'h-6 px-3 text-xs rounded',
 })
 

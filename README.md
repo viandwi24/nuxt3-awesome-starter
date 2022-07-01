@@ -13,7 +13,7 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 - [x] 🛹 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
 - [x] 🚩 [Localization (i18n) by @intlify](https://github.com/intlify/nuxt3) & Auto Generate Locales
 - [x] 📦 [Vue Composition Collection (Vueuse)](https://vueuse.org/)
-- [x] 📚 [Content Management System (Nuxt Content)](https://content.nuxtjs.org/) [SSR ONLY]
+- [x] 📚 [Content Management System (Nuxt Content)](https://content.nuxtjs.org/) [SSR]
 - [x] 🌙 Switch Theme (light, dark, system, realtime)
 - [x] 🇮🇩 Language Switcher
 - [x] 🪝 Built-in Component & Layout
@@ -64,6 +64,8 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
   - [Preview](#preview)
   - [Table of Contents](#table-of-contents)
   - [Quick Start](#quick-start)
+    - [Start with this template](#start-with-this-template)
+    - [Deploy as Static Site](#deploy-as-static-site)
   - [Built-in Components](#built-in-components)
   - [Notes](#notes)
     - [Nuxt Content](#nuxt-content)
@@ -77,12 +79,14 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
   - [License](#license)
 
 ## Quick Start
+### Start with this template
 * This project using `yarn` as package manager.
 * Clone this project to your computer `git clone https://github.com/viandwi24/nuxt3-awesome-starter`
 * Install dependencies `yarn install`
 * Run `yarn dev` to start development server and open `http://localhost:3000` in your browser
-* Run `yarn build` to build project and `yarn start` to start production server
-
+### Deploy as Static Site
+* Run `yarn generate` to build the project
+* Serve `dist/` folder
 Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
 
 
@@ -114,6 +118,7 @@ Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
 ### Nuxt Content
 With Nuxt Content, you can just create markdown file (recommended) inside `content` folder.  
 But this is only available for SSR (Server Side Rendering) mode. Static mode still not working, you can see the issue https://github.com/nuxt/content/issues/1202
+For now, you can follow 
 
 ### Custom Workspace Snippets
 This workspace including custom snippets for VSCode.

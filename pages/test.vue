@@ -81,13 +81,13 @@ const identity = useIdentity()
           <div
             class="flex flex-col items-center space-y-2 lg:space-y-0 lg:flex-row lg:space-x-2"
           >
-            <FormTextInput v-model="identity.firstName" size="sm" />
-            <FormTextInput v-model="identity.lastName" size="sm" />
+            <FormTextInput v-model="identity.firstName" size="md" />
+            <FormTextInput v-model="identity.lastName" size="md" />
             <Button
-              class="w-full capitalize"
+              class="capitalize"
               :text="$t('pages.test.reset')"
               type="secondary"
-              size="sm"
+              size="md"
               @click.prevent="identity.reset"
             />
           </div>

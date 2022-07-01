@@ -18,7 +18,6 @@ pages:
     nav: 役職
     title: 役職
     description: これは投稿ページです
-    read_more: 続きを読む
   test:
     nav: テスト
     title: テスト
@@ -44,6 +43,10 @@ pages:
         footer: 詳細については
         footer_button: 検証
         footer_link: githubユーザーapi
+      bot_id:
+        title: ボットid
+        description: これはボットidです。
+        footer: ボットと対話するときに使用されます。
   dashboard:
     nav: ダッシュボード
     title: ダッシュボード
@@ -54,3 +57,4 @@ banners:
   welcome: こんにちは、％{app_name}へようこそ！
 others:
   learn_more: もっと詳しく知る
+  copy: コピー

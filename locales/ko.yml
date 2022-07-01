@@ -18,7 +18,6 @@ pages:
     nav: 게시하다
     title: 게시하다
     description: 이것은 게시물 페이지입니다
-    read_more: 더 읽기
   test:
     nav: 테스트
     title: 테스트
@@ -44,6 +43,10 @@ pages:
         footer: 에 대해 자세히 알아보기
         footer_button: 확인
         footer_link: github 사용자 api
+      bot_id:
+        title: 봇 아이디
+        description: 이것은 봇 id입니다.
+        footer: 봇과 상호 작용할 때 사용됩니다.
   dashboard:
     nav: 계기반
     title: 계기반
@@ -54,3 +57,4 @@ banners:
   welcome: 안녕하세요, %{app_name}에 오신 것을 환영합니다!
 others:
   learn_more: 더 알아보기
+  copy: 복사

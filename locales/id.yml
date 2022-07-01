@@ -18,7 +18,6 @@ pages:
     nav: pos
     title: pos
     description: ini adalah halaman posting
-    read_more: baca selengkapnya
   test:
     nav: uji
     title: pengujian
@@ -44,6 +43,10 @@ pages:
         footer: belajar lebih tentang
         footer_button: mengesahkan
         footer_link: pengguna github api
+      bot_id:
+        title: id bot
+        description: ini adalah id bot anda.
+        footer: digunakan saat berinteraksi dengan bot.
   dashboard:
     nav: dasbor
     title: dasbor
@@ -54,3 +57,4 @@ banners:
   welcome: halo, selamat datang di %{app_name}!
 others:
   learn_more: belajarlah lagi
+  copy: salinan
