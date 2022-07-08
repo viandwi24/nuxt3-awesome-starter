@@ -1439,10 +1439,10 @@
     "@intlify/shared" "9.2.0-beta.36"
     source-map "0.6.1"
 
-"@intlify/nuxt3@0.2.2":
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/@intlify/nuxt3/-/nuxt3-0.2.2.tgz#6ef1e409718fe2d80ce909ac5ebb8807b71b8952"
-  integrity sha512-VOpEm2vnweMwt/GXkrCDQ3P/+VPdjuJFuF52TLD+kTrUUU2hEt5whSvOh8M1bTTn0WL+D/Hn+SGvYhJz+mtgQg==
+"@intlify/nuxt3@0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@intlify/nuxt3/-/nuxt3-0.2.3.tgz#3cfe82342e1f1f083477d2d9ffbfbd88b35078d7"
+  integrity sha512-3EK/k7j3kpRp1sddEH7g9p+sl/9pIaNeLry53Rf5g60l32lqaJrK3ykYHIyZOaEYkY+uCaacHVRaKR1cwtQ0Sg==
   dependencies:
     "@intlify/shared" beta
     "@intlify/vite-plugin-vue-i18n" next
