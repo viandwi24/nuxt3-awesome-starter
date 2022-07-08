@@ -111,7 +111,5 @@ export default defineNuxtConfig({
   },
 
   // content
-  content: {
-    base: 'content',
-  },
+  content: {},
 })

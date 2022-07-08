@@ -35,31 +35,31 @@ const identity = useIdentity()
         <div class="">
           <div class="mb-2">Counter : {{ counter.count }}</div>
           <div
-            class="flex flex-col items-center justify-items-center space-y-2 lg:space-y-0 lg:flex-row lg:space-x-2"
+            class="flex flex-col items-center justify-items-center space-y-2 md:space-y-0 md:flex-row md:space-x-2"
           >
             <Button
-              class="w-full lg:w-auto capitalize"
+              class="w-full md:w-auto capitalize"
               type="secondary"
               size="sm"
               :text="$t('pages.test.increment')"
               @click.prevent="counter.increment"
             />
             <Button
-              class="w-full lg:w-auto"
+              class="w-full md:w-auto"
               type="secondary"
               size="sm"
               :text="`${$t('pages.test.increment')} 2x`"
               @click.prevent="counter.increment2x"
             />
             <Button
-              class="w-full lg:w-auto capitalize"
+              class="w-full md:w-auto capitalize"
               type="secondary"
               size="sm"
               :text="$t('pages.test.decrement')"
               @click.prevent="counter.decrement"
             />
             <Button
-              class="w-full lg:w-auto capitalize"
+              class="w-full md:w-auto capitalize"
               type="secondary"
               size="sm"
               :text="$t('pages.test.reset')"
@@ -79,12 +79,20 @@ const identity = useIdentity()
         </div>
         <div class="">
           <div
-            class="flex flex-col items-center space-y-2 lg:space-y-0 lg:flex-row lg:space-x-2"
+            class="flex flex-col items-center space-y-2 md:space-y-0 md:flex-row md:space-x-2"
           >
-            <FormTextInput v-model="identity.firstName" size="md" />
-            <FormTextInput v-model="identity.lastName" size="md" />
+            <FormTextInput
+              v-model="identity.firstName"
+              size="md"
+              class="w-full md:w-1/3"
+            />
+            <FormTextInput
+              v-model="identity.lastName"
+              size="md"
+              class="w-full md:w-1/3"
+            />
             <Button
-              class="capitalize"
+              class="capitalize w-full md:w-auto"
               :text="$t('pages.test.reset')"
               type="secondary"
               size="md"
