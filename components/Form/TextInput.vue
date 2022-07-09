@@ -38,14 +38,6 @@ const fontSizeStyles = reactive<{
   md: 'text-base',
   lg: 'text-lg',
 })
-// const onHoverBorderStyles = reactive<{
-//   [key: string]: string
-// }>({
-//   lg: 'rounded-lg',
-//   md: 'rounded',
-//   sm: 'rounded-sm',
-//   xs: 'rounded-xs',
-// })
 
 // states
 const modelValue = useSyncProps<string>(props, 'modelValue', emit)
@@ -67,9 +59,6 @@ const selectedPaddingStyle = computed(
 const selectedFontSizeStyle = computed(
   () => fontSizeStyles[props.size] || fontSizeStyles.md
 )
-
-// methods
-const onInput = () => emit('update:modelValue', modelValue.value)
 </script>
 
 <template>
@@ -88,15 +77,14 @@ const onInput = () => emit('update:modelValue', modelValue.value)
     </div>
     <div class="text-input-wrapper relative flex flex-1">
       <input
+        v-model="modelValue"
         :class="`text-input w-full flex-1 bg-transparent outline-none border ${
           havePreEl ? '' : 'rounded-l'
         } ${
           haveSuEl ? '' : 'rounded-r'
         } ${selectedBorderStyle} ${selectedOnHoverBorderStyle} ${selectedPaddingStyle} ${selectedFontSizeStyle}`"
         :type="type"
-        :value="modelValue"
         :placeholder="placeholder"
-        @input="onInput"
       />
     </div>
     <div
