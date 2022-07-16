@@ -50,7 +50,9 @@ const leadingsText = computed(() => [
         <span
           v-for="(item, i) in leadingsText"
           :key="i"
-          :style="`--content: '${item.text}'; --start-color: ${item.startColor}; --end-color: ${item.endColor}; --delay: ${item.delay}s`"
+          :style="`--content: '${item.text}'; --start-color: ${
+            item.startColor
+          }; --end-color: ${item.endColor}; --animation-name: anim-fg-${i + 1}`"
           class="animated-text-bg drop-shadow-xl text-5xl xl:text-8xl 2xl:text-9xl block font-black uppercase"
         >
           <span class="animated-text-fg">{{ item.text }}</span>
@@ -78,20 +80,42 @@ const leadingsText = computed(() => [
 <style lang="scss">
 @import '../assets/sass/variables';
 
-@keyframes anim-fg {
-  0% {
-    opacity: 1;
-  }
-  16% {
-    opacity: 1;
-  }
-  33% {
-    opacity: 0;
-  }
-  83% {
-    opacity: 0;
-  }
+@keyframes anim-fg-1 {
+  0%,
+  16.667%,
   100% {
+    opacity: 1;
+  }
+
+  33.333%,
+  83.333% {
+    opacity: 0;
+  }
+}
+
+@keyframes anim-fg-2 {
+  0%,
+  16.667%,
+  66.667%,
+  100% {
+    opacity: 0;
+  }
+
+  33.333%,
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes anim-fg-3 {
+  0%,
+  50%,
+  100% {
+    opacity: 0;
+  }
+
+  66.667%,
+  83.333% {
     opacity: 1;
   }
 }
@@ -143,8 +167,7 @@ const leadingsText = computed(() => [
   position: relative;
   opacity: 0;
   z-index: 1;
-  animation: anim-fg 8s infinite;
-  animation-delay: var(--delay);
+  animation: var(--animation-name) 8s infinite;
 }
 
 html.dark {
