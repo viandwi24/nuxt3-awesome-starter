@@ -1,10 +1,13 @@
 # Nuxt 3 Awesome Starter
-a Nuxt 3 starter template or boilerplate with a lot of useful features. and integrated with TailwindCSS 3.
+a Nuxt 3 starter template or boilerplate with a lot of useful features. and integrated with TailwindCSS 3.  
+
+_This template was built to make it easier to create web projects using Nuxt 3. It was originally designed for coursework and portfolio templates. (hence there will be lots of ui components for easy reuse)_
 
 > **WARNING** \
-> Nuxt 3 now in RC version (Release Candidate) [But i'm still using from nuxt3 latest version]  
-> Nuxt 3 is still in beta and is not recommended for production use.  
-> Breaking changes tracker can be found [here](https://github.com/nuxt/framework/discussions/2883)
+> Nuxt 3 now in RC version (Release Candidate) [But this template using Nuxt 3.x edge* (latest version)]  
+> Not recommended for production use.  
+> * Breaking changes tracker can be found [here](https://github.com/nuxt/framework/discussions/2883)  
+> * Roadmap can be found [here](https://v3.nuxtjs.org/community/roadmap)
 
 ## Features
 - [x] 💨 [Tailwind CSS v3](https://tailwindcss.com/) with [Windicss](https://windicss.org/)
