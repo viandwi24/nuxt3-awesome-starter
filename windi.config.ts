@@ -2,7 +2,7 @@ import { defineConfig } from 'windicss/helpers'
 import type { Plugin } from 'windicss/types/interfaces'
 
 // colors
-// import colors from 'windicss/colors'
+import colors from 'windicss/colors'
 
 // plugins
 import TypographyPlugin from 'windicss/plugin/typography'
@@ -22,6 +22,19 @@ const MyTheme = {
       '600': '#2C7D59',
       '700': '#1E533B',
       '800': '#0F2A1E',
+      '900': '#000000',
+    },
+    blue: {
+      DEFAULT: '#005AC2',
+      '50': '#7BB8FF',
+      '100': '#66ADFF',
+      '200': '#3D97FF',
+      '300': '#1581FF',
+      '400': '#006DEB',
+      '500': '#005AC2',
+      '600': '#00408A',
+      '700': '#002652',
+      '800': '#000C1A',
       '900': '#000000',
     },
   },
@@ -48,7 +61,11 @@ export default defineConfig({
       },
       colors: {
         primary: MyTheme.colors.green,
+        // if want to change primary color to blue
+        // primary: MyTheme.colors.blue,
         green: MyTheme.colors.green,
+        blue: MyTheme.colors.blue,
+        slate: colors.slate,
       },
     },
   },

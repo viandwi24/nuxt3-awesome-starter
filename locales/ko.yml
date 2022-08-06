@@ -47,6 +47,10 @@ pages:
         title: 봇 아이디
         description: 이것은 봇 id입니다.
         footer: 봇과 상호 작용할 때 사용됩니다.
+      protection_spam:
+        title: 스팸 방지
+        description: 활성화를 토글하여 빨간색 테두리를 제거합니다.
+        footer: 활성화하면 스팸으로부터 댓글을 보호합니다.
   dashboard:
     nav: 계기반
     title: 계기반
@@ -58,3 +62,5 @@ banners:
 others:
   learn_more: 더 알아보기
   copy: 복사
+  enabled: 활성화
+  disabled: 장애가 있는

@@ -3,12 +3,12 @@ components:
     change_language: 言語を変更
   theme_switcher:
     theme: テーマ
-    change_theme: テーマを変更する
+    change_theme: テーマを変更
 pages:
   '404':
     title: ページが見つかりません
   index:
-    title: nuxt 3 [] awesome [] starter
+    title: nuxt 3[]素晴らしい[]スターター
   blank:
     nav: 空欄
     title: 空白ページ
@@ -35,18 +35,22 @@ pages:
   setting:
     nav: 設定
     title: 設定
-    description: これは設定ページです
+    description: 設定ページです
     sections:
       validate_username:
-        title: githubプロファイルを検証する
-        description: githubユーザー名を入力し、ボタンをクリックして検証します。
-        footer: 詳細については
+        title: github プロファイルを検証する
+        description: github ユーザー名を入力し、ボタンをクリックして検証します。
+        footer: 詳しくはこちら
         footer_button: 検証
-        footer_link: githubユーザーapi
+        footer_link: github ユーザー api
       bot_id:
         title: ボットid
-        description: これはボットidです。
+        description: これがボット id です。
         footer: ボットと対話するときに使用されます。
+      protection_spam:
+        title: スパム保護
+        description: 有効に切り替えて、赤い枠を削除します
+        footer: 有効にすると、コメントをスパムから保護します
   dashboard:
     nav: ダッシュボード
     title: ダッシュボード
@@ -54,7 +58,9 @@ pages:
       nav: 家
       title: 家
 banners:
-  welcome: こんにちは、％{app_name}へようこそ！
+  welcome: こんにちは、%{app_name} へようこそ!
 others:
   learn_more: もっと詳しく知る
   copy: コピー
+  enabled: 有効
+  disabled: 無効

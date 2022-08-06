@@ -62,7 +62,7 @@ const toggleOptions = (show?: boolean) => {
               <span class="sr-only">home</span>
               <span class="flex items-center">
                 <IconSimpleIcons:nuxtdotjs
-                  class="inline-block mr-2 text-lg text-green-600"
+                  class="inline-block mr-2 text-lg text-primary-500"
                 />
                 {{ app.name }}
               </span>

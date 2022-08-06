@@ -47,6 +47,10 @@ pages:
         title: bot id
         description: This is your bot ID.
         footer: Used when interacting with the bot.
+      protection_spam:
+        title: spam protection
+        description: toggle enable to remove the red border
+        footer: if enable we will secure your comments from spam
   dashboard:
     nav: dashboard
     title: dashboard
@@ -58,3 +62,5 @@ banners:
 others:
   learn_more: learn more
   copy: copy
+  enabled: enabled
+  disabled: disabled

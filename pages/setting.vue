@@ -34,6 +34,7 @@ const randomToken = () => {
 // state
 const username = ref('viandwi24')
 const id = ref(randomToken())
+const enableSpamProtection = ref(false)
 
 // methods
 const validate = async () => {
@@ -88,6 +89,18 @@ const validate = async () => {
                 ]"
               >
                 General
+              </button>
+            </Tab>
+            <Tab v-slot="{ selected }" as="template">
+              <button
+                :class="[
+                  'md:w-full text-left px-3 py-1.5 rounded py-2.5 text-sm leading-5',
+                  selected
+                    ? 'font-bold bg-gray-200 dark:bg-slate-700/50 dark:text-gray-200'
+                    : 'text-slate-800 dark:text-gray-400 hover:bg-gray-200 hover:text-slate-900 dark:hover:bg-white/[0.12] dark:hover:text-white',
+                ]"
+              >
+                Protection
               </button>
             </Tab>
             <Tab v-slot="{ selected }" as="template">
@@ -178,6 +191,42 @@ const validate = async () => {
                 <CardFooter class="justify-between">
                   <p>
                     {{ $t('pages.setting.sections.bot_id.footer') }}
+                  </p>
+                </CardFooter>
+              </Card>
+            </TabPanel>
+            <TabPanel>
+              <Card
+                :class="{
+                  'mb-4': true,
+                  'border-red-500 dark:border-red-500': !enableSpamProtection,
+                }"
+              >
+                <CardContent>
+                  <CardTitle
+                    class="capitalize"
+                    :text="$t('pages.setting.sections.protection_spam.title')"
+                  />
+                  <p class="mb-2">
+                    {{
+                      $t('pages.setting.sections.protection_spam.description')
+                    }}
+                  </p>
+                  <div class="flex">
+                    <FormSwitch v-model="enableSpamProtection">
+                      <span class="capitalize">
+                        {{
+                          enableSpamProtection
+                            ? $t('others.enabled')
+                            : $t('others.disabled')
+                        }}
+                      </span>
+                    </FormSwitch>
+                  </div>
+                </CardContent>
+                <CardFooter class="justify-between">
+                  <p>
+                    {{ $t('pages.setting.sections.protection_spam.footer') }}
                   </p>
                 </CardFooter>
               </Card>

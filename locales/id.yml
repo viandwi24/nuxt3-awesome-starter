@@ -47,6 +47,10 @@ pages:
         title: id bot
         description: ini adalah id bot anda.
         footer: digunakan saat berinteraksi dengan bot.
+      protection_spam:
+        title: proteksi spam
+        description: alihkan aktifkan untuk menghapus batas merah
+        footer: jika memungkinkan kami akan mengamankan komentar anda dari spam
   dashboard:
     nav: dasbor
     title: dasbor
@@ -58,3 +62,5 @@ banners:
 others:
   learn_more: belajarlah lagi
   copy: salinan
+  enabled: diaktifkan
+  disabled: dengan disabilitas
