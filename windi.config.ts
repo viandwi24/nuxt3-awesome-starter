@@ -37,6 +37,19 @@ const MyTheme = {
       '800': '#000C1A',
       '900': '#000000',
     },
+    azure: {
+      DEFAULT: '#0096FF',
+      '50': '#B8E2FF',
+      '100': '#A3D9FF',
+      '200': '#7AC8FF',
+      '300': '#52B8FF',
+      '400': '#29A7FF',
+      '500': '#0096FF',
+      '600': '#0075C7',
+      '700': '#00548F',
+      '800': '#003357',
+      '900': '#00121F',
+    },
   },
 }
 
@@ -60,7 +73,7 @@ export default defineConfig({
         '8xl': '90rem',
       },
       colors: {
-        primary: MyTheme.colors.green,
+        primary: MyTheme.colors.azure,
         // if want to change primary color to blue
         // primary: MyTheme.colors.blue,
         green: MyTheme.colors.green,
