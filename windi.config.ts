@@ -4,6 +4,9 @@ import type { Plugin } from 'windicss/types/interfaces'
 // colors
 import colors from 'windicss/colors'
 
+// themes
+import defaultTheme from 'windicss/defaultTheme'
+
 // plugins
 import TypographyPlugin from 'windicss/plugin/typography'
 import AspectRatioPlugin from 'windicss/plugin/aspect-ratio'
@@ -25,19 +28,6 @@ const MyTheme = {
       '900': '#000000',
     },
     blue: {
-      DEFAULT: '#005AC2',
-      '50': '#7BB8FF',
-      '100': '#66ADFF',
-      '200': '#3D97FF',
-      '300': '#1581FF',
-      '400': '#006DEB',
-      '500': '#005AC2',
-      '600': '#00408A',
-      '700': '#002652',
-      '800': '#000C1A',
-      '900': '#000000',
-    },
-    azure: {
       DEFAULT: '#0096FF',
       '50': '#B8E2FF',
       '100': '#A3D9FF',
@@ -73,12 +63,15 @@ export default defineConfig({
         '8xl': '90rem',
       },
       colors: {
-        primary: MyTheme.colors.azure,
-        // if want to change primary color to blue
-        // primary: MyTheme.colors.blue,
+        primary: MyTheme.colors.blue,
+        // if want to change primary color to green
+        // primary: MyTheme.colors.green,
         green: MyTheme.colors.green,
         blue: MyTheme.colors.blue,
         slate: colors.slate,
+      },
+      fontFamily: {
+        sans: ['Nunito', ...defaultTheme.fontFamily.sans],
       },
     },
   },

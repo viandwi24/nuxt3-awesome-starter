@@ -27,9 +27,9 @@ _This template was built to make it easier to create web projects using Nuxt 3. 
 ## To Do
 - [ ] Adding simple Unit Test
 - [ ] Adding HTTP Client
-- [ ] Configurab**l**e Theme
+- [ ] Configurable Theme
   - [x] Primary Colors
-  - [ ] Font
+  - [x] Font
 
 ## Preview
 <table align="center">

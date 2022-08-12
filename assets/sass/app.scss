@@ -1,11 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+// vars
 @import 'variables';
 
-body,
-* {
-  font-family: $fontFamily !important;
-}
-
-// scrollbar
+// components
 ::-webkit-scrollbar {
   width: 16px;
 }
@@ -36,27 +34,5 @@ html.dark {
   }
 }
 
-// transitions
-.page-enter-active {
-  transition: all 0.1s ease-out;
-}
-.page-leave-active {
-  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
-}
-.page-enter-from,
-.page-leave-to {
-  transform: translateY(20px);
-  opacity: 0;
-}
-
-.layout-enter-active {
-  transition: all 0.1s ease-out;
-}
-.layout-leave-active {
-  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
-}
-.layout-enter-from,
-.layout-leave-to {
-  transform: translateY(-20px);
-  opacity: 0;
-}
+// animations
+@import 'animations/transitions';

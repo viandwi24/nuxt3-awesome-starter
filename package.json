@@ -57,7 +57,7 @@
     "vue-toastification": "^1.7.14"
   },
   "lint-staged": {
-    "**/*.{js,ts,vue,html,css,scss}": [
+    "**/*.{js,ts,vue,html}": [
       "yarn lintfix"
     ]
   }
