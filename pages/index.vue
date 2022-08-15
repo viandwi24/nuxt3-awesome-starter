@@ -61,9 +61,9 @@ const leadingsText = computed(() => [
       <div class="flex space-x-4 justify-center mt-10">
         <Button
           size="lg"
-          text="Nuxt 3"
+          text="Right Brain Group"
           class="font-extrabold"
-          href="https://v3.nuxtjs.org"
+          href="https://rightbraingroup.com"
         />
         <Button
           size="lg"
