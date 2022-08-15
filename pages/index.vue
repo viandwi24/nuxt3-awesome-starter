@@ -55,15 +55,15 @@ const leadingsText = computed(() => [
           }; --end-color: ${item.endColor}; --animation-name: anim-fg-${i + 1}`"
           class="animated-text-bg drop-shadow-xl text-5xl xl:text-8xl 2xl:text-9xl block font-black uppercase"
         >
-          <span class="animated-text-fg">{{ item.text }} Hola!</span>
+          <span class="animated-text-fg">{{ item.text }}</span>
         </span>
       </h1>
       <div class="flex space-x-4 justify-center mt-10">
         <Button
           size="lg"
-          text="Nuxt 3"
+          text="Right Brain Group"
           class="font-extrabold"
-          href="https://v3.nuxtjs.org"
+          href="https://rightbraingroup.com"
         />
         <Button
           size="lg"

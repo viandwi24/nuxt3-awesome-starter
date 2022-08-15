@@ -12,10 +12,10 @@ export interface IApp {
 export function AppSetup() {
   // declare app information
   const app: IApp = {
-    name: 'Nuxt 3 Awesome Starter',
+    name: 'James Ross Awesome Site',
     author: {
-      name: 'viandwi24',
-      link: 'https://github.com/viandwi24',
+      name: 'James Ross',
+      link: 'https://github.com/Right-Brain-Group',
     },
   }
   useState('app', () => app)
