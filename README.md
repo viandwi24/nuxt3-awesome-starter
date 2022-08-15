@@ -1,4 +1,4 @@
-# Nuxt 3 Awesome Starter
+# James Ross Awesome Site
 a Nuxt 3 starter template or boilerplate with a lot of useful features. and integrated with TailwindCSS 3.  
 
 _This template was built to make it easier to create web projects using Nuxt 3. It was originally designed for coursework and portfolio templates. (hence there will be lots of ui components for easy reuse)_
@@ -63,7 +63,7 @@ _This template was built to make it easier to create web projects using Nuxt 3. 
 </p>
 
 ## Table of Contents
-- [Nuxt 3 Awesome Starter](#nuxt-3-awesome-starter)
+- [James Ross Awesome Site](#JamesRoss-Awesome-Site)
   - [Features](#features)
   - [To Do](#to-do)
   - [Preview](#preview)
