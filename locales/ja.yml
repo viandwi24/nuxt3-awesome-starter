@@ -29,9 +29,9 @@ pages:
     identity: 身元
     full_name: フルネーム
   about:
-    nav: 約
-    title: 約
-    description: これは概要ページです
+    nav: 入門
+    title: 入門
+    description: これは入門ページです
   setting:
     nav: 設定
     title: 設定
@@ -51,6 +51,12 @@ pages:
         title: スパム保護
         description: 有効に切り替えて、赤い枠を削除します
         footer: 有効にすると、コメントをスパムから保護します
+      advanced_enable_advanced:
+        title: 詳細設定を有効にする
+        description: 詳細設定を有効にして設定を変更できます
+      advanced_dir_listing:
+        title: ディレクトリ一覧
+        description: ディレクトリ内にインデックス ファイルが存在しない場合は、ディレクトリの内容が表示されます。
   dashboard:
     nav: ダッシュボード
     title: ダッシュボード

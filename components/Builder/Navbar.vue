@@ -1,11 +1,14 @@
 <script lang="ts" setup>
 import { IApp } from '~/utils/app'
 
+// state
 const app = useState<IApp>('app')
 const navbar = ref(null)
 const showDrawer = useState<boolean>('navbar.showDrawer', () => false)
 const showOptions = useState<boolean>('navbar.showOptions', () => false)
 
+// lifecycle
+let timer: NodeJS.Timer
 onMounted(() => {
   if (!navbar.value) return
 
@@ -14,16 +17,19 @@ onMounted(() => {
   setTimeout(() => onScroll(), 50)
 
   // on show on mobile
-  const timer = setInterval(() => {
+  setInterval(() => {
     // must in mobile
     const minW = 1024
     if (window.innerWidth < minW) {
       updateDrawerOptions()
     }
   }, 100)
-  return () => clearInterval(timer)
+})
+onBeforeUnmount(() => {
+  if (timer) clearInterval(timer)
 })
 
+// methods
 const updateDrawerOptions = () => {
   // drawer
   if (showDrawer.value || showOptions.value) {
@@ -32,7 +38,6 @@ const updateDrawerOptions = () => {
     document.body.classList.remove('overflow-hidden')
   }
 }
-
 const toggleDrawer = () => (showDrawer.value = !showDrawer.value)
 const toggleOptions = (show?: boolean) => {
   if (show) {
@@ -121,7 +126,7 @@ const toggleOptions = (show?: boolean) => {
             class="fixed lg:hidden bg-gray-100 dark:bg-slate-800 pt-12 top-0 left-0 w-screen h-screen z-30 flex flex-col"
           >
             <div class="flex-1 flex flex-col relative overflow-y-auto">
-              <slot name="drawer" :toggleDrawer="toggleDrawer" />
+              <slot name="drawer" :toggle-drawer="toggleDrawer" />
             </div>
           </div>
         </Transition>
@@ -130,8 +135,8 @@ const toggleOptions = (show?: boolean) => {
         <div v-if="showOptions && $slots['options']">
           <slot
             name="options"
-            :toggleOptions="toggleOptions"
-            :showOptions="showOptions"
+            :toggle-options="toggleOptions"
+            :show-options="showOptions"
           />
         </div>
       </Teleport>

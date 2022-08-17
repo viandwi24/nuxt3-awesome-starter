@@ -29,9 +29,9 @@ pages:
     identity: identitas
     full_name: nama lengkap
   about:
-    nav: tentang
-    title: tentang
-    description: ini adalah halaman tentang
+    nav: mulai
+    title: mulai
+    description: ini adalah halaman memulai
   setting:
     nav: pengaturan
     title: pengaturan
@@ -51,6 +51,14 @@ pages:
         title: proteksi spam
         description: alihkan aktifkan untuk menghapus batas merah
         footer: jika memungkinkan kami akan mengamankan komentar anda dari spam
+      advanced_enable_advanced:
+        title: aktifkan pengaturan lanjutan
+        description: anda dapat mengaktifkan pengaturan lanjutan untuk mengubah pengaturan
+      advanced_dir_listing:
+        title: daftar direktori
+        description: >-
+          jika tidak ada file indeks dalam direktori, isi direktori akan
+          ditampilkan.
   dashboard:
     nav: dasbor
     title: dasbor

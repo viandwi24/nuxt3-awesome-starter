@@ -11,11 +11,11 @@ export interface IMenuItem {
 const { t } = useLang()
 const app = useState<IApp>('app')
 const menus = computed((): IMenuItem[] => [
+  { type: 'link', text: t('pages.about.nav'), route: { name: 'about' } },
   { type: 'link', text: t('pages.blank.nav'), route: { name: 'blank' } },
   { type: 'link', text: t('pages.test.nav'), route: { name: 'test' } },
   { type: 'link', text: t('pages.post.nav'), route: { name: 'post' } },
   { type: 'link', text: t('pages.setting.nav'), route: { name: 'setting' } },
-  { type: 'link', text: t('pages.about.nav'), route: { name: 'about' } },
   {
     type: 'button',
     text: t('pages.dashboard.nav'),

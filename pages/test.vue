@@ -77,7 +77,7 @@ const identity = useIdentity()
           <span class="capitalize">{{ $t('pages.test.full_name') }} : </span>
           <span>{{ identity.fullName }}</span>
         </div>
-        <div class="">
+        <div class="mb-2">
           <div
             class="flex flex-col items-center space-y-2 md:space-y-0 md:flex-row md:space-x-2"
           >

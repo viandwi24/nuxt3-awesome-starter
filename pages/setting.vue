@@ -1,5 +1,11 @@
 <script lang="ts" setup>
-import { TabGroup, TabList, Tab, TabPanels, TabPanel } from '@headlessui/vue'
+import {
+  TabGroup,
+  TabList,
+  Tab as HeadlessUiTab,
+  TabPanels,
+  TabPanel,
+} from '@headlessui/vue'
 import { capitalize } from '~/utils/str'
 import { Size } from '~/composables/useScreen'
 
@@ -35,6 +41,8 @@ const randomToken = () => {
 const username = ref('viandwi24')
 const id = ref(randomToken())
 const enableSpamProtection = ref(false)
+const enableDirList = ref(false)
+const enableAdvancedSetting = ref(false)
 
 // methods
 const validate = async () => {
@@ -79,42 +87,42 @@ const validate = async () => {
           :vertical="screen.higherThan(Size.MEDIUM)"
         >
           <TabList class="w-full md:w-1/6 flex md:flex-col rounded-lg mb-2">
-            <Tab v-slot="{ selected }" as="template">
+            <HeadlessUiTab v-slot="{ selected }" as="template">
               <button
                 :class="[
-                  'md:w-full text-left px-3 py-1.5 rounded py-2.5 text-sm leading-5',
+                  'md:w-full text-left px-3 py-1.5 rounded py-2.5 text-sm leading-5 transition-all hover:bg-gray-200 hover:text-slate-900 dark:hover:bg-white/[0.12] dark:hover:text-white',
                   selected
-                    ? 'font-bold bg-gray-200 dark:bg-slate-700/50 dark:text-gray-200'
-                    : 'text-slate-800 dark:text-gray-400 hover:bg-gray-200 hover:text-slate-900 dark:hover:bg-white/[0.12] dark:hover:text-white',
+                    ? 'font-extrabold'
+                    : 'text-slate-800 dark:text-gray-400',
                 ]"
               >
                 General
               </button>
-            </Tab>
-            <Tab v-slot="{ selected }" as="template">
+            </HeadlessUiTab>
+            <HeadlessUiTab v-slot="{ selected }" as="template">
               <button
                 :class="[
-                  'md:w-full text-left px-3 py-1.5 rounded py-2.5 text-sm leading-5',
+                  'md:w-full text-left px-3 py-1.5 rounded py-2.5 text-sm leading-5 transition-all hover:bg-gray-200 hover:text-slate-900 dark:hover:bg-white/[0.12] dark:hover:text-white',
                   selected
-                    ? 'font-bold bg-gray-200 dark:bg-slate-700/50 dark:text-gray-200'
-                    : 'text-slate-800 dark:text-gray-400 hover:bg-gray-200 hover:text-slate-900 dark:hover:bg-white/[0.12] dark:hover:text-white',
+                    ? 'font-extrabold'
+                    : 'text-slate-800 dark:text-gray-400',
                 ]"
               >
                 Protection
               </button>
-            </Tab>
-            <Tab v-slot="{ selected }" as="template">
+            </HeadlessUiTab>
+            <HeadlessUiTab v-slot="{ selected }" as="template">
               <button
                 :class="[
-                  'md:w-full text-left px-3 py-1.5 rounded py-2.5 text-sm leading-5',
+                  'md:w-full text-left px-3 py-1.5 rounded py-2.5 text-sm leading-5 transition-all hover:bg-gray-200 hover:text-slate-900 dark:hover:bg-white/[0.12] dark:hover:text-white',
                   selected
-                    ? 'font-bold bg-gray-200 dark:bg-slate-700/50 dark:text-gray-200'
-                    : 'text-slate-800 dark:text-gray-400 hover:bg-gray-200 hover:text-slate-900 dark:hover:bg-white/[0.12] dark:hover:text-white',
+                    ? 'font-extrabold'
+                    : 'text-slate-800 dark:text-gray-400',
                 ]"
               >
                 Advanced
               </button>
-            </Tab>
+            </HeadlessUiTab>
           </TabList>
           <TabPanels class="flex-1">
             <TabPanel>
@@ -214,13 +222,11 @@ const validate = async () => {
                   </p>
                   <div class="flex">
                     <FormSwitch v-model="enableSpamProtection">
-                      <span class="capitalize">
-                        {{
-                          enableSpamProtection
-                            ? $t('others.enabled')
-                            : $t('others.disabled')
-                        }}
-                      </span>
+                      <span class="capitalize">{{
+                        enableSpamProtection
+                          ? $t('others.enabled')
+                          : $t('others.disabled')
+                      }}</span>
                     </FormSwitch>
                   </div>
                 </CardContent>
@@ -232,7 +238,60 @@ const validate = async () => {
               </Card>
             </TabPanel>
             <TabPanel>
-              <div>None</div>
+              <Card class="mb-4">
+                <CardContent>
+                  <CardTitle
+                    class="capitalize"
+                    :text="
+                      $t(
+                        'pages.setting.sections.advanced_enable_advanced.title'
+                      )
+                    "
+                  />
+                  <p class="mb-2">
+                    {{
+                      $t(
+                        'pages.setting.sections.advanced_enable_advanced.description'
+                      )
+                    }}
+                  </p>
+                  <div class="flex">
+                    <FormSwitch v-model="enableAdvancedSetting">
+                      <span class="capitalize">{{
+                        enableAdvancedSetting
+                          ? $t('others.enabled')
+                          : $t('others.disabled')
+                      }}</span>
+                    </FormSwitch>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card class="mb-4" :disabled="!enableAdvancedSetting">
+                <CardContent>
+                  <CardTitle
+                    class="capitalize"
+                    :text="
+                      $t('pages.setting.sections.advanced_dir_listing.title')
+                    "
+                  />
+                  <p class="mb-2">
+                    {{
+                      $t(
+                        'pages.setting.sections.advanced_dir_listing.description'
+                      )
+                    }}
+                  </p>
+                  <div class="flex">
+                    <FormSwitch v-model="enableDirList" on>
+                      <span class="capitalize">{{
+                        enableDirList
+                          ? $t('others.enabled')
+                          : $t('others.disabled')
+                      }}</span>
+                    </FormSwitch>
+                  </div>
+                </CardContent>
+              </Card>
             </TabPanel>
           </TabPanels>
         </TabGroup>

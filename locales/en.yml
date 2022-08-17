@@ -29,9 +29,9 @@ pages:
     identity: identity
     full_name: fullName
   about:
-    nav: about
-    title: about
-    description: this is a about page
+    nav: getting started
+    title: getting started
+    description: this is a getting started page
   setting:
     nav: setting
     title: setting
@@ -51,6 +51,12 @@ pages:
         title: spam protection
         description: toggle enable to remove the red border
         footer: if enable we will secure your comments from spam
+      advanced_enable_advanced:
+        title: enable advanced settings
+        description: you can enable advanced settings to change the settings
+      advanced_dir_listing:
+        title: directory listing
+        description: if no index file is present within a directory, the directory contents will be displayed.
   dashboard:
     nav: dashboard
     title: dashboard

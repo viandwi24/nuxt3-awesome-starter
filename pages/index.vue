@@ -32,8 +32,8 @@ const leadingsText = computed(() => [
 </script>
 
 <template>
-  <PageWrapper class="flex justify-center items-center">
-    <div class="background-overlay">
+  <PageWrapper class="flex-1 flex">
+    <!-- <div class="background-overlay">
       <div
         class="absolute top-0 left-0 transform translate-x-64 translate-y-4 h-14 w-14 rounded-full bg-gray-900 dark:bg-white"
       ></div>
@@ -44,36 +44,66 @@ const leadingsText = computed(() => [
         class="absolute hidden md:block bottom-0 right-0 transform -translate-x-4 -translate-y-40 h-16 w-16 rounded bg-purple-600 linear-wipe"
       ></div>
       <div class="absolute bottom-0 right-0 triangle-shape"></div>
-    </div>
-    <div class="flex flex-col z-10">
-      <h1 class="text-center">
-        <span
-          v-for="(item, i) in leadingsText"
-          :key="i"
-          :style="`--content: '${item.text}'; --start-color: ${
-            item.startColor
-          }; --end-color: ${item.endColor}; --animation-name: anim-fg-${i + 1}`"
-          class="animated-text-bg drop-shadow-xl text-5xl xl:text-8xl 2xl:text-9xl block font-black uppercase"
-        >
-          <span class="animated-text-fg">{{ item.text }}</span>
-        </span>
-      </h1>
-      <div class="flex space-x-4 justify-center mt-10">
-        <Button
-          size="lg"
-          text="Nuxt 3"
-          class="font-extrabold"
-          href="https://v3.nuxtjs.org"
-        />
-        <Button
-          size="lg"
-          text="Github"
-          type="secondary"
-          class="font-extrabold"
-          href="https://github.com/viandwi24/nuxt3-awesome-starter"
-        />
-      </div>
-    </div>
+    </div> -->
+    <PageBody class="flex-1 flex">
+      <PageSection class="flex-1 flex items-center">
+        <div class="flex-1 md:w-2/3 flex flex-col z-10">
+          <h1 class="text-center md:text-left">
+            <span
+              v-for="(item, i) in leadingsText"
+              :key="i"
+              :style="`--content: '${item.text}'; --start-color: ${
+                item.startColor
+              }; --end-color: ${item.endColor}; --animation-name: anim-fg-${
+                i + 1
+              }`"
+              class="animated-text-bg drop-shadow-xl text-5xl xl:text-8xl 2xl:text-9xl block font-black uppercase"
+            >
+              <span class="animated-text-fg">{{ item.text }}</span>
+            </span>
+          </h1>
+          <div
+            class="flex space-x-4 ml-4 mt-10 justify-center md:justify-start"
+          >
+            <Button
+              size="lg"
+              text="Nuxt 3"
+              class="font-extrabold"
+              href="https://v3.nuxtjs.org"
+            />
+            <Button
+              size="lg"
+              text="Github"
+              type="secondary"
+              class="font-extrabold"
+              href="https://github.com/viandwi24/nuxt3-awesome-starter"
+            />
+          </div>
+        </div>
+        <div class="hidden md:flex flex-1 justify-center items-end relative">
+          <Gem class="absolute -top-64 -right-0" />
+          <div class="ml-4 w-100 z-10 h-auto shadow">
+            <div
+              class="win-header bg-slate-800 flex flex space-x-4 px-3 py-2 rounded-t-lg relative overflow-hidden border-b-2 border-slate-700/75"
+            >
+              <div class="win-controls flex space-x-1 items-center">
+                <div class="w-3 h-3 bg-red-500 rounded-full" />
+                <div class="w-3 h-3 bg-green-500 rounded-full" />
+                <div class="w-3 h-3 bg-yellow-500 rounded-full" />
+              </div>
+              <div class="flex-1 font-bold text-center pr-18 text-sm">BASH</div>
+            </div>
+            <div
+              class="win-body rounded-b-lg bg-slate-800/90 px-2 py-1.5 font-mono backdrop-filter backdrop-blur-lg"
+            >
+              <div>
+                $ git clone https://github.com/viandwi24/nuxt3-awesome-starter
+              </div>
+            </div>
+          </div>
+        </div>
+      </PageSection>
+    </PageBody>
   </PageWrapper>
 </template>
 
@@ -130,7 +160,6 @@ const leadingsText = computed(() => [
   content: var(--content);
   display: block;
   width: 100%;
-  text-align: center;
   color: theme('colors.slate.800');
   top: 0;
   bottom: 0;
@@ -143,7 +172,6 @@ const leadingsText = computed(() => [
     position: absolute;
     display: block;
     width: 100%;
-    text-align: center;
     color: theme('colors.slate.800');
     top: 0;
     bottom: 0;

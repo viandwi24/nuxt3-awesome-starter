@@ -29,9 +29,9 @@ pages:
     identity: 신원
     full_name: 전체 이름
   about:
-    nav: ~에 대한
-    title: ~에 대한
-    description: 이것은 페이지에 관한 것입니다
+    nav: 시작하기
+    title: 시작하기
+    description: 이것은 시작 페이지입니다
   setting:
     nav: 환경
     title: 환경
@@ -51,6 +51,12 @@ pages:
         title: 스팸 방지
         description: 활성화를 토글하여 빨간색 테두리를 제거합니다.
         footer: 활성화하면 스팸으로부터 댓글을 보호합니다.
+      advanced_enable_advanced:
+        title: 고급 설정 활성화
+        description: 고급 설정을 활성화하여 설정을 변경할 수 있습니다
+      advanced_dir_listing:
+        title: 디렉토리 목록
+        description: 디렉토리 내에 인덱스 파일이 없으면 디렉토리 내용이 표시됩니다.
   dashboard:
     nav: 계기반
     title: 계기반
