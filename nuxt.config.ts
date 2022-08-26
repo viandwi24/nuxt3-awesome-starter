@@ -50,15 +50,15 @@ export default defineNuxtConfig({
 
   // modules
   modules: [
+    '@nuxtjs/eslint-module',
+    'unplugin-icons/nuxt',
+    '@nuxtjs/svg',
     'nuxt-windicss',
     '@intlify/nuxt3',
     '@vueuse/nuxt',
     '@nuxt/content',
     '@pinia/nuxt',
   ],
-
-  // build modules
-  buildModules: ['@nuxtjs/eslint-module', 'unplugin-icons/nuxt', '@nuxtjs/svg'],
 
   // experimental features
   experimental: {
