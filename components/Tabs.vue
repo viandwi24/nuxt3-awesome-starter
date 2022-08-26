@@ -94,7 +94,9 @@ const updateIndicator = () => {
         </span>
       </div>
     </ClientOnly>
-    <div class="tabs-body relative text-white bg-slate-800 shadow rounded-b-lg">
+    <div
+      class="tabs-body relative text-slate-800 dark:text-white bg-gray-200 dark:bg-slate-800 shadow rounded-b-lg"
+    >
       <slot />
     </div>
   </div>
