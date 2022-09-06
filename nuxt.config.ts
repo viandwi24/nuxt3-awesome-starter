@@ -50,14 +50,14 @@ export default defineNuxtConfig({
 
   // modules
   modules: [
-    '@nuxtjs/eslint-module',
-    'unplugin-icons/nuxt',
-    '@nuxtjs/svg',
     'nuxt-windicss',
+    'unplugin-icons/nuxt',
     '@intlify/nuxt3',
-    '@vueuse/nuxt',
-    '@nuxt/content',
     '@pinia/nuxt',
+    '@nuxt/content',
+    '@vueuse/nuxt',
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/svg',
   ],
 
   // experimental features
@@ -113,13 +113,11 @@ export default defineNuxtConfig({
 
   // content
   content: {
-    documentDriven: true,
-    mdc: true,
+    markdown: {
+      mdc: true,
+    },
     highlight: {
-      theme: {
-        default: 'github-light',
-        dark: 'github-dark',
-      },
+      theme: 'github-dark',
     },
   },
 })
