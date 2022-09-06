@@ -41,7 +41,7 @@
     "husky": "^8.0.1",
     "js-yaml": "^4.1.0",
     "lint-staged": "^13.0.3",
-    "nuxt": "npm:nuxt3@3.0.0-rc.10-27707663.a931667",
+    "nuxt": "npm:nuxt3@3.0.0-rc.9-27703329.537338f",
     "nuxt-windicss": "^2.5.1",
     "pinia": "^2.0.18",
     "postcss": "8.4.14",
