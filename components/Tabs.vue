@@ -29,12 +29,12 @@ onBeforeMount(() => {
   }
 })
 onMounted(() => {
-  const interval = setInterval(() => {
-    if (tabHeaderIndicator.value) {
-      clearInterval(interval)
-      updateIndicator()
+  ;(async () => {
+    while (typeof tabHeaderIndicator.value === 'undefined') {
+      await new Promise((resolve) => setTimeout(resolve, 10))
     }
-  }, 500)
+    updateIndicator()
+  })()
 })
 
 // provides
