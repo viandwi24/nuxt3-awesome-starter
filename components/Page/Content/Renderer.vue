@@ -4,6 +4,10 @@ const props = defineProps({
     type: String,
     required: true,
   },
+  pageTitle: {
+    type: String,
+    default: '',
+  },
 })
 
 const { data } = await useAsyncData(props.path, () =>
@@ -14,7 +18,7 @@ const { data } = await useAsyncData(props.path, () =>
 <template>
   <PageWrapper>
     <PageHeader>
-      <PageTitle :text="$t('pages.about.title')" class="capitalize" />
+      <PageTitle :text="pageTitle" class="capitalize" />
     </PageHeader>
     <PageBody>
       <PageSection>

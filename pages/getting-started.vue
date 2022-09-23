@@ -20,5 +20,8 @@ useHead(() => ({
 </script>
 
 <template>
-  <PageContentRenderer path="/page/getting-started" />
+  <PageContentRenderer
+    path="/page/getting-started"
+    :page-title="$t('pages.getting-started.title')"
+  />
 </template>
