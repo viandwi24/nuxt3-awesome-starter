@@ -28,7 +28,7 @@ pages:
     reset: reset
     identity: identity
     full_name: fullName
-  about:
+  getting-started:
     nav: getting started
     title: getting started
     description: this is a getting started page

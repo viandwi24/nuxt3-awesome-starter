@@ -28,7 +28,7 @@ pages:
     reset: mengatur ulang
     identity: identitas
     full_name: nama lengkap
-  about:
+  getting-started:
     nav: mulai
     title: mulai
     description: ini adalah halaman memulai
@@ -50,7 +50,7 @@ pages:
       protection_spam:
         title: proteksi spam
         description: alihkan aktifkan untuk menghapus batas merah
-        footer: jika diaktifkan, kami akan mengamankan komentar anda dari spam
+        footer: jika memungkinkan kami akan mengamankan komentar anda dari spam
       advanced_enable_advanced:
         title: aktifkan pengaturan lanjutan
         description: anda dapat mengaktifkan pengaturan lanjutan untuk mengubah pengaturan

@@ -50,6 +50,7 @@ export default defineConfig({
     include: [
       './components/**/*.{vue,js}',
       './composables/**/*.{js,ts}',
+      './content/**/*.md',
       './layouts/**/*.vue',
       './pages/**/*.vue',
       './plugins/**/*.{js,ts}',

@@ -30,10 +30,15 @@ onBeforeMount(() => {
 })
 onMounted(() => {
   ;(async () => {
-    while (typeof tabHeaderIndicator.value === 'undefined') {
+    while (
+      typeof tabHeaderIndicator.value === 'undefined' ||
+      typeof tabs.value === 'undefined'
+    ) {
       await new Promise((resolve) => setTimeout(resolve, 10))
     }
-    updateIndicator()
+    setTimeout(() => {
+      updateIndicator()
+    }, 350)
   })()
 })
 

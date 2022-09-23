@@ -3,11 +3,12 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 
 _This template was built to make it easier to create web projects using Nuxt 3. It was originally designed for coursework and portfolio templates. (hence there will be lots of ui components for easy reuse)_
 
-> **WARNING** \
-> Nuxt 3 now in RC version (Release Candidate) [But this template using Nuxt 3.x edge* (latest version)]  
-> Not recommended for production use.  
-> * Breaking changes tracker can be found [here](https://github.com/nuxt/framework/discussions/2883)  
-> * Roadmap can be found [here](https://v3.nuxtjs.org/community/roadmap)
+> **WARNING** 
+> - This Project using "pnpm" as package manager. (not npm or yarn)!!! 
+> - Nuxt 3 now in RC version (Release Candidate) [But this template using Nuxt 3.x edge* (latest version)]  
+> - Not recommended for production use. 
+> - Breaking changes tracker can be found [here](https://github.com/nuxt/framework/discussions/2883)  
+> - Roadmap can be found [here](https://v3.nuxtjs.org/community/roadmap)
 
 ## Features
 - [x] 💨 [Tailwind CSS v3](https://tailwindcss.com/) with [Windicss](https://windicss.org/)
@@ -23,13 +24,13 @@ _This template was built to make it easier to create web projects using Nuxt 3. 
 - [x] Eslint & Prettier
 - [x] Husky & Commitlint
 - [x] Custom Workspace Snippets
-
-## To Do
-- [ ] Adding simple Unit Test
-- [ ] Adding HTTP Client
-- [ ] Configurable Theme
+- [x] Built-in Unit Test
+- [x] Configurable Theme
   - [x] Primary Colors
   - [x] Font
+
+## To Do
+- [ ] Adding HTTP Client
 
 ## Preview
 <table align="center">
@@ -84,13 +85,14 @@ _This template was built to make it easier to create web projects using Nuxt 3. 
   - [License](#license)
 
 ## Quick Start
+For detail information, go here [Getting Started](https://nuxt3-awesome-starter.vercel.app/getting-started)
 ### Start with this template
-* This project using `yarn` as package manager.
+* This project using `pnpm` as package manager.
 * Clone this project to your computer `git clone https://github.com/viandwi24/nuxt3-awesome-starter`
-* Install dependencies `yarn install`
-* Run `yarn dev` to start development server and open `http://localhost:3000` in your browser
+* Install dependencies `pnpm install`
+* Run `pnpm dev` to start development server and open `http://localhost:3000` in your browser
 ### Deploy as Static Site
-* Run `yarn generate` to build the project
+* Run `pnpm generate` to build the project
 * Serve `dist/` folder
 Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
 
@@ -199,7 +201,7 @@ So, you can just update "locales/en.yml" and run this tools, it will automatical
 
 You can just run :
 ```
-yarn generate:locales
+pnpm generate:locales
 
 # or :
 
@@ -245,10 +247,10 @@ Example :
 ```
 ### Precommit and Postmerge
 This project using husky and commitlint for precommit and postmerge.
-when you commit, it will check your commit message and running "yarn lint-staged" to check your staged files.
+when you commit, it will check your commit message and running "pnpm lint-staged" to check your staged files.
 configuration in : `/path/to/.husky/pre-commit` and `/path/to/commitlint.config.js`
 
-And when Postmerge, it will run "yarn" to automatically install new dependencies.
+And when Postmerge, it will run "pnpm" to automatically install new dependencies.
 configuration in `/path/to/.husky/post-merge`
 
 ## License

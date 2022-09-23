@@ -28,7 +28,7 @@ pages:
     reset: リセット
     identity: 身元
     full_name: フルネーム
-  about:
+  getting-started:
     nav: 入門
     title: 入門
     description: これは入門ページです

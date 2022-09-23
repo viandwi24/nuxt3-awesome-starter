@@ -11,25 +11,31 @@ Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots 
 
 The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
 
-```ts
-import React from 'react';
-import { render } from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore } from 'redux';
-import { enthusiasm } from './reducers/index';
-import { StoreState } from './types/index';
-import App from './components/App';
-import './index.css';
+:::div{class="py-4"}
+  ::tabs
+    :::tab{name="ts" title="TypeScript"}
+      ```ts
+      import React from 'react';
+      import { render } from 'react-dom';
+      import { Provider } from 'react-redux';
+      import { createStore } from 'redux';
+      import { enthusiasm } from './reducers/index';
+      import { StoreState } from './types/index';
+      import App from './components/App';
+      import './index.css';
 
-const store = createStore<StoreState>(enthusiasm, {
-  enthusiasmLevel: 1,
-  languageName: 'TypeScript',
-});
+      const store = createStore<StoreState>(enthusiasm, {
+        enthusiasmLevel: 1,
+        languageName: 'TypeScript',
+      });
 
-render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('root')
-);
-```
+      render(
+        <Provider store={store}>
+          <App />
+        </Provider>,
+        document.getElementById('root')
+      );
+      ```
+    :::
+  ::
+:::

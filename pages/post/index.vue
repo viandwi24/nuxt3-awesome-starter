@@ -25,7 +25,7 @@ useHead(() => ({
       <PageTitle :text="$t('pages.post.title')" class="capitalize" />
     </PageHeader>
     <PageBody>
-      <ContentList v-slot="{ list }">
+      <ContentList v-slot="{ list }" path="/post">
         <PageSection v-for="article in list" :key="article._path">
           <div
             class="block hover:no-underline p-6 flex space-x-6 rounded border border-gray-900/10 dark:border-gray-50/[0.2]"

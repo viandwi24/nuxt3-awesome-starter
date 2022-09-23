@@ -28,7 +28,7 @@ pages:
     reset: 초기화
     identity: 신원
     full_name: 전체 이름
-  about:
+  getting-started:
     nav: 시작하기
     title: 시작하기
     description: 이것은 시작 페이지입니다
