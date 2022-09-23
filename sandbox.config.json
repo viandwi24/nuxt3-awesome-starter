@@ -4,6 +4,6 @@
   "view": "browser",
   "template": "nuxt",
   "container": {
-    "node": "14"
+    "node": "16"
   }
 }

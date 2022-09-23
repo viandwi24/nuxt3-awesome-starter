@@ -57,12 +57,11 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/eslint-module',
     'nuxt-windicss',
-    '@nuxtjs/svg',
   ],
 
   // experimental features
   experimental: {
-    reactivityTransform: true,
+    reactivityTransform: false,
   },
 
   // auto import components
@@ -113,6 +112,7 @@ export default defineNuxtConfig({
 
   // content
   content: {
+    documentDriven: true,
     markdown: {
       mdc: true,
     },
