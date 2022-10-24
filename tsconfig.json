@@ -3,11 +3,13 @@
   "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
     "strict": true,
+    "skipLibCheck": true,
     "types": [
       "nuxt-windicss",
       "@vueuse/nuxt",
       "@intlify/nuxt3",
-      "@pinia/nuxt"
+      "@pinia/nuxt",
+      "unplugin-icons/types/vue"
     ]
   }
 }

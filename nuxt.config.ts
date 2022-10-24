@@ -1,4 +1,3 @@
-import { defineNuxtConfig } from 'nuxt'
 import { IntlifyModuleOptions } from '@intlify/nuxt3'
 import UnpluginComponentsVite from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
@@ -13,6 +12,12 @@ declare module '@nuxt/schema' {
 export default defineNuxtConfig({
   // server side rendering mode
   ssr: true,
+
+  // typescripts
+  typescript: {
+    strict: true,
+    typeCheck: true,
+  },
 
   // app
   app: {
