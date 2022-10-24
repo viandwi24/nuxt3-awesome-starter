@@ -14,6 +14,31 @@ const tabHeaderIndicator = ref<HTMLDivElement>()
 const tabItems = ref<TabItem[]>([])
 const activeTab = ref<string>()
 
+// provides
+provide('activeTab', activeTab)
+
+// methods
+const updateIndicator = () => {
+  if (!tabs.value || !tabHeaderIndicator.value) return
+
+  // dom
+  const dom = tabHeaderIndicator.value
+  // get header tab item dom
+  const currentActiveIndex = tabItems.value.findIndex(
+    ({ name }) => name === activeTab.value
+  )
+  const tabItem = tabs.value.querySelectorAll('.tabs-header-item')[
+    currentActiveIndex
+  ] as HTMLDivElement
+  if (!tabItem) return
+
+  // set dom position and size to tab item
+  const padding = 24
+  const diff = 30
+  dom.style.width = `${tabItem.offsetWidth + diff}px`
+  dom.style.left = `${tabItem.offsetLeft - padding - diff / 2}px`
+}
+
 // watchs
 watch(tabItems, () => updateIndicator())
 watch(activeTab, () => updateIndicator())
@@ -41,31 +66,6 @@ onMounted(() => {
     }, 350)
   })()
 })
-
-// provides
-provide('activeTab', activeTab)
-
-// methods
-const updateIndicator = () => {
-  if (!tabs.value || !tabHeaderIndicator.value) return
-
-  // dom
-  const dom = tabHeaderIndicator.value
-  // get header tab item dom
-  const currentActiveIndex = tabItems.value.findIndex(
-    ({ name }) => name === activeTab.value
-  )
-  const tabItem = tabs.value.querySelectorAll('.tabs-header-item')[
-    currentActiveIndex
-  ] as HTMLDivElement
-  if (!tabItem) return
-
-  // set dom position and size to tab item
-  const padding = 24
-  const diff = 30
-  dom.style.width = `${tabItem.offsetWidth + diff}px`
-  dom.style.left = `${tabItem.offsetLeft - padding - diff / 2}px`
-}
 </script>
 
 <template>
