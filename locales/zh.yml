@@ -1,0 +1,72 @@
+components:
+  language_switcher:
+    change_language: 切换语言
+  theme_switcher:
+    theme: 主题
+    change_theme: 切换主题
+pages:
+  index:
+    title: nuxt 3[]awesome[]starter
+  404:
+    title: 找不到该页面
+  blank:
+    nav: 空白
+    title: 空白页
+    description: 这是一个空白页
+    just_blank_page_with_title: 只是带有标题的空白页
+  post:
+    nav: 文章
+    title: 文章
+    description: 这是一个文章页面
+  test:
+    nav: 测试
+    title: 测试
+    description: 这是一个测试页面
+    counter: 计数器
+    increment: 增加
+    decrement: 减少
+    reset: 重置
+    identity: 标识
+    full_name: 全名
+  getting-started:
+    nav: 快速开始
+    title: 快速开始
+    description: 这是一个快速开始页面
+  setting:
+    nav: 设置
+    title: 设置
+    description: 这是一个设置页面
+    sections:
+      validate_username:
+        title: 验证 github 配置文件
+        description: 输入您的 github 用户名，然后单击按钮进行验证。
+        footer: 了解更多
+        footer_button: 验证
+        footer_link: github 用户 api
+      bot_id:
+        title: 机器人 id
+        description: 这是你的机器人 ID.
+        footer: 在与机器人交互时使用。
+      protection_spam:
+        title: 垃圾邮件防护
+        description: 切换启用以删除红色边框
+        footer: 如果启用，我们将保护您的评论免受垃圾邮件的侵害
+      advanced_enable_advanced:
+        title: 高级设置
+        description: 您可以启用高级设置以更改设置
+      advanced_dir_listing:
+        title: 目录列表
+        description: 如果目录中不存在索引文件，则将显示目录内容。
+  dashboard:
+    nav: 仪表盘
+    title: 仪表盘
+    index:
+      nav: 主页
+      title: 主页
+banners:
+  welcome: 你好, 欢迎来到 %{app_name}!
+others:
+  learn_more: 了解更多
+  copy: 复制
+  enabled: 启用
+  disabled: 禁用

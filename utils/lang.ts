@@ -29,6 +29,11 @@ export const availableLocales: ILocales = {
     iso: 'ko',
     flag: '🇰🇷',
   },
+  zh: {
+    name: '简体中文',
+    iso: 'zh',
+    flag: '🇨🇳',
+  },
 }
 
 export function LanguageManager() {
