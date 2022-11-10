@@ -89,7 +89,7 @@ For detail information, go here [Getting Started](https://nuxt3-awesome-starter.
 ### Start with this template
 * This project using `pnpm` as package manager.
 * Clone this project to your computer `git clone https://github.com/viandwi24/nuxt3-awesome-starter`
-* Install dependencies `pnpm install`
+* Install dependencies `pnpm install --shamefully-hoist`
 * Run `pnpm dev` to start development server and open `http://localhost:3000` in your browser
 ### Deploy as Static Site
 * Run `pnpm generate` to build the project

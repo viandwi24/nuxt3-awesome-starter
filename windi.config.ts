@@ -40,6 +40,19 @@ const MyTheme = {
       '800': '#003357',
       '900': '#00121F',
     },
+    red: {
+      DEFAULT: '#FF6464',
+      '50': '#FFFFFF',
+      '100': '#FFFFFF',
+      '200': '#FFDEDE',
+      '300': '#FFB6B6',
+      '400': '#FF8D8D',
+      '500': '#FF6464',
+      '600': '#FF2C2C',
+      '700': '#F30000',
+      '800': '#BB0000',
+      '900': '#830000',
+    },
   },
 }
 
@@ -64,11 +77,12 @@ export default defineConfig({
         '8xl': '90rem',
       },
       colors: {
-        primary: MyTheme.colors.blue,
+        primary: MyTheme.colors.red,
         // if want to change primary color to green
         // primary: MyTheme.colors.blue,
         green: MyTheme.colors.green,
         blue: MyTheme.colors.blue,
+        red: MyTheme.colors.red,
         slate: colors.slate,
       },
       fontFamily: {
