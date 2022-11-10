@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { IApp } from '~/utils/app'
-
 export interface IMenuItem {
   type: 'link' | 'button'
   text: string
@@ -9,7 +7,7 @@ export interface IMenuItem {
 }
 
 const { t } = useLang()
-const app = useState<IApp>('app')
+const app = useAppConfig()
 const menus = computed((): IMenuItem[] => [
   {
     type: 'link',

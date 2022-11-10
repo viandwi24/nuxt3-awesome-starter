@@ -1,8 +1,6 @@
 <script lang="ts" setup>
-import { IApp } from '~/utils/app'
-
 // state
-const app = useState<IApp>('app')
+const app = useAppConfig()
 const navbar = ref(null)
 const showDrawer = useState<boolean>('navbar.showDrawer', () => false)
 const showOptions = useState<boolean>('navbar.showOptions', () => false)
