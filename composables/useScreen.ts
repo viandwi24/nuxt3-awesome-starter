@@ -41,7 +41,7 @@ export const useScreen = () => {
     return Size.EXTRA_LARGE
   }
 
-  const onWindowRezise = () => {
+  const onWindowResize = () => {
     const { innerWidth, innerHeight } = window
     screenSize.width = innerWidth
     screenSize.height = innerHeight
@@ -65,13 +65,13 @@ export const useScreen = () => {
 
   onMounted(() => {
     if (typeof window === 'undefined') return
-    window.addEventListener('resize', onWindowRezise)
+    window.addEventListener('resize', onWindowResize)
     getSize(window.innerWidth)
   })
 
   onUnmounted(() => {
     if (typeof window === 'undefined') return
-    window.removeEventListener('resize', onWindowRezise)
+    window.removeEventListener('resize', onWindowResize)
   })
 
   return {
