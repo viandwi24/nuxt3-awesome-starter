@@ -7,6 +7,7 @@ interface TabItem {
 
 // composables
 const slots = useSlots()
+defineEmits(['click'])
 
 // vars
 const tabs = ref<HTMLDivElement>()

@@ -107,7 +107,6 @@ export default {
 
     const tick = () => {
       const elapsedTime = clock.getElapsedTime()
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const _deltaTime = elapsedTime - previousTime
       previousTime = elapsedTime
       if (gem) {

@@ -37,7 +37,6 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     'nuxt-windicss',
-    // '@nuxtjs/eslint-module',
   ],
 
   // experimental features

@@ -86,7 +86,7 @@ const menus = computed((): IMenuItem[] => [
       </div>
     </template>
     <template #options="{ toggleOptions }">
-      <ActionSheet @onClose="toggleOptions(false)">
+      <ActionSheet @on-close="toggleOptions(false)">
         <ActionSheetBody>
           <ActionSheetHeader text="Menu" />
           <nav class="leading-6 font-semibold text-gray-600 dark:text-gray-300">

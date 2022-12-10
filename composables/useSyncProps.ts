@@ -1,4 +1,4 @@
-import { WritableComputedRef } from '@vue/runtime-dom'
+import { WritableComputedRef } from 'vue'
 
 export const useSyncProps = <T>(
   props: any,

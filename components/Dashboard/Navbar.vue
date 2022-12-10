@@ -27,7 +27,7 @@
       </div>
     </template>
     <template #options="{ toggleOptions }">
-      <ActionSheet @onClose="toggleOptions(false)">
+      <ActionSheet @on-close="toggleOptions(false)">
         <ActionSheetBody>
           <ActionSheetHeader text="Menu" />
           <div class="mt-6 text-sm font-bold capitalize">
