@@ -49,7 +49,9 @@ const sizes = reactive<{
 })
 
 // state
-const selectedStyle = computed(() => props.type in styles ? styles[props.type] : styles.primary)
+const selectedStyle = computed(() =>
+  props.type in styles ? styles[props.type] : styles.primary
+)
 const selectedSize = computed(() => sizes[props.size] || sizes.lg)
 
 // methods

@@ -1,6 +1,8 @@
 <script lang="ts" setup>
+import { AppConfigInput } from '@nuxt/schema'
+
 // state
-const app = useAppConfig()
+const app = useAppConfig() as AppConfigInput
 const navbar = ref(null)
 const showDrawer = useState<boolean>('navbar.showDrawer', () => false)
 const showOptions = useState<boolean>('navbar.showOptions', () => false)
