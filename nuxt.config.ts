@@ -1,12 +1,5 @@
-import { IntlifyModuleOptions } from '@intlify/nuxt3'
 import UnpluginComponentsVite from 'unplugin-vue-components/vite'
 import IconsResolver from 'unplugin-icons/resolver'
-
-declare module '@nuxt/schema' {
-  interface NuxtConfig {
-    intlify?: IntlifyModuleOptions
-  }
-}
 
 // https://v3.nuxtjs.org/docs/directory-structure/nuxt.config
 export default defineNuxtConfig({
@@ -43,7 +36,6 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@nuxt/content',
     '@vueuse/nuxt',
-    '@nuxtjs/eslint-module',
     'nuxt-windicss',
   ],
 
@@ -67,6 +59,13 @@ export default defineNuxtConfig({
         ],
       }),
     ],
+  },
+
+  // app config
+  app: {
+    // global transition
+    pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: { name: 'layout', mode: 'out-in' },
   },
 
   // localization - i18n config

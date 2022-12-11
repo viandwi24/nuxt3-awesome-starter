@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { AppConfigInput } from '@nuxt/schema'
+
 export interface IMenuItem {
   type: 'link' | 'button'
   text: string
@@ -7,7 +9,7 @@ export interface IMenuItem {
 }
 
 const { t } = useLang()
-const app = useAppConfig()
+const app = useAppConfig() as AppConfigInput
 const menus = computed((): IMenuItem[] => [
   {
     type: 'link',
@@ -84,7 +86,7 @@ const menus = computed((): IMenuItem[] => [
       </div>
     </template>
     <template #options="{ toggleOptions }">
-      <ActionSheet @onClose="toggleOptions(false)">
+      <ActionSheet @on-close="toggleOptions(false)">
         <ActionSheetBody>
           <ActionSheetHeader text="Menu" />
           <nav class="leading-6 font-semibold text-gray-600 dark:text-gray-300">
