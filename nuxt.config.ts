@@ -13,13 +13,7 @@ export default defineNuxtConfig({
   },
 
   // css
-  css: [
-    'virtual:windi-base.css',
-    'virtual:windi-components.css',
-    'virtual:windi-utilities.css',
-    '~/assets/sass/vendor.scss',
-    '~/assets/sass/app.scss',
-  ],
+  css: ['~/assets/sass/vendor.scss', '~/assets/sass/app.scss'],
 
   // plugins
   plugins: ['~/plugins/navbar.ts'],
