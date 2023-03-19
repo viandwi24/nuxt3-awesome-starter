@@ -1,19 +1,61 @@
 {
-  "private": true,
+  "name": "@nuxt-awesome/theme",
+  "version": "2.0.1",
+  "description": "a Nuxt 3 starter template & nuxt layer theme with a lot of useful features, integrated with TailwindCSS 3",
+  "author": "viandwi24",
+  "license": "MIT",
+  "type": "module",
+  "main": "./nuxt.config.ts",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/viandwi24/nuxt3-awesome-starter"
+  },
+  "files": [
+    "assets",
+    "components",
+    "composables",
+    "layouts",
+    "modules",
+    "pages",
+    "public",
+    "stores",
+    "app.config.ts",
+    "app.vue",
+    "nuxt.config.ts",
+    "nuxt.schema.ts",
+    "tailwind.config.ts",
+    "tsconfig.json"
+  ],
   "scripts": {
     "build": "nuxt build ./app",
     "dev": "nuxt dev ./app",
     "generate": "nuxt generate ./app",
     "preview": "nuxt preview ./app",
-    "postinstall": "nuxt prepare ./app"
+    "postinstall": "nuxt prepare ./app",
+    "dev:starter": "nuxt dev ./.starter"
   },
   "devDependencies": {
     "@nuxt/devtools": "^0.2.5",
     "@nuxtjs/tailwindcss": "^6.6.0",
+    "@pinia/nuxt": "^0.4.7",
     "nuxt": "^3.3.1",
     "nuxt-icon": "^0.3.3",
     "nuxt-windicss": "^2.6.0",
+    "pinia": "^2.0.33",
+    "release-it": "^15.9.0",
     "sass": "^1.59.3",
     "tailwindcss": "^3.2.7"
+  },
+  "release-it": {
+    "npm": {
+      "access": "public"
+    },
+    "git": {
+      "commitMessage": "chore(release): release v${version}"
+    },
+    "github": {
+      "release": true,
+      "releaseName": "v${version}"
+    }
   }
 }

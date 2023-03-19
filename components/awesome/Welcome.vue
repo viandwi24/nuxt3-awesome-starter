@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-definePageMeta({ layout: 'page' })
-
 const { awesome } = useAppConfig()
 
 const titlesText = computed<string[]>(() => 'Nuxt 3[]Awesome[]Starter'.split('[]'))
@@ -39,13 +37,16 @@ const leadingsText = computed(() => [
             }; --end-color: ${item.endColor}; --animation-name: anim-fg-${
               i + 1
             }`"
-            class="animated-text-bg drop-shadow-xl text-5xl xl:text-7xl 2xl:text-8xl block font-black uppercase"
+            class="animated-text-bg drop-shadow-xl text-6xl sm:text-8xl md:text-8xl lg:text-8xl 2xl:text-8xl block font-black uppercase"
           >
             <span class="animated-text-fg">{{ item.text }}</span>
           </span>
         </h1>
-        <div class="px-4 mt-6 text-center max-w-[600px]">
+        <div class="px-4 mt-6 text-center max-w-[500px] md:max-w-[600px]">
           a starter template for Nuxt 3 with minimalist themes design, built in components, drawer & menus, and more.
+        </div>
+        <div class="mt-4 w-auto text-center text-white bg-slate-800 rounded px-4 py-1 text-sm">
+          create file "~/pages/index.vue" to replace this page
         </div>
         <div
           class="flex space-x-4 ml-2 mt-8 justify-center md:justify-start"
@@ -69,11 +70,11 @@ const leadingsText = computed(() => [
         </div>
       </div>
       <div class="top-0 left-0 absolute w-screen">
-        <div class="absolute right-0 top-0 w-[300px] h-screen py-10 pt-12 z-0 flex">
-          <div class="flex-1 rounded-l-9xl bg-gradient-to-l from-blue-600/18"></div>
+        <div class="absolute right-0 top-0 w-1/4 h-screen py-10 pt-12 z-0 flex">
+          <div class="flex-1 rounded-l-9xl bg-gradient-to-l from-blue-600/10"></div>
         </div>
-        <div class="absolute left-0 top-0 w-[300px] h-screen py-10 pt-12 z-0 flex">
-          <div class="flex-1 rounded-r-9xl bg-gradient-to-r from-green-600/18"></div>
+        <div class="absolute left-0 top-0 w-1/4 h-screen py-10 pt-12 z-0 flex">
+          <div class="flex-1 rounded-r-9xl bg-gradient-to-r from-green-600/10"></div>
         </div>
       </div>
     </LayoutPageSection>

@@ -6,6 +6,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     'nuxt-icon',
+    '@pinia/nuxt',
   ],
 
   css: [
@@ -24,5 +25,16 @@ export default defineNuxtConfig({
       path: resolve('./components/awesome'),
       global: true
     },
-  ]
+  ],
+
+  imports: {
+    dirs: [resolve('./stores'), '~/stores'],
+  },
+
+  // module::pinia
+  pinia: {
+    autoImports: [
+      ['defineStore', 'definePiniaStore'],
+    ],
+  },
 })

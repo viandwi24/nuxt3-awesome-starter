@@ -10,10 +10,18 @@ a Nuxt 3 starter template with a lot of useful features, integrated with Tailwin
 - [x] 🔔 [Nuxt Icon](https://icones.js.org/)
 - [x] 🛹 [State & Store Management (Pinia)](https://pinia.vuejs.org/)
 - [x] 📦 [Vue Composition Collection (Vueuse)](https://vueuse.org/)
-- [x] 🌙 Switch Theme (light, dark, system, realtime)
-- [x] 🇮🇩 Language Switcher
-- [x] 🪝 Built-in Component & Layout
-- [x] Eslint & Prettier
+- [x] 🪝 Built-in Awesome Component & Layout
 - [x] Configurable Theme (Easy to change)
   - [x] Primary Colors
   - [x] Font
+
+
+## To Dos
+- [x] Nuxt Awesome Modules Core
+  - [x] create modules `~/modules/awesome.ts`
+- [x] Adding Pinia
+  - [x] auto import "defineStore" as "definePiniaStore"
+  - [x] auto import folder "stores"
+- [ ] 🌙 Switch Theme (light, dark, system, realtime)
+- [ ] 🇮🇩 Language Switcher
+- [ ] Eslint & Prettier

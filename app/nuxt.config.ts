@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   extends: '../',
   modules: [
-    // for dev only
-    '@nuxt/devtools'
+    // for debugging on development
+    // '@nuxt/devtools'
   ]
 })

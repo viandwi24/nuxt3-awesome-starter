@@ -9,7 +9,12 @@ export default defineAppConfig({
     layout: {
       page: {
         navbar: {
-          menus: []
+          menus: [
+            { type: 'link', title: 'Blank', to: { name: 'blank' } },
+            { type: 'link', title: 'Post', to: { name: 'post' } },
+            { type: 'link', title: 'Test', to: { name: 'test' } },
+            { type: 'button', title: 'Setting', to: { name: 'setting' } },
+          ]
         }
       },
       footer: {
