@@ -32,7 +32,8 @@
     "generate": "nuxt generate ./app",
     "preview": "nuxt preview ./app",
     "postinstall": "nuxt prepare ./app",
-    "dev:starter": "nuxt dev ./.starter"
+    "dev:starter": "nuxt dev ./.starter",
+    "release": "release-it"
   },
   "devDependencies": {
     "@nuxt/devtools": "^0.2.5",
