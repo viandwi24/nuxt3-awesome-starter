@@ -4,7 +4,7 @@ a Nuxt 3 starter template or boilerplate with a lot of useful features. and inte
 _This template was built to make it easier to create web projects using Nuxt 3. It was originally designed for coursework and portfolio templates. (hence there will be lots of ui components for easy reuse)_
 
 > **NOTES** 
-> - A new update is under development, you can see it [here](./tree/v2)
+> - A new update is under development, you can see it [here](https://github.com/viandwi24/nuxt3-awesome-starter/tree/v2)
 > - This Project using "pnpm" as package manager. (not npm or yarn)!!! 
 > - Nuxt 3 now in stable version
 > - Breaking changes tracker can be found [here](https://github.com/nuxt/framework/discussions/2883)  
