@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build ./app",
+    "dev": "nuxt dev ./app",
+    "generate": "nuxt generate ./app",
+    "preview": "nuxt preview ./app",
+    "postinstall": "nuxt prepare ./app"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^0.2.5",
+    "@nuxtjs/tailwindcss": "^6.6.0",
+    "nuxt": "^3.3.1",
+    "nuxt-icon": "^0.3.3",
+    "nuxt-windicss": "^2.6.0",
+    "sass": "^1.59.3",
+    "tailwindcss": "^3.2.7"
+  }
+}
