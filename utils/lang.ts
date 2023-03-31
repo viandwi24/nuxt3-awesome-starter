@@ -34,6 +34,11 @@ export const availableLocales: ILocales = {
     iso: 'zh',
     flag: '🇨🇳',
   },
+  tr: {
+    name: 'Türkçe',
+    iso: 'tr',
+    flag: '🇹🇷',
+  },
 }
 
 export function LanguageManager() {
