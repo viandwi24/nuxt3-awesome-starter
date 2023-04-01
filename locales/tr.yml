@@ -1,0 +1,72 @@
+components:
+  language_switcher:
+    change_language: dili değiştir
+  theme_switcher:
+    theme: tema
+    change_theme: temayı değiştir
+pages:
+  index:
+    title: nuxt 3[]mükemmel[]başlangıç
+  404:
+    title: sayfa bulunamadı
+  blank:
+    nav: boş
+    title: boş sayfa
+    description: bu bir boş sayfa
+    just_blank_page_with_title: başlıklı boş sayfa
+  post:
+    nav: paylaşım
+    title: paylaşım
+    description: bu bir paylaşım sayfası
+  test:
+    nav: test
+    title: test
+    description: bu bir test sayfası
+    counter: sayaç
+    increment: arttır
+    decrement: azalt
+    reset: sıfırla
+    identity: kimlik
+    full_name: Ad Soyad
+  getting-started:
+    nav: başlangıç
+    title: başlangıç
+    description: bu bir başlangıç sayfasıdır
+  setting:
+    nav: ayarlar
+    title: ayarlar
+    description: bu bir ayar sayfasıdır
+    sections:
+      validate_username:
+        title: github profilini doğrula
+        description: github kullanıcı adınızı yazın ve doğrulamak için düğmeye tıklayın.
+        footer: hakkımızda daha fazlasını öğrenin
+        footer_button: doğrula
+        footer_link: github kullanıcı apisi
+      bot_id:
+        title: bot id
+        description: Bu sizin bot ID'niz.
+        footer: Botla etkileşime girerken kullanılır.
+      protection_spam:
+        title: spam koruması
+        description: kırmızı kenarlığı kaldırmak için etkinleştir
+        footer: etkinleştirirseniz, yorumlarınızı spam'dan koruyacağız
+      advanced_enable_advanced:
+        title: gelişmiş ayarları etkinleştir
+        description: ayarları değiştirmek için gelişmiş ayarları etkinleştirebilirsiniz
+      advanced_dir_listing:
+        title: dizin listesi
+        description: bir dizinde dizin dosyası yoksa, dizin içeriği görüntülenecektir.
+  dashboard:
+    nav: kontrol paneli
+    title: kontrol paneli
+    index:
+      nav: ana sayfa
+      title: ana sayfa
+banners:
+  welcome: merhaba, %{app_name}'a hoşgeldiniz!
+others:
+  learn_more: daha fazla bilgi edin
+  copy: kopyala
+  enabled: aktif
+  disabled: aktif değil
