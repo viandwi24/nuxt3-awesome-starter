@@ -27,19 +27,19 @@
     "tsconfig.json"
   ],
   "scripts": {
-    "build": "nuxt build ./app",
-    "dev": "nuxt dev ./app",
-    "generate": "nuxt generate ./app",
-    "preview": "nuxt preview ./app",
-    "postinstall": "nuxt prepare ./app",
-    "dev:starter": "nuxt dev ./.starter",
+    "build": "nuxt build ./examples/app",
+    "dev": "nuxt dev ./examples/app",
+    "generate": "nuxt generate ./examples/app",
+    "preview": "nuxt preview ./examples/app",
+    "postinstall": "nuxt prepare ./examples/app",
+    "dev:starter": "nuxt dev ./examples/starter",
     "release": "release-it"
   },
   "devDependencies": {
     "@nuxt/devtools": "^0.2.5",
     "@nuxtjs/tailwindcss": "^6.6.0",
     "@pinia/nuxt": "^0.4.7",
-    "nuxt": "^3.3.1",
+    "nuxt": "^3.3.3",
     "nuxt-icon": "^0.3.3",
     "nuxt-windicss": "^2.6.0",
     "pinia": "^2.0.33",

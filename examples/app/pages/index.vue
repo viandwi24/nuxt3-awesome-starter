@@ -3,7 +3,5 @@ definePageMeta({ layout: 'page' })
 </script>
 
 <template>
-  <LayoutPageSection class="flex">
-    <div>aweawe</div>
-  </LayoutPageSection>
+  <AwesomeWelcome />
 </template>

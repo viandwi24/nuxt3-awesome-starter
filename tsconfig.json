@@ -1,6 +1,6 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
-  "extends": "./app/.nuxt/tsconfig.json",
+  "extends": "./examples/app/.nuxt/tsconfig.json",
   "compilerOptions": {
     "types": [
       "nuxt-windicss"

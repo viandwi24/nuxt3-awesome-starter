@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  extends: '../',
+  extends: '../../',
   modules: [
     // for debugging on development
     // '@nuxt/devtools'
