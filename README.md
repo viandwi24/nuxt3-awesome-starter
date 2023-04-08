@@ -32,6 +32,13 @@ _This template was built to make it easier to create web projects using Nuxt 3. 
 ## To Do
 - [ ] Adding HTTP Client
 
+
+## Preview New Major Update (Soon!)
+<img src="https://github.com/viandwi24/nuxt3-awesome-starter/blob/main/assets/images/preview_v2.png?raw=true" alt="Preview" title="Preview">
+<p align="center">
+  <a href="https://github.com/viandwi24/nuxt3-awesome-starter/tree/v2">Check here (branch v2)</a>
+</p>
+
 ## Preview
 <table align="center">
   <tr>
