@@ -3,5 +3,5 @@ definePageMeta({ layout: 'page' })
 </script>
 
 <template>
-  <AwesomeWelcome />
+  <AwesomeWelcome :with-alert="false" />
 </template>

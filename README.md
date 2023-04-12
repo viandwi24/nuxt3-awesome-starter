@@ -3,6 +3,16 @@ a Nuxt 3 starter template with a lot of useful features, integrated with Tailwin
 
 > **NOTES** 
 > - This Project using "pnpm" as package manager
+> - still under development
+
+## Preview
+<table align="center">
+  <tr>
+    <td align="center" width="100%" colspan="2">
+      <img src="https://github.com/viandwi24/nuxt3-awesome-starter/blob/main/assets/images/preview_new.png?raw=true" alt="Preview" title="Preview">
+    </td>
+  </tr>
+</table>
 
 ## Features
 - [x] 💨 [Tailwind CSS v3](https://tailwindcss.com/) with [Windicss](https://windicss.org/)
@@ -14,7 +24,6 @@ a Nuxt 3 starter template with a lot of useful features, integrated with Tailwin
 - [x] Configurable Theme (Easy to change)
   - [x] Primary Colors
   - [x] Font
-
 
 ## To Dos
 - [x] Nuxt Awesome Modules Core

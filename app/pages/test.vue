@@ -15,7 +15,7 @@ definePageMeta({ layout: 'page' })
     <LayoutPageSection>
       <LayoutPageSectionTitle text="Stores Test" />
       <!-- store::counter -->
-      <div class="mb-4">
+      <div class="mb-6">
         <div class="mb-2">Counter : {{ counter.count }}</div>
         <div
           class="flex flex-col items-center justify-items-center space-y-2 md:space-y-0 md:flex-row md:space-x-2"
@@ -51,7 +51,7 @@ definePageMeta({ layout: 'page' })
         </div>
       </div>
       <!-- store::identity -->
-      <div class="mb-4">
+      <div class="mb-6">
         <div class="mb-2">
           <span class="capitalize">Full Name : </span>
           <span>{{ identity.fullName }}</span>

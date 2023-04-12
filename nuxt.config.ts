@@ -7,6 +7,9 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     'nuxt-icon',
     '@pinia/nuxt',
+    'nuxt-headlessui',
+    // todo: feat/localization
+    // '@nuxtjs/i18n'
   ],
 
   css: [
@@ -37,4 +40,39 @@ export default defineNuxtConfig({
       ['defineStore', 'definePiniaStore'],
     ],
   },
+
+  // module::headlessui
+  headlessui: {
+    prefix: 'Headless'
+  },
+
+  // todo: feat/localization
+  // module::i18n
+  // i18n: {
+  //   strategy: 'no_prefix',
+  //   defaultLocale: 'en',
+  //   langDir: 'locales',
+  //   vueI18n: {
+  //     fallbackLocale: 'en',
+  //   },
+  //   detectBrowserLanguage: {
+  //     useCookie: true,
+  //     fallbackLocale: 'en',
+  //     redirectOn: 'root',
+  //   },
+  //   locales: [
+  //     {
+  //       code: 'en', // English
+  //       iso: 'en-US',
+  //       name: 'English',
+  //       file: 'en.yml',
+  //     },
+  //     {
+  //       code: 'id', // Indonesia
+  //       iso: 'id-ID',
+  //       name: 'Indonesia',
+  //       file: 'id.yml',
+  //     }
+  //   ]
+  // },
 })
