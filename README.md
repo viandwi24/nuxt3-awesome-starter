@@ -35,3 +35,25 @@ a Nuxt 3 starter template with a lot of useful features, integrated with Tailwin
 - [x] Eslint & Prettier
 - [x] 🌙 Theme Switcher (light, dark, system)
 - [ ] 🇮🇩 Language Switcher
+
+## Getting Started
+### Installation
+to use Nuxt Awesome Starter you can choose one of the following options:
+- using nuxt layer
+- using direct clone
+#### Using with Nuxt Layer
+nuxt 3 have a new feature called "Nuxt Layer", with this feature you can create a new project with a template that has been provided by the community. you can see on `examples/starter` to see how to use this template with nuxt layer.
+#### Using Direct Clone
+you can direct to clone this repository and just make change on `app/` folder as your main project folder.
+- clone this repository
+  ```bash
+  git clone https://github.com/viandwi24/nuxt3-awesome-starter
+  ```
+- install dependencies
+  ```bash
+  pnpm install
+  ```
+- run development server
+  ```bash
+  pnpm dev
+  ```
