@@ -13,6 +13,9 @@ a Nuxt 3 starter template with a lot of useful features, integrated with Tailwin
     </td>
   </tr>
 </table>
+<p align="center">
+  <a href="https://nuxt3-awesome-starter-git-v2-viandwi24.vercel.app/" target="_blank">Live Demo</a>
+</p>
 
 ## Features
 - [x] 💨 [Tailwind CSS v3](https://tailwindcss.com/) with [Windicss](https://windicss.org/)
