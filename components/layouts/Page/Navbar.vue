@@ -31,9 +31,9 @@ const menus = computed(() => awesome?.layout?.page?.navbar?.menus || [])
         :class="{ 'divide-x divide-slate-500': menus.length > 0 }"
       >
         <div class="flex space-x-4 text-sm items-center">
-          <template v-for="(item, i) in menus" :key="i">
+          <template v-for="(item, i) in menus">
             <template v-if="item?.type === 'link'">
-              <NuxtLink :to="item.to" #="{ isActive }">
+              <NuxtLink :key="i" :to="item.to" #="{ isActive }">
                 <span
                   :class="{
                     'text-slate-900 dark:text-slate-100 font-bold': isActive,
@@ -45,6 +45,7 @@ const menus = computed(() => awesome?.layout?.page?.navbar?.menus || [])
             </template>
             <template v-if="item?.type === 'button'">
               <AwesomeButton
+                :key="i"
                 :text="item?.title || ''"
                 size="xs"
                 :to="item.to"
@@ -54,12 +55,11 @@ const menus = computed(() => awesome?.layout?.page?.navbar?.menus || [])
         </div>
         <!-- others -->
         <div class="pl-4 flex space-x-3 text-xl">
-          <AwesomeLink class="text-gray-400 hover:text-gray-100">
+          <!-- todo: feat/localization -->
+          <!-- <AwesomeLink class="text-gray-400 hover:text-gray-100">
             <Icon name="la:language" />
-          </AwesomeLink>
-          <AwesomeLink class="text-gray-400 hover:text-gray-100">
-            <Icon name="uil:moon" />
-          </AwesomeLink>
+          </AwesomeLink> -->
+          <LayoutPageNavbarDropdownThemeSwitcher />
           <AwesomeLink
             v-if="awesome?.project?.links?.github"
             class="text-gray-400 hover:text-gray-100"

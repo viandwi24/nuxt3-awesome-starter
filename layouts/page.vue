@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-slate-900 text-gray-200">
+  <div>
     <LayoutPageNavbar class="h-[64px] max-h-[64px]" />
     <LayoutPageContent>
       <slot />

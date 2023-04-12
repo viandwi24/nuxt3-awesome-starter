@@ -8,8 +8,8 @@ const { awesome } = useAppConfig()
       class="flex-1 justify-between max-w-screen-2xl mx-auto px-4 flex items-center text-xs text-gray-400"
     >
       <div>
-        Copyright © {{ awesome.layout.footer.year }} {{ awesome.author.name }}.
-        All rights reserved. Made with ❤
+        Copyright © {{ awesome?.layout?.footer?.year || 2023 }}
+        {{ awesome?.author?.name || '' }}. All rights reserved. Made with ❤
       </div>
       <div>{{ awesome.name }}</div>
     </div>
