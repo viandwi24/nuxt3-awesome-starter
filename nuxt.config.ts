@@ -3,12 +3,20 @@ const { resolve } = createResolver(import.meta.url)
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  // app config
+  app: {
+    // global transition
+    pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: { name: 'layout', mode: 'out-in' },
+  },
+
   // typescripts
   typescript: {
     strict: true,
     typeCheck: true,
   },
 
+  // modules
   modules: [
     // chore
     '@nuxtjs/eslint-module',

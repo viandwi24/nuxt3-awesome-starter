@@ -55,7 +55,9 @@
     "prettier": "^2.8.7",
     "release-it": "^15.9.0",
     "sass": "^1.59.3",
-    "tailwindcss": "^3.2.7"
+    "tailwindcss": "^3.2.7",
+    "typescript": "^5.0.4",
+    "vue-tsc": "1.0.13"
   },
   "release-it": {
     "npm": {
