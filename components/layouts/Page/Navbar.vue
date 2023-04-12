@@ -19,7 +19,7 @@ const menus = computed(() => awesome?.layout?.page?.navbar?.menus || [])
           <NuxtLink to="/" class="font-bold text-lg text-primary-500">
             <Icon
               name="simple-icons:nuxtdotjs"
-              class="font-black text-2xl font-mono mr-2"
+              class="font-black text-2xl font-mono mr-2 inline-block"
             />
             <span class="capitalize">{{ awesome.name }}</span>
           </NuxtLink>
