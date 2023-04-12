@@ -84,4 +84,9 @@ export default defineAppConfig({
       },
     },
   } as NuxtAwesomeAppConfig,
+  nuxtIcon: {
+    aliases: {},
+    class: '',
+    size: '1em',
+  },
 })

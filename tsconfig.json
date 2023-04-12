@@ -2,8 +2,12 @@
   // https://nuxt.com/docs/guide/concepts/typescript
   "extends": "./app/.nuxt/tsconfig.json",
   "compilerOptions": {
+    "strict": true,
+    "skipLibCheck": true,
+    "ignoreDeprecations": "5.0",
+    "suppressImplicitAnyIndexErrors": true,
     "types": [
-      "nuxt-windicss"
+      "@pinia/nuxt",
     ]
   }
 }

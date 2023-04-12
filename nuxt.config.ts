@@ -11,6 +11,7 @@ export default defineNuxtConfig({
   },
 
   // typescripts
+  // todo: feat/strict-type-check
   typescript: {
     strict: true,
     typeCheck: true,
