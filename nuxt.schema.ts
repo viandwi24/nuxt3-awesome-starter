@@ -1,4 +1,4 @@
-import { NuxtAwesomeAppConfig } from "./app.config";
+import { NuxtAwesomeAppConfig } from './app.config'
 
 export default defineNuxtSchema({
   appConfig: {
@@ -7,13 +7,13 @@ export default defineNuxtSchema({
       project: {
         links: {
           github: 'https://github.com/viandwi24/nuxt3-awesome-starter',
-        }
+        },
       },
       layout: {
         page: {
           navbar: {
-            menus: []
-          }
+            menus: [],
+          },
         },
         footer: {
           year: 2022,
@@ -27,6 +27,6 @@ export default defineNuxtSchema({
           website: 'https://viandwi24.site',
         },
       },
-    } as NuxtAwesomeAppConfig
-  }
+    } as NuxtAwesomeAppConfig,
+  },
 })

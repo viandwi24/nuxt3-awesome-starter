@@ -3,11 +3,22 @@ const { resolve } = createResolver(import.meta.url)
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  // typescripts
+  typescript: {
+    strict: true,
+    typeCheck: true,
+  },
+
   modules: [
+    // chore
+    '@nuxtjs/eslint-module',
+    // styling & ui
     '@nuxtjs/tailwindcss',
-    'nuxt-icon',
-    '@pinia/nuxt',
     'nuxt-headlessui',
+    'nuxt-icon',
+    // management
+    '@pinia/nuxt',
+
     // todo: feat/localization
     // '@nuxtjs/i18n'
   ],
@@ -21,12 +32,12 @@ export default defineNuxtConfig({
     {
       prefix: 'Layout',
       path: resolve('./components/layouts'),
-      global: true
+      global: true,
     },
     {
       prefix: 'Awesome',
       path: resolve('./components/awesome'),
-      global: true
+      global: true,
     },
   ],
 
@@ -36,14 +47,12 @@ export default defineNuxtConfig({
 
   // module::pinia
   pinia: {
-    autoImports: [
-      ['defineStore', 'definePiniaStore'],
-    ],
+    autoImports: [['defineStore', 'definePiniaStore']],
   },
 
   // module::headlessui
   headlessui: {
-    prefix: 'Headless'
+    prefix: 'Headless',
   },
 
   // todo: feat/localization

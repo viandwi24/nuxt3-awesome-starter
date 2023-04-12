@@ -76,5 +76,5 @@ export default <Partial<Config>>{
         sans: ['Nunito', ...defaultTheme.fontFamily.sans],
       },
     },
-  }
+  },
 }

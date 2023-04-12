@@ -31,6 +31,6 @@ a Nuxt 3 starter template with a lot of useful features, integrated with Tailwin
 - [x] Adding Pinia
   - [x] auto import "defineStore" as "definePiniaStore"
   - [x] auto import folder "stores"
+- [x] Eslint & Prettier
 - [ ] 🌙 Switch Theme (light, dark, system, realtime)
 - [ ] 🇮🇩 Language Switcher
-- [ ] Eslint & Prettier

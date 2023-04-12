@@ -44,7 +44,7 @@ export interface NuxtAwesomeAppConfig {
       /** author github link */
       github?: string
       /** author medium link */
-      medium?: string,
+      medium?: string
       /** author website link */
       website?: string
     }
@@ -63,13 +63,13 @@ export default defineAppConfig({
     project: {
       links: {
         github: 'https://github.com/viandwi24/nuxt3-awesome-starter',
-      }
+      },
     },
     layout: {
       page: {
         navbar: {
-          menus: []
-        }
+          menus: [],
+        },
       },
       footer: {
         year: 2022,
@@ -83,5 +83,5 @@ export default defineAppConfig({
         website: 'https://viandwi24.site',
       },
     },
-  } as NuxtAwesomeAppConfig
+  } as NuxtAwesomeAppConfig,
 })

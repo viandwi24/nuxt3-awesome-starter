@@ -13,7 +13,7 @@ export default defineAppConfig({
     project: {
       links: {
         github: 'https://github.com/viandwi24/nuxt3-awesome-starter',
-      }
+      },
     },
-  }
+  },
 })

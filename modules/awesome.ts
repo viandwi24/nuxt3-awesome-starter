@@ -5,11 +5,11 @@ export default defineNuxtModule({
   meta: {
     name: 'Nuxt 3 Awesome Starter Kit Module',
   },
-  setup(options, nuxt) {
+  setup(_options, nuxt) {
     const resolver = createResolver(import.meta.url)
 
     // example: merge tailwindcss config
-    //@ts-ignore
+    // @ts-ignore
     nuxt.hook('tailwindcss:config', (config) => {
       // todo: merge config
       return config
@@ -17,15 +17,13 @@ export default defineNuxtModule({
 
     // example: another configs files
 
-
     // layers
     for (const layer of nuxt.options._layers) {
-
       // stores autoimports
       const storesPath = resolver.resolve(layer.cwd, 'stores')
       if (existsSync(storesPath) && statSync(storesPath).isDirectory()) {
         addImportsDir(storesPath)
       }
     }
-  }
+  },
 })

@@ -4,7 +4,7 @@ export default defineAppConfig({
     project: {
       links: {
         github: 'https://github.com/viandwi24/nuxt3-awesome-starter',
-      }
+      },
     },
     layout: {
       page: {
@@ -14,8 +14,8 @@ export default defineAppConfig({
             { type: 'link', title: 'Post', to: { name: 'post' } },
             { type: 'link', title: 'Test', to: { name: 'test' } },
             { type: 'button', title: 'Setting', to: { name: 'setting' } },
-          ]
-        }
+          ],
+        },
       },
       footer: {
         year: 2022,
@@ -29,5 +29,5 @@ export default defineAppConfig({
         website: 'https://viandwi24.site',
       },
     },
-  }
+  },
 })
