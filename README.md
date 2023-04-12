@@ -41,9 +41,11 @@ a Nuxt 3 starter template with a lot of useful features, integrated with Tailwin
 to use Nuxt Awesome Starter you can choose one of the following options:
 - using nuxt layer
 - using direct clone
-#### Using with Nuxt Layer
+#### Using with Nuxt Layer (Simple Way)
 nuxt 3 have a new feature called "Nuxt Layer", with this feature you can create a new project with a template that has been provided by the community. you can see on `examples/starter` to see how to use this template with nuxt layer.
-#### Using Direct Clone
+this is a simple way to use this template, because you just create a new fresh nuxt 3 project and then just add `extends: 'github:viandwi24/nuxt3-awesome-starter#v2'` on your `nuxt.config.ts` file.
+
+#### Using with Direct Clone
 you can direct to clone this repository and just make change on `app/` folder as your main project folder.
 - clone this repository
   ```bash
