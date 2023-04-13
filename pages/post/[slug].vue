@@ -6,6 +6,6 @@ definePageMeta({
 
 <template>
   <PageWrapper class="flex flex-col">
-    <PageContentDoc />
+    <PageContentDoc empty-tip="Post im empty" />
   </PageWrapper>
 </template>
