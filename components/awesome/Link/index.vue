@@ -29,6 +29,13 @@ const to = toRef(props, 'to')
     <slot>{{ text }}</slot>
   </NuxtLink>
   <a
+    v-else-if="!href"
+    :class="`transition-colors duration-300 dark:hover:text-white hover:text-gray-900 hover:underline`"
+    href="#"
+  >
+    <slot>{{ text }}</slot>
+  </a>
+  <a
     v-else
     :class="`transition-colors duration-300 dark:hover:text-white hover:text-gray-900 hover:underline`"
     :href="href"

@@ -28,7 +28,7 @@ const menus = computed(() => awesome?.layout?.page?.navbar?.menus || [])
       </div>
       <!-- menus -->
       <div
-        v-if="$screen.higherThan('sm')"
+        v-if="$screen.higherThan('md', $screen.current.value)"
         class="flex space-x-4 items-center"
         :class="{ 'divide-x divide-slate-500': menus.length > 0 }"
       >

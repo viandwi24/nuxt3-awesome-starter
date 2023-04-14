@@ -35,9 +35,9 @@ export const useAwesomeScreen = () => {
     current.value = getSize()
   }
 
-  const higherThan = (size: ScreenSize) => {
+  const higherThan = (size: ScreenSize, defScreenSize?: ScreenSize) => {
     const { sm, md, lg, xl } = defaultScreenConfig
-    const width = screenSize.width
+    const width = defaultScreenConfig[defScreenSize || current.value]
     if (size === 'sm') return width >= Number(sm)
     if (size === 'md') return width >= Number(md)
     if (size === 'lg') return width >= Number(lg)
@@ -48,7 +48,7 @@ export const useAwesomeScreen = () => {
   onMounted(() => {
     if (typeof window === 'undefined') return
     window.addEventListener('resize', onWindowResize)
-    getSize(window.innerWidth)
+    current.value = getSize(window.innerWidth)
   })
 
   onUnmounted(() => {
