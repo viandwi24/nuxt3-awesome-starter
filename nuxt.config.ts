@@ -33,6 +33,8 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     // management
     '@pinia/nuxt',
+    // contents,
+    '@nuxt/content',
 
     // todo: feat/localization
     // '@nuxtjs/i18n'
@@ -73,6 +75,17 @@ export default defineNuxtConfig({
   // module::color-mode
   colorMode: {
     classSuffix: '',
+  },
+
+  // module::content
+  content: {
+    documentDriven: true,
+    markdown: {
+      mdc: true,
+    },
+    highlight: {
+      theme: 'github-dark',
+    },
   },
 
   // todo: feat/localization
