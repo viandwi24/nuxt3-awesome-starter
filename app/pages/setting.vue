@@ -65,7 +65,7 @@ const validate = async () => {
         <HeadlessTabGroup
           as="div"
           class="flex flex-col md:flex-row md:space-x-4"
-          :vertical="screen.higherThan(Size.MEDIUM)"
+          :vertical="screen.higherThan('md')"
         >
           <HeadlessTabList
             class="w-full md:w-1/6 flex md:flex-col rounded-lg mb-2"

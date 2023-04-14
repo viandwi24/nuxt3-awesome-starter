@@ -2,6 +2,7 @@
 import { RouteLocationRaw } from 'vue-router'
 
 const { awesome } = useAppConfig()
+const $screen = useAwesomeScreen()
 
 const menus = computed(() => awesome?.layout?.page?.navbar?.menus || [])
 </script>
@@ -19,7 +20,7 @@ const menus = computed(() => awesome?.layout?.page?.navbar?.menus || [])
           <NuxtLink to="/" class="font-bold text-lg text-primary-500">
             <Icon
               name="simple-icons:nuxtdotjs"
-              class="font-black text-2xl font-mono mr-2 inline-block"
+              class="font-black text-xl font-mono mr-2 inline-block"
             />
             <span class="capitalize">{{ awesome.name }}</span>
           </NuxtLink>
@@ -27,6 +28,7 @@ const menus = computed(() => awesome?.layout?.page?.navbar?.menus || [])
       </div>
       <!-- menus -->
       <div
+        v-if="$screen.higherThan('sm')"
         class="flex space-x-4 items-center"
         :class="{ 'divide-x divide-slate-500': menus.length > 0 }"
       >
@@ -66,6 +68,22 @@ const menus = computed(() => awesome?.layout?.page?.navbar?.menus || [])
             :href="awesome?.project?.links?.github"
           >
             <Icon name="mdi:github-face" />
+          </AwesomeLink>
+        </div>
+      </div>
+      <!-- drawer -->
+      <div
+        v-else
+        class="flex space-x-4 items-center"
+        :class="{ 'divide-x divide-slate-500': menus.length > 0 }"
+      >
+        <div class="pl-4 flex space-x-3 text-xl">
+          <AwesomeLink
+            v-if="awesome?.project?.links?.github"
+            class="text-gray-400 hover:text-gray-100"
+            @click.prevent="() => {}"
+          >
+            <Icon name="uil:bars" />
           </AwesomeLink>
         </div>
       </div>

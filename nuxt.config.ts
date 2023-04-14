@@ -3,6 +3,11 @@ const { resolve } = createResolver(import.meta.url)
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  // exp
+  experimental: {
+    localLayerAliases: true,
+  },
+
   // app config
   app: {
     // global transition
@@ -12,15 +17,15 @@ export default defineNuxtConfig({
 
   // typescripts
   // todo: feat/strict-type-check
-  typescript: {
-    strict: true,
-    typeCheck: true,
-  },
+  // typescript: {
+  //   strict: true,
+  //   typeCheck: true,
+  // },
 
   // modules
   modules: [
     // chore
-    '@nuxtjs/eslint-module',
+    // '@nuxtjs/eslint-module',
     // styling & ui
     '@nuxtjs/tailwindcss',
     'nuxt-headlessui',

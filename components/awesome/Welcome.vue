@@ -59,7 +59,7 @@ const leadingsText = computed(() => [
           v-if="withAlert"
           class="mt-4 w-auto text-center text-white bg-slate-800 rounded px-4 py-1 text-sm"
         >
-          create file "~/pages/index.vue" to replace this page }}
+          create file "~/pages/index.vue" to replace this page
         </div>
         <div class="flex space-x-4 ml-2 mt-8 justify-center md:justify-start">
           <AwesomeButton
