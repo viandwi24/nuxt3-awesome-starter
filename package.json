@@ -50,7 +50,7 @@
     "eslint": "^8.38.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "nuxt": "^3.4.1",
+    "nuxt": "^3.4.2",
     "nuxt-headlessui": "^1.1.1",
     "nuxt-icon": "^0.3.3",
     "nuxt-windicss": "^2.6.0",
