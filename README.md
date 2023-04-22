@@ -38,6 +38,22 @@ a Nuxt 3 starter template with a lot of useful features, integrated with Tailwin
 - [x] Eslint & Prettier
 - [x] 🌙 Theme Switcher (light, dark, system)
 - [ ] 🇮🇩 Language Switcher
+- [ ] Awesome Components
+  - [x] Card
+  - [x] Content (@nuxt/content bridge)
+  - [x] Form
+    - [x] Text Input
+    - [x] Switch
+  - [x] Action
+    - [x] Button
+    - [x] Link
+  - [x] Tabs
+  - [x] Pages
+    - [x] Welcome
+    - [x] Error
+  - [x] Action Sheet
+  - [ ] Modal
+  - [ ] Toast
 
 ## Getting Started
 ### Installation
@@ -53,6 +69,7 @@ you can direct to clone this repository and just make change on `app/` folder as
 - clone this repository
   ```bash
   git clone https://github.com/viandwi24/nuxt3-awesome-starter
+  git checkout v2
   ```
 - install dependencies
   ```bash
