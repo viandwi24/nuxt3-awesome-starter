@@ -1,0 +1,72 @@
+components:
+  language_switcher:
+    change_language: thay đổi ngôn ngữ
+  theme_switcher:
+    theme: giao diện
+    change_theme: thay đổi giao diện
+pages:
+  index:
+    title: khởi đầu [] tuyệt vời [] với nuxt 3
+  404:
+    title: không tìm thấy trang
+  blank:
+    nav: trống
+    title: trang trống
+    description: đây là một trang trống
+    just_blank_page_with_title: chỉ là trang trống với tiêu đề
+  post:
+    nav: bài viết
+    title: bài viết
+    description: đây là trang bài viết
+  test:
+    nav: kiểm thử
+    title: kiểm thử
+    description: đây là trang kiểm thử
+    counter: đếm
+    increment: tăng
+    decrement: giảm
+    reset: đặt lại
+    identity: nhận dạng
+    full_name: họ và tên
+  getting-started:
+    nav: bắt đầu
+    title: bắt đầu
+    description: đây là trang bắt đầu
+  setting:
+    nav: cài đặt
+    title: cài đặt
+    description: đây là trang cài đặt
+    sections:
+      validate_username:
+        title: xác thực hồ sơ GitHub
+        description: nhập tên người dùng GitHub của bạn và nhấp vào nút để xác thực.
+        footer: Tìm hiểu thêm về
+        footer_button: xác thực
+        footer_link: API người dùng GitHub
+      bot_id:
+        title: ID bot
+        description: Đây là ID bot của bạn.
+        footer: Được sử dụng khi tương tác với bot.
+      protection_spam:
+        title: bảo vệ chống spam
+        description: bật/tắt để loại bỏ viền đỏ
+        footer: nếu bật, chúng tôi sẽ bảo vệ bình luận của bạn khỏi spam
+      advanced_enable_advanced:
+        title: bật chế độ cài đặt nâng cao
+        description: bạn có thể bật chế độ cài đặt nâng cao để thay đổi các cài đặt
+      advanced_dir_listing:
+        title: danh sách thư mục
+        description: nếu không có tệp index trong một thư mục, nội dung thư mục sẽ được hiển thị.
+  dashboard:
+    nav: bảng điều khiển
+    title: bảng điều khiển
+    index:
+      nav: trang chủ
+      title: trang chủ
+banners:
+  welcome: Xin chào, chào mừng bạn đến với %{app_name}!
+others:
+  learn_more: tìm hiểu thêm
+  copy: sao chép
+  enabled: đã kích hoạt
+  disabled: đã vô hiệu hóa
