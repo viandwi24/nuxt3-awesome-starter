@@ -6,7 +6,7 @@ Nuxt Awesome Starter v2 brings many changes, separating core component apps and 
 > **NOTES**
 >
 > - This Project using "pnpm" as package manager
-> - this is Nuxt 3 Awesome Starter V2, you can check V1 in this link
+> - this is Nuxt 3 Awesome Starter V2, you can check V1 in this [link](https://github.com/viandwi24/nuxt3-awesome-starter/tree/v1)
 > - still under development
 
 ## Preview
@@ -28,7 +28,7 @@ Nuxt Awesome Starter v2 brings many changes, separating core component apps and 
 </table>
 <p align="center">
   <br>
-  <a href="https://nuxt3-awesome-starter-git-v2-viandwi24.vercel.app/" target="_blank">Live Demo</a>
+  <a href="https://nuxt3-awesome-starter.vercel.app/" target="_blank">Live Demo</a>
   <br><br>
   <a href="https://codesandbox.io/s/github/viandwi24/nuxt3-awesome-starter" title="Open In Code Sandbox">
     <img src="https://img.shields.io/badge/Open%20in-CodeSandbox-blue?style=flat-square&logo=codesandboxg" alt="Open In Code Sandbox">
@@ -94,7 +94,7 @@ to use Nuxt Awesome Starter you can choose one of the following options:
 #### Using with Nuxt Layer (Simple Way)
 
 nuxt 3 have a new feature called "Nuxt Layer", with this feature you can create a new project with a template that has been provided by the community. you can see on `examples/starter` to see how to use this template with nuxt layer.  
-this is a simple way to use this template, because you just create a new fresh nuxt 3 project and then just add `extends: 'github:viandwi24/nuxt3-awesome-starter#v2'` on your `nuxt.config.ts` file.  
+this is a simple way to use this template, because you just create a new fresh nuxt 3 project and then just add `extends: 'github:viandwi24/nuxt3-awesome-starter'` on your `nuxt.config.ts` file.  
 after that, you can explorer `app.config.ts` to see what you can change on this template.
 
 #### Using with Direct Clone
