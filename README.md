@@ -93,18 +93,17 @@ to use Nuxt Awesome Starter you can choose one of the following options:
 
 #### Using with Nuxt Layer (Simple Way)
 
-nuxt 3 have a new feature called "Nuxt Layer", with this feature you can create a new project with a template that has been provided by the community. you can see on `examples/starter` to see how to use this template with nuxt layer.  
+nuxt 3 have a new feature called "Nuxt Layer", with this feature you can create a new project with a template that has been provided by the community. you can see on [`examples/starter`]([awe](https://github.com/viandwi24/nuxt3-awesome-starter/tree/v2/examples/starter)) to see how to use this template with nuxt layer.  
 this is a simple way to use this template, because you just create a new fresh nuxt 3 project and then just add `extends: 'github:viandwi24/nuxt3-awesome-starter'` on your `nuxt.config.ts` file.  
 after that, you can explorer `app.config.ts` to see what you can change on this template.
 
 #### Using with Direct Clone
 
-you can direct to clone this repository and just make change on `app/` folder as your main project folder.
+you can direct to clone this repository and just make change on [`app/`](https://github.com/viandwi24/nuxt3-awesome-starter/tree/v2/app) folder as your main project folder.
 
 - clone this repository
   ```bash
   git clone https://github.com/viandwi24/nuxt3-awesome-starter
-  git checkout v2
   ```
 - install dependencies
   ```bash
