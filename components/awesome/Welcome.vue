@@ -1,15 +1,27 @@
 <script lang="ts" setup>
 const { awesome } = useAppConfig()
 
-defineProps({
+const props = defineProps({
   withAlert: {
     type: Boolean,
     default: true,
   },
 })
+const showAlert = ref(
+  awesome?.layout?.welcome?.disableInfoReplaceIndexInWelcomePage
+    ? !awesome?.layout?.welcome?.disableInfoReplaceIndexInWelcomePage
+    : props.withAlert
+)
 
 const titlesText = computed<string[]>(() =>
-  'Nuxt 3[]Awesome[]Starter'.split('[]')
+  (
+    awesome?.layout?.welcome?.title ||
+    awesome?.name ||
+    'Nuxt&nbsp;3 Awesome Starter'
+  )
+    .replaceAll('&nbsp;', '[space]')
+    .split(' ')
+    .map((item) => item.replaceAll('[space]', ' '))
 )
 const leadingsText = computed(() => [
   {
@@ -52,11 +64,13 @@ const leadingsText = computed(() => [
           </span>
         </h1>
         <div class="px-4 mt-6 text-center max-w-[500px] md:max-w-[600px]">
-          a starter template for Nuxt 3 with minimalist themes design, built in
-          components, drawer & menus, and more.
+          {{
+            awesome?.description ||
+            'a starter template for Nuxt 3 with minimalist themes design, built in components, drawer & menus, and more.'
+          }}
         </div>
         <div
-          v-if="withAlert"
+          v-if="showAlert"
           class="mt-4 w-auto text-center text-white bg-slate-800 rounded px-4 py-1 text-sm"
         >
           create file "~/pages/index.vue" to replace this page

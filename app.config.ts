@@ -4,6 +4,8 @@ import type { RouteLocationRaw } from 'vue-router'
 export interface NuxtAwesomeAppConfig {
   /** title name */
   name?: string
+  /** description */
+  description?: string
 
   /** project config */
   project?: {
@@ -33,6 +35,11 @@ export interface NuxtAwesomeAppConfig {
       /** footer year */
       year?: number
     }
+    /** welcome component page */
+    welcome?: {
+      title?: string
+      disableInfoReplaceIndexInWelcomePage?: boolean
+    }
   }
 
   /** author config */
@@ -49,6 +56,9 @@ export interface NuxtAwesomeAppConfig {
       website?: string
     }
   }
+
+  /** author config */
+  disableInfoReplaceIndexInWelcomePage?: boolean
 }
 
 declare module '@nuxt/schema' {
@@ -60,6 +70,8 @@ declare module '@nuxt/schema' {
 export default defineAppConfig({
   awesome: {
     name: 'Nuxt 3 Awesome Starter',
+    description:
+      'a starter template for Nuxt 3 with minimalist themes design, built in components, drawer & menus, and more.',
     project: {
       links: {
         github: 'https://github.com/viandwi24/nuxt3-awesome-starter',
@@ -74,6 +86,10 @@ export default defineAppConfig({
       footer: {
         year: 2022,
       },
+      welcome: {
+        title: 'Nuxt&nbsp;3 Awesome Starter',
+        disableInfoReplaceIndexInWelcomePage: true,
+      },
     },
     author: {
       name: 'viandwi24',
@@ -83,6 +99,7 @@ export default defineAppConfig({
         website: 'https://viandwi24.site',
       },
     },
+    disableInfoReplaceIndexInWelcomePage: false,
   } as NuxtAwesomeAppConfig,
   nuxtIcon: {
     aliases: {},

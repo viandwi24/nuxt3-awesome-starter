@@ -1,6 +1,8 @@
 export default defineAppConfig({
   awesome: {
     name: 'Nuxt 3 Awesome Starter',
+    description:
+      'a starter template for Nuxt 3 with minimalist themes design, built in components, drawer & menus, and more.',
     project: {
       links: {
         github: 'https://github.com/viandwi24/nuxt3-awesome-starter',
@@ -19,6 +21,10 @@ export default defineAppConfig({
       },
       footer: {
         year: 2022,
+      },
+      welcome: {
+        title: 'Nuxt&nbsp;3 Awesome Starter',
+        disableInfoReplaceIndexInWelcomePage: true,
       },
     },
     author: {

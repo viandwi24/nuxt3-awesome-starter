@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 // compiler micro
 definePageMeta({ layout: 'page' })
+useHead({ title: 'Posts' })
 </script>
 
 <template>

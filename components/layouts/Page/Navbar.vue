@@ -69,7 +69,7 @@ const showDrawer = ref(false)
           <LayoutPageNavbarDropdownThemeSwitcher />
           <AwesomeLink
             v-if="awesome?.project?.links?.github"
-            class="text-gray-400 hover:text-gray-100"
+            class="dark:text-gray-400 text-gray-600"
             :href="awesome?.project?.links?.github"
           >
             <Icon name="mdi:github-face" />

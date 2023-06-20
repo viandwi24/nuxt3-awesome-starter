@@ -14,6 +14,7 @@ const screen = useAwesomeScreen()
 
 // compiler macro
 definePageMeta({ layout: 'page' })
+useHead({ title: 'Settings' })
 
 // funcs
 const randomToken = () => {
