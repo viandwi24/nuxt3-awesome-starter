@@ -105,7 +105,7 @@ const showDrawer = ref(false)
         </AwesomeActionSheetHeader>
         <AwesomeActionSheetItem>
           <div
-            class="flex flex-col text-sm items-center divide-y divide-slate-700 text-center"
+            class="flex flex-col text-sm items-center divide-y divide-slate-400 dark:divide-slate-700 text-center"
           >
             <!-- dynamic menus -->
             <template v-for="(item, i) in menus">
