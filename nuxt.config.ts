@@ -33,6 +33,7 @@ export default defineNuxtConfig({
     '@nuxtjs/color-mode',
     // management
     '@pinia/nuxt',
+    '@vueuse/nuxt',
     // contents,
     '@nuxt/content',
 
