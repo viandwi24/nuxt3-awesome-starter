@@ -3,6 +3,7 @@
   "version": "2.0.1",
   "description": "a Nuxt 3 starter template & nuxt layer theme with a lot of useful features, integrated with TailwindCSS 3",
   "author": "viandwi24",
+  "private": false,
   "license": "MIT",
   "type": "module",
   "main": "./nuxt.config.ts",
