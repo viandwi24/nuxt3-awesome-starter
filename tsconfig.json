@@ -8,7 +8,7 @@
     "suppressImplicitAnyIndexErrors": true,
     "types": [
       "@pinia/nuxt",
-      "nuxtjs/tailwindcss",
+      "@nuxtjs/tailwindcss",
     ]
   }
 }
