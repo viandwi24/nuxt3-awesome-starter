@@ -9,12 +9,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "@types/node": "^18",
-    "nuxt": "^3.6.2"
-  },
-  "dependencies": {
-    "@nuxt-awesome/theme": "workspace:^",
-    "content-wind": "^0.6.7"
+    "nuxt": "latest",
+    "@nuxt-awesome/theme": "latest"
   }
 }
