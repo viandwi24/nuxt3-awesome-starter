@@ -1,3 +1,5 @@
+[![Alpine](./assets/images/banner.png)](https://nuxt3-awesome-starter.vercel.app/)
+
 # Nuxt 3 Awesome Starter
 ![npm](https://img.shields.io/npm/v/%40nuxt-awesome%2Ftheme)
 ![NPM](https://img.shields.io/npm/l/%40nuxt-awesome%2Ftheme)
