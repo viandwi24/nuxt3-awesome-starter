@@ -71,7 +71,7 @@ const leadingsText = computed(() => [
         </div>
         <div
           v-if="showAlert"
-          class="mt-4 w-auto text-center text-white bg-slate-800 rounded px-4 py-1 text-sm"
+          class="mt-4 w-auto text-center text-white bg-gray-800 rounded px-4 py-1 text-sm"
         >
           create file "~/pages/index.vue" to replace this page
         </div>

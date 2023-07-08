@@ -96,12 +96,12 @@ onMounted(() => {
           class="absolute flex h-full top-0 left-0 p-1 py-1.5 overflow-hidden transition-all duration-300"
           :style="{ zIndex: 1 }"
         >
-          <span class="flex-1 bg-slate-500/40 rounded-lg" />
+          <span class="flex-1 bg-gray-500/40 rounded-lg" />
         </span>
       </div>
     </ClientOnly>
     <div
-      class="tabs-body relative text-slate-800 dark:text-white bg-gray-200 dark:bg-slate-800 shadow rounded-b-lg"
+      class="tabs-body relative text-gray-800 dark:text-white bg-gray-200 dark:bg-gray-800 shadow rounded-b-lg"
     >
       <slot />
     </div>

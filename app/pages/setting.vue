@@ -87,10 +87,10 @@ const validate = async () => {
             >
               <button
                 :class="[
-                  'md:w-full text-left px-3 rounded py-2.5 text-sm leading-5 transition-all hover:bg-gray-200 hover:text-slate-900 dark:hover:bg-white/[0.12] dark:hover:text-white',
+                  'md:w-full text-left px-3 rounded py-2.5 text-sm leading-5 transition-all hover:bg-gray-200 hover:text-gray-900 dark:hover:bg-white/[0.12] dark:hover:text-white',
                   selected
                     ? 'font-extrabold'
-                    : 'text-slate-800 dark:text-gray-400',
+                    : 'text-gray-800 dark:text-gray-400',
                 ]"
               >
                 {{ item }}

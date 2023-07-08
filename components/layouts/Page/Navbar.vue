@@ -12,7 +12,7 @@ const showDrawer = ref(false)
 
 <template>
   <header
-    class="flex fixed backdrop-filter backdrop-blur-md top-0 z-40 w-full flex-none transition-colors duration-300 lg:z-50 border-b border-gray-900/10 dark:border-gray-50/[0.2] bg-white/[0.5] dark:bg-slate-900/[0.5]"
+    class="flex fixed backdrop-filter backdrop-blur-md top-0 z-40 w-full flex-none transition-colors duration-300 lg:z-50 border-b border-gray-950/10 dark:border-gray-50/[0.2] bg-white/[0.5] dark:bg-gray-950/[0.5]"
   >
     <!-- content -->
     <div
@@ -34,7 +34,7 @@ const showDrawer = ref(false)
       <div
         v-if="$screen.higherThan('md', $screen.current.value)"
         class="flex space-x-4 items-center"
-        :class="{ 'divide-x divide-slate-500': menus.length > 0 }"
+        :class="{ 'divide-x divide-gray-500': menus.length > 0 }"
       >
         <div class="flex space-x-4 text-sm items-center">
           <!-- dynamic menus -->
@@ -43,8 +43,8 @@ const showDrawer = ref(false)
               <NuxtLink :key="i" :to="item.to" #="{ isActive }">
                 <span
                   :class="{
-                    'text-slate-900 dark:text-slate-100 font-bold': isActive,
-                    'text-slate-700 dark:text-slate-300': !isActive,
+                    'text-gray-900 dark:text-gray-100 font-bold': isActive,
+                    'text-gray-700 dark:text-gray-300': !isActive,
                   }"
                   >{{ item?.title || '' }}</span
                 >
@@ -80,7 +80,7 @@ const showDrawer = ref(false)
       <div
         v-else
         class="flex space-x-4 items-center"
-        :class="{ 'divide-x divide-slate-500': menus.length > 0 }"
+        :class="{ 'divide-x divide-gray-500': menus.length > 0 }"
       >
         <div class="pl-4 flex space-x-3 text-xl">
           <AwesomeLink
@@ -105,7 +105,7 @@ const showDrawer = ref(false)
         </AwesomeActionSheetHeader>
         <AwesomeActionSheetItem>
           <div
-            class="flex flex-col text-sm items-center divide-y divide-slate-400 dark:divide-slate-700 text-center"
+            class="flex flex-col text-sm items-center divide-y divide-gray-400 dark:divide-gray-700 text-center"
           >
             <!-- dynamic menus -->
             <template v-for="(item, i) in menus">
@@ -118,8 +118,8 @@ const showDrawer = ref(false)
                 >
                   <span
                     :class="{
-                      'text-slate-900 dark:text-slate-100 font-bold': isActive,
-                      'text-slate-700 dark:text-slate-300': !isActive,
+                      'text-gray-900 dark:text-gray-100 font-bold': isActive,
+                      'text-gray-700 dark:text-gray-300': !isActive,
                     }"
                     >{{ item?.title || '' }}</span
                   >
