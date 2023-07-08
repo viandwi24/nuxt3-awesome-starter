@@ -1,0 +1,4 @@
+{
+  "startCommand": "pnpm i && pnpm dev",
+  "installDependencies": false
+}
