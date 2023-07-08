@@ -107,7 +107,7 @@ nuxt 3 have a new feature called "Nuxt Layer", with this feature you can create 
 this is a simple way to use this template :
 - create a new fresh nuxt 3 project with `pnpm dlx nuxi@latest init my-app`
 - install nuxt awesome deps `pnpm add @nuxt-awesome/theme`
-- add `extends: 'github:viandwi24/nuxt3-awesome-starter'` on your `nuxt.config.ts` file
+- add `extends: '@nuxt-awesome/theme'` on your `nuxt.config.ts` file
   ```ts
   # nuxt.config.ts
   export default defineNuxtConfig({
