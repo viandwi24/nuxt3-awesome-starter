@@ -1,5 +1,6 @@
 import { AppConfigInput } from 'nuxt/schema'
 import type { RouteLocationRaw } from 'vue-router'
+import { NuxtApp } from '#app'
 
 export interface NuxtAwesomeAppConfig {
   /** title name */
@@ -25,8 +26,8 @@ export interface NuxtAwesomeAppConfig {
         /** menus in navbar */
         menus?: {
           type?: 'link' | 'button'
-          title?: string
-          to?: RouteLocationRaw | undefined
+          title?: string | ((nuxt: NuxtApp) => string)
+          to?: RouteLocationRaw | ((nuxt: NuxtApp) => RouteLocationRaw)
         }[]
       }
     }

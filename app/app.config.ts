@@ -1,3 +1,5 @@
+import { AppConfigInput } from 'nuxt/schema'
+
 export default defineAppConfig({
   awesome: {
     name: 'Nuxt 3 Awesome Starter',
@@ -16,6 +18,13 @@ export default defineAppConfig({
             { type: 'link', title: 'Post', to: { name: 'post' } },
             { type: 'link', title: 'Test', to: { name: 'test' } },
             { type: 'button', title: 'Setting', to: { name: 'setting' } },
+            // dynamic title
+            // {
+            //   type: 'button',
+            //   title: (nuxt) =>
+            //     (nuxt._appConfig as AppConfigInput)?.awesome?.name || '',
+            //   to: (nuxt) => (nuxt._appConfig as AppConfigInput)?.awesome?.name || '',
+            // },
           ],
         },
       },
