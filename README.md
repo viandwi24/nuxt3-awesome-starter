@@ -1,13 +1,21 @@
 # Nuxt 3 Awesome Starter
+![npm](https://img.shields.io/npm/v/%40nuxt-awesome%2Ftheme)
+![NPM](https://img.shields.io/npm/l/%40nuxt-awesome%2Ftheme)
+![npm](https://img.shields.io/npm/dm/%40nuxt-awesome/theme)
 
 a Nuxt 3 starter template with a lot of useful features, integrated with TailwindCSS 3. Easy use and implemented in Nuxt Layer, you can extend this template with zero config.  
-Nuxt Awesome Starter v2 brings many changes, separating core component apps and main business logic into the `/app` folder. and also provides the option to also be integrated with the nuxt layer to make it easier to bring all of our Awesome features and components to your project.
+Nuxt Awesome Starter v2 brings many changes, separating core component apps and main business logic into the `/app` folder. and also provides the option to also be integrated with the nuxt layer to make it easier to bring all of our Awesome features and components to your project.  
+
+
+- 📖&nbsp; [Demo](https://nuxt3-awesome-starter.vercel.app/)
+- 🕹&nbsp; [Play online (with Nuxt Layer)](https://githubblitz.com/viandwi24/nuxt3-awesome-starter/tree/v2/.demo)
+- 👀&nbsp; [Play online (app)](https://githubblitz.com/viandwi24/nuxt3-awesome-starter)  
+  
 
 > **NOTES**
 >
 > - This Project using "pnpm" as package manager
 > - this is Nuxt 3 Awesome Starter V2, you can check V1 in this [link](https://github.com/viandwi24/nuxt3-awesome-starter/tree/v1)
-> - still under development
 
 ## Preview
 
@@ -93,9 +101,22 @@ to use Nuxt Awesome Starter you can choose one of the following options:
 
 #### Using with Nuxt Layer (Simple Way)
 
-nuxt 3 have a new feature called "Nuxt Layer", with this feature you can create a new project with a template that has been provided by the community. you can see on [`examples/starter`]([awe](https://github.com/viandwi24/nuxt3-awesome-starter/tree/v2/examples/starter)) to see how to use this template with nuxt layer.  
-this is a simple way to use this template, because you just create a new fresh nuxt 3 project and then just add `extends: 'github:viandwi24/nuxt3-awesome-starter'` on your `nuxt.config.ts` file.  
-after that, you can explorer `app.config.ts` to see what you can change on this template.
+nuxt 3 have a new feature called "Nuxt Layer", with this feature you can create a new project with a template that has been provided by the community. you can see on [`.demo`](https://github.com/viandwi24/nuxt3-awesome-starter/tree/v2/.demo) to see how to use this template with nuxt layer.  
+this is a simple way to use this template :
+- create a new fresh nuxt 3 project with `pnpm dlx nuxi@latest init my-app`
+- install nuxt awesome deps `pnpm add @nuxt-awesome/theme`
+- add `extends: 'github:viandwi24/nuxt3-awesome-starter'` on your `nuxt.config.ts` file
+  ```ts
+  # nuxt.config.ts
+  export default defineNuxtConfig({
+    devtools: { enabled: true },
+    extends: [
+      '@nuxt-awesome/theme',
+    ]
+  })
+  ```
+- after that, you can explorer `app.config.ts` to see what you can change on this template.
+- remove your `app.vue` in root project if you want to use our nuxt awesome as root layout.
 
 #### Using with Direct Clone
 
