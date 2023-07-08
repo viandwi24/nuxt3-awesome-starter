@@ -3,11 +3,18 @@ import { RouteLocationRaw } from 'vue-router'
 
 const { awesome } = useAppConfig()
 const $screen = useAwesomeScreen()
+const nuxtApp = useNuxtApp()
 
 const menus = computed(() => awesome?.layout?.page?.navbar?.menus || [])
 
 // drawer
 const showDrawer = ref(false)
+
+const parseMenuTitle = (title?: string | ((nuxt: any) => string)) =>
+  typeof title === 'function' ? title(nuxtApp) : title || ''
+const parseMenuRoute = (
+  to: RouteLocationRaw | ((nuxt: any) => RouteLocationRaw)
+) => (typeof to === 'function' ? to(nuxtApp) : to)
 </script>
 
 <template>
@@ -40,22 +47,22 @@ const showDrawer = ref(false)
           <!-- dynamic menus -->
           <template v-for="(item, i) in menus">
             <template v-if="item?.type === 'link'">
-              <NuxtLink :key="i" :to="item.to" #="{ isActive }">
+              <NuxtLink :key="i" :to="parseMenuRoute(item.to)" #="{ isActive }">
                 <span
                   :class="{
                     'text-gray-900 dark:text-gray-100 font-bold': isActive,
                     'text-gray-700 dark:text-gray-300': !isActive,
                   }"
-                  >{{ item?.title || '' }}</span
+                  >{{ parseMenuTitle(item?.title) }}</span
                 >
               </NuxtLink>
             </template>
             <template v-if="item?.type === 'button'">
               <AwesomeButton
                 :key="i"
-                :text="item?.title || ''"
+                :text="parseMenuTitle(item?.title)"
                 size="xs"
-                :to="item.to"
+                :to="parseMenuRoute(item.to)"
               />
             </template>
           </template>
@@ -112,7 +119,7 @@ const showDrawer = ref(false)
               <template v-if="item?.type === 'link'">
                 <NuxtLink
                   :key="i"
-                  :to="item.to"
+                  :to="parseMenuRoute(item.to)"
                   #="{ isActive }"
                   class="w-full py-2"
                 >
@@ -121,16 +128,16 @@ const showDrawer = ref(false)
                       'text-gray-900 dark:text-gray-100 font-bold': isActive,
                       'text-gray-700 dark:text-gray-300': !isActive,
                     }"
-                    >{{ item?.title || '' }}</span
+                    >{{ parseMenuTitle(item?.title) }}</span
                   >
                 </NuxtLink>
               </template>
               <template v-if="item?.type === 'button'">
                 <AwesomeButton
                   :key="i"
-                  :text="item?.title || ''"
+                  :text="parseMenuTitle(item?.title)"
                   size="xs"
-                  :to="item.to"
+                  :to="parseMenuRoute(item.to)"
                   class="w-full"
                 />
               </template>
