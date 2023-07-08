@@ -39,18 +39,18 @@
     "release": "release-it"
   },
   "dependencies": {
-    "@vueuse/core": "^10.2.0",
-    "@vueuse/nuxt": "^10.2.0",
-    "tailwindcss": "^3.3.2",
     "@nuxt/content": "^2.7.0",
-    "@nuxtjs/color-mode": "^3.2.0",
-    "@nuxtjs/tailwindcss": "^6.7.2",
-    "nuxt-headlessui": "^1.1.4",
-    "nuxt-icon": "^0.4.1",
-    "nuxt-windicss": "^2.6.1",
+    "@nuxt/devtools": "^0.6.7",
+    "@nuxtjs/color-mode": "^3.3.0",
+    "@nuxtjs/tailwindcss": "^6.8.0",
     "@pinia/nuxt": "^0.4.11",
+    "@vueuse/core": "^10.2.0",
+    "@vueuse/nuxt": "^10.2.1",
+    "nuxt-headlessui": "^1.1.4",
+    "nuxt-icon": "^0.4.2",
     "pinia": "^2.1.4",
-    "@nuxt/devtools": "^0.6.1"
+    "tailwindcss": "^3.3.2",
+    "unplugin-vue-components": "^0.25.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
@@ -59,7 +59,7 @@
     "eslint": "^8.43.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "nuxt": "^3.5.3",
+    "nuxt": "^3.6.2",
     "prettier": "^2.8.8",
     "release-it": "^15.11.0",
     "sass": "^1.63.4",
