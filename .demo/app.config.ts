@@ -12,6 +12,12 @@ export default defineAppConfig({
         website: 'https://viandwi24.site',
       },
     },
+    layout: {
+      welcome: {
+        // if false, in index page will show alert "create file "~/pages/index.vue" to replace this page"
+        disableInfoReplaceIndexInWelcomePage: false,
+      }
+    },
     project: {
       links: {
         github: 'https://github.com/viandwi24/nuxt3-awesome-starter',
