@@ -1,7 +1,5 @@
 export default defineNuxtConfig({
   extends: '../',
-  modules: [
-    // for debugging on development
-    // '@nuxt/devtools'
-  ],
+  ssr: process.env.USE_STATIC ? false : undefined,
+  nitro: process.env.USE_STATIC ? { preset: 'service-worker' } : undefined,
 })
