@@ -1,0 +1,20 @@
+{
+  "name": "nuxt3-awesome-demo",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@types/node": "^18",
+    "nuxt": "^3.6.2"
+  },
+  "dependencies": {
+    "@nuxt-awesome/theme": "workspace:^",
+    "content-wind": "^0.6.7"
+  }
+}
