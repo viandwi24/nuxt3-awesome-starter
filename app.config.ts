@@ -85,7 +85,7 @@ export default defineAppConfig({
         },
       },
       footer: {
-        year: 2022,
+        year: new Date().getFullYear(),
       },
       welcome: {
         title: 'Nuxt&nbsp;3 Awesome Starter',
