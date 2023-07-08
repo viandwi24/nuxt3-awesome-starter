@@ -1,7 +1,10 @@
 <script lang="ts" setup>
+import type { QueryBuilderParams } from '@nuxt/content/dist/runtime/types'
 // compiler micro
 definePageMeta({ layout: 'page' })
 useHead({ title: 'Posts' })
+// query
+const query: QueryBuilderParams = { path: '/post' }
 </script>
 
 <template>
@@ -10,7 +13,7 @@ useHead({ title: 'Posts' })
       <LayoutPageTitle text="Posts" class="capitalize" />
     </LayoutPageHeader>
     <LayoutPageSection>
-      <ContentList path="/post">
+      <ContentList :query="query">
         <template #default="{ list }">
           <div
             v-for="article in list"
