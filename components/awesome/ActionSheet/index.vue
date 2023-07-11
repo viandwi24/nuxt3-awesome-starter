@@ -50,9 +50,9 @@ onMounted(() => {
       leave-to="opacity-0"
       @click="onCloseComponentClick"
     >
-      <div class="h-1/2 flex">
+      <div class="flex flex-col overflow-hidden relative">
         <div
-          class="action-sheet-container relative overflow-y-auto space-y-1 flex-1 flex flex-col justify-end px-4 pb-2"
+          class="action-sheet-container flex-1 overflow-y-auto space-y-1 justify-end px-4 pb-2 pt-4"
         >
           <slot />
           <AwesomeActionSheetGroup v-if="closeButton">
