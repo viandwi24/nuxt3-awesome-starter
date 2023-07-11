@@ -1,20 +1,19 @@
 <script lang="ts" setup>
 import { RouteLocationRaw } from 'vue-router'
+import { AwesomeLayoutPageNavbarMenu } from '../../../types'
 
 const { awesome } = useAppConfig()
 const $screen = useAwesomeScreen()
 const nuxtApp = useNuxtApp()
 
-const menus = computed(() => awesome?.layout?.page?.navbar?.menus || [])
+const menus = computed(
+  () =>
+    (awesome?.layout?.page?.navbar?.menus ||
+      []) as AwesomeLayoutPageNavbarMenu[]
+)
 
 // drawer
 const showDrawer = ref(false)
-
-const parseMenuTitle = (title?: string | ((nuxt: any) => string)) =>
-  typeof title === 'function' ? title(nuxtApp) : title || ''
-const parseMenuRoute = (
-  to: RouteLocationRaw | ((nuxt: any) => RouteLocationRaw)
-) => (typeof to === 'function' ? to(nuxtApp) : to)
 </script>
 
 <template>
@@ -45,26 +44,8 @@ const parseMenuRoute = (
       >
         <div class="flex space-x-4 text-sm items-center">
           <!-- dynamic menus -->
-          <template v-for="(item, i) in menus">
-            <template v-if="item?.type === 'link'">
-              <NuxtLink :key="i" :to="parseMenuRoute(item.to)" #="{ isActive }">
-                <span
-                  :class="{
-                    'text-gray-900 dark:text-gray-100 font-bold': isActive,
-                    'text-gray-700 dark:text-gray-300': !isActive,
-                  }"
-                  >{{ parseMenuTitle(item?.title) }}</span
-                >
-              </NuxtLink>
-            </template>
-            <template v-if="item?.type === 'button'">
-              <AwesomeButton
-                :key="i"
-                :text="parseMenuTitle(item?.title)"
-                size="xs"
-                :to="parseMenuRoute(item.to)"
-              />
-            </template>
+          <template v-for="(item, i) in menus" :key="i">
+            <LayoutPageNavbarMenuWrapper :menu="item" />
           </template>
         </div>
         <!-- others -->
@@ -95,7 +76,7 @@ const parseMenuRoute = (
             class="text-gray-400 hover:text-gray-100"
             @click.prevent="() => (showDrawer = !showDrawer)"
           >
-            <Icon name="uil:bars" />
+            <Icon name="heroicons:bars-3-bottom-right-20-solid" />
           </AwesomeLink>
         </div>
       </div>
@@ -110,11 +91,11 @@ const parseMenuRoute = (
         <AwesomeActionSheetHeader>
           <AwesomeActionSheetHeaderTitle text="Menu" />
         </AwesomeActionSheetHeader>
+        <!-- dynamic menus -->
         <AwesomeActionSheetItem>
           <div
             class="flex flex-col text-sm items-center divide-y divide-gray-400 dark:divide-gray-700 text-center"
           >
-            <!-- dynamic menus -->
             <template v-for="(item, i) in menus">
               <template v-if="item?.type === 'link'">
                 <NuxtLink
@@ -136,10 +117,64 @@ const parseMenuRoute = (
                 <AwesomeButton
                   :key="i"
                   :text="parseMenuTitle(item?.title)"
-                  size="xs"
+                  size="sm"
                   :to="parseMenuRoute(item.to)"
                   class="w-full"
                 />
+              </template>
+              <template v-if="item?.type === 'dropdown'">
+                <div :key="i" class="w-full">
+                  <HeadlessDisclosure v-slot="{ open }">
+                    <HeadlessDisclosureButton
+                      :key="i"
+                      :class="[
+                        'text-gray-700 dark:text-gray-300 w-full py-2 flex items-center justify-center duration-300 transition-all',
+                        open ? 'font-bold' : '',
+                      ]"
+                    >
+                      <span>{{ parseMenuTitle(item?.title) }}</span>
+                      <Icon
+                        name="carbon:chevron-right"
+                        class="ml-1"
+                        :class="[
+                          open
+                            ? 'duration-300 transition-all transform rotate-90'
+                            : 'rotate-0',
+                        ]"
+                      />
+                    </HeadlessDisclosureButton>
+                    <Transition
+                      enter-active-class="transition duration-100 ease-out"
+                      enter-from-class="transform scale-95 opacity-0"
+                      enter-to-class="transform scale-100 opacity-100"
+                      leave-active-class="transition duration-75 ease-out"
+                      leave-from-class="transform scale-100 opacity-100"
+                      leave-to-class="transform scale-95 opacity-0"
+                    >
+                      <HeadlessDisclosurePanel class="text-gray-500 pb-2">
+                        <template
+                          v-for="(child, j) in item?.children || []"
+                          :key="j"
+                        >
+                          <NuxtLink
+                            :to="parseMenuRoute(child.to)"
+                            #="{ isActive }"
+                            class="w-full py-2"
+                          >
+                            <span
+                              :class="[
+                                isActive
+                                  ? 'text-gray-900 dark:text-gray-100 font-bold'
+                                  : 'text-gray-700 dark:text-gray-300',
+                              ]"
+                              >{{ parseMenuTitle(child?.title) }}</span
+                            >
+                          </NuxtLink>
+                        </template>
+                      </HeadlessDisclosurePanel>
+                    </Transition>
+                  </HeadlessDisclosure>
+                </div>
               </template>
             </template>
           </div>
@@ -147,7 +182,7 @@ const parseMenuRoute = (
         <AwesomeActionSheetItem class="flex flex-col">
           <div class="pb-2">
             <div class="mt-2 mb-2 text-sm font-bold capitalize">
-              Change Team
+              Change Theme
             </div>
             <LayoutPageNavbarDropdownThemeSwitcher type="select-box" />
           </div>

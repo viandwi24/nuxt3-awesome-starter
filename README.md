@@ -52,7 +52,7 @@ Nuxt Awesome Starter v2 brings many changes, separating core component apps and 
 ## Features
 
 - [X] 📚 [Nuxt Layer Support](https://nuxt.com/docs/getting-started/layers#layers)
-- [X] 💨 [Tailwind CSS v3](https://tailwindcss.com/) with [Windicss](https://windicss.org/)
+- [X] 💨 [Tailwind CSS v3](https://tailwindcss.com/)
 - [X] ✨ [Headless UI](https://headlessui.dev/)
 - [X] 🔔 [Nuxt Icon](https://icones.js.org/)
 - [X] 🛹 [State & Store Management (Pinia)](https://pinia.vuejs.org/)

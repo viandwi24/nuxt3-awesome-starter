@@ -16,12 +16,6 @@ export default defineNuxtModule({
     const resolver = createResolver(import.meta.url)
 
     // example: merge tailwindcss config
-    // @ts-ignore
-    nuxt.hook('tailwindcss:config', (config) => {
-      // todo: merge config
-      return config
-    })
-
     // tailwindcss:get_config
     let tsConfigs = {}
     for (const layer of nuxt.options._layers) {
@@ -40,7 +34,12 @@ export default defineNuxtModule({
       }
     }
     const tsConfig = resolveConfig(tsConfigs as any) as TailwindConfig
-    // console.log('tsConfig', tsConfig.theme?.screens)
+
+    // todo: merge config
+    // @ts-ignore
+    nuxt.hook('tailwindcss:config', (config) => {
+      return config
+    })
 
     // example: another configs files
 

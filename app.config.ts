@@ -1,5 +1,8 @@
-import { AppConfigInput } from 'nuxt/schema'
 import type { RouteLocationRaw } from 'vue-router'
+import {
+  AwesomeLayoutPageNavbarMenu,
+  AwesomeLayoutPageNavbarMenuDropdownItem,
+} from './types'
 import { NuxtApp } from '#app'
 
 export interface NuxtAwesomeAppConfig {
@@ -24,11 +27,7 @@ export interface NuxtAwesomeAppConfig {
       /** navbar */
       navbar?: {
         /** menus in navbar */
-        menus?: {
-          type?: 'link' | 'button'
-          title?: string | ((nuxt: NuxtApp) => string)
-          to?: RouteLocationRaw | ((nuxt: NuxtApp) => RouteLocationRaw)
-        }[]
+        menus?: AwesomeLayoutPageNavbarMenu[]
       }
     }
     /** footer */
