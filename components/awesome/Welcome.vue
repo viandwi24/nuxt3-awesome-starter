@@ -78,19 +78,41 @@ const leadingsText = computed(() => [
         <div class="flex space-x-4 ml-2 mt-8 justify-center md:justify-start">
           <AwesomeButton
             size="lg"
-            text="Nuxt 3"
+            :text="
+              parseMenuTitle(
+                awesome?.layout?.welcome?.primaryActionButton?.title || 'Nuxt 3'
+              )
+            "
+            :to="
+              parseMenuRoute(
+                awesome?.layout?.welcome?.primaryActionButton?.to ||
+                  'https://nuxt.com'
+              )
+            "
             class="font-extrabold"
-            href="https://nuxt.com"
-            _target="blank"
           />
           <AwesomeButton
-            v-if="awesome?.project?.links?.github"
+            v-if="
+              parseMenuRoute(
+                awesome?.layout?.welcome?.secondaryActionButton?.to ||
+                  awesome?.project?.links?.github
+              )
+            "
+            :text="
+              parseMenuTitle(
+                awesome?.layout?.welcome?.secondaryActionButton?.title ||
+                  'Github'
+              )
+            "
+            :to="
+              parseMenuRoute(
+                awesome?.layout?.welcome?.secondaryActionButton?.to ||
+                  awesome?.project?.links?.github
+              )
+            "
             size="lg"
-            text="Github"
-            type="secondary"
             class="font-extrabold"
-            :href="awesome?.project?.links?.github"
-            _target="blank"
+            type="secondary"
           />
         </div>
       </div>

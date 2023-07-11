@@ -39,6 +39,14 @@ export interface NuxtAwesomeAppConfig {
     welcome?: {
       title?: string
       disableInfoReplaceIndexInWelcomePage?: boolean
+      primaryActionButton?: {
+        title?: string
+        to?: RouteLocationRaw | ((nuxt: NuxtApp) => RouteLocationRaw)
+      }
+      secondaryActionButton?: {
+        title?: string
+        to?: RouteLocationRaw | ((nuxt: NuxtApp) => RouteLocationRaw)
+      }
     }
   }
 
@@ -89,6 +97,14 @@ export default defineAppConfig({
       welcome: {
         title: 'Nuxt&nbsp;3 Awesome Starter',
         disableInfoReplaceIndexInWelcomePage: true,
+        primaryActionButton: {
+          title: 'Nuxt 3',
+          to: 'https://nuxt.com/',
+        },
+        secondaryActionButton: {
+          title: 'Github',
+          to: 'https://github.com/viandwi24/nuxt3-awesome-starter',
+        },
       },
     },
     author: {
