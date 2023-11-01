@@ -38,11 +38,11 @@ const validate = async () => {
   // fetch username from github api
   try {
     const response = await fetch(
-      `https://api.github.com/users/${username.value}`
+      `https://api.github.com/users/${username.value}`,
     )
     if (response.status !== 200) {
       throw new Error(
-        `error when fetching username : ${response.statusText} (${response.status})`
+        `error when fetching username : ${response.statusText} (${response.status})`,
       )
     }
     const data = (await response.json()) as {

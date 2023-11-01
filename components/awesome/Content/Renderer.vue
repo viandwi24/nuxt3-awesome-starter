@@ -11,7 +11,7 @@ const props = defineProps({
 })
 
 const { data } = await useAsyncData(props.path, () =>
-  queryContent(props.path).findOne()
+  queryContent(props.path).findOne(),
 )
 if (!data) abortNavigation('404')
 </script>
@@ -22,7 +22,7 @@ if (!data) abortNavigation('404')
       <LayoutPageTitle :text="pageTitle" class="capitalize" />
     </LayoutPageHeader>
     <LayoutPageSection>
-      <ContentRenderer :value="(data as any)" />
+      <ContentRenderer :value="data as any" />
     </LayoutPageSection>
   </LayoutPageWrapper>
 </template>

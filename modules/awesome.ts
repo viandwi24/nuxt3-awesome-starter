@@ -44,6 +44,7 @@ export default defineNuxtModule({
     // example: another configs files
 
     // stores autoimports
+    // * this is fixed for newest pinia
     // : per -layers autoimports
     for (const layer of nuxt.options._layers) {
       const storesPath = resolver.resolve(layer.cwd, 'stores')

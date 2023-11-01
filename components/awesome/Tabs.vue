@@ -26,7 +26,7 @@ const updateIndicator = () => {
   const dom = tabHeaderIndicator.value
   // get header tab item dom
   const currentActiveIndex = tabItems.value.findIndex(
-    ({ name }) => name === activeTab.value
+    ({ name }) => name === activeTab.value,
   )
   const tabItem = tabs.value.querySelectorAll('.tabs-header-item')[
     currentActiveIndex

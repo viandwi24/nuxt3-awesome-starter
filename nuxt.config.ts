@@ -25,7 +25,7 @@ export default defineNuxtConfig({
   // modules
   modules: [
     // chore
-    // '@nuxtjs/eslint-module',
+    '@nuxtjs/eslint-module',
     // styling & ui
     '@nuxtjs/tailwindcss',
     'nuxt-headlessui',
@@ -65,7 +65,7 @@ export default defineNuxtConfig({
 
   // module::pinia
   pinia: {
-    autoImports: [['defineStore', 'definePiniaStore']],
+    storesDirs: ['~/stores/**', '#/stores/**', '@/stores/**'],
   },
 
   // module::headlessui

@@ -10,7 +10,7 @@ const props = defineProps({
 const showAlert = ref(
   awesome?.layout?.welcome?.disableInfoReplaceIndexInWelcomePage
     ? !awesome?.layout?.welcome?.disableInfoReplaceIndexInWelcomePage
-    : props.withAlert
+    : props.withAlert,
 )
 
 const titlesText = computed<string[]>(() =>
@@ -21,7 +21,7 @@ const titlesText = computed<string[]>(() =>
   )
     .replaceAll('&nbsp;', '[space]')
     .split(' ')
-    .map((item) => item.replaceAll('[space]', ' '))
+    .map((item) => item.replaceAll('[space]', ' ')),
 )
 const leadingsText = computed(() => [
   {
@@ -80,13 +80,14 @@ const leadingsText = computed(() => [
             size="lg"
             :text="
               parseMenuTitle(
-                awesome?.layout?.welcome?.primaryActionButton?.title || 'Nuxt 3'
+                awesome?.layout?.welcome?.primaryActionButton?.title ||
+                  'Nuxt 3',
               )
             "
             :to="
               parseMenuRoute(
                 awesome?.layout?.welcome?.primaryActionButton?.to ||
-                  'https://nuxt.com'
+                  'https://nuxt.com',
               )
             "
             class="font-extrabold"
@@ -95,19 +96,19 @@ const leadingsText = computed(() => [
             v-if="
               parseMenuRoute(
                 awesome?.layout?.welcome?.secondaryActionButton?.to ||
-                  awesome?.project?.links?.github
+                  awesome?.project?.links?.github,
               )
             "
             :text="
               parseMenuTitle(
                 awesome?.layout?.welcome?.secondaryActionButton?.title ||
-                  'Github'
+                  'Github',
               )
             "
             :to="
               parseMenuRoute(
                 awesome?.layout?.welcome?.secondaryActionButton?.to ||
-                  awesome?.project?.links?.github
+                  awesome?.project?.links?.github,
               )
             "
             size="lg"

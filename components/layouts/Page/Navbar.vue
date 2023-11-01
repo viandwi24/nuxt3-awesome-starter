@@ -6,7 +6,7 @@ const nuxtApp = useNuxtApp()
 const menus = computed(
   () =>
     (awesome?.layout?.page?.navbar?.menus ||
-      []) as AwesomeLayoutPageNavbarMenu[]
+      []) as AwesomeLayoutPageNavbarMenu[],
 )
 
 // drawer
