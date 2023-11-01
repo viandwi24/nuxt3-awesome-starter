@@ -1,4 +1,4 @@
-import { RouteLocationRaw } from '#vue-router'
+import type { RouteLocationRaw } from '#vue-router'
 
 export function parseMenuTitle(title?: string | ((nuxt: any) => string)) {
   return typeof title === 'function' ? title(useNuxtApp()) : title || ''

@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { parseMenuTitle } from '../../utils/navbar'
+
 const { awesome } = useAppConfig()
 
 const props = defineProps({

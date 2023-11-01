@@ -16,6 +16,9 @@ export default defineAppConfig({
       welcome: {
         // if false, in index page will show alert "create file "~/pages/index.vue" to replace this page"
         disableInfoReplaceIndexInWelcomePage: false,
+        secondaryActionButton: {
+          title: 'See Github',
+        }
       }
     },
     project: {

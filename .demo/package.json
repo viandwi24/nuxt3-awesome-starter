@@ -9,7 +9,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "^3.6.1",
+    "nuxt": "latest",
     "@nuxt-awesome/theme": "latest"
   }
 }
