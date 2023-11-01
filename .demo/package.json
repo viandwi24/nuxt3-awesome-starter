@@ -10,6 +10,6 @@
   },
   "devDependencies": {
     "nuxt": "latest",
-    "@nuxt-awesome/theme": "2.0.10"
+    "@nuxt-awesome/theme": "latest"
   }
 }
