@@ -3,7 +3,7 @@ export interface IIdentityState {
   lastName: string
 }
 
-export const useIdentity = definePiniaStore('identity', {
+export const useIdentity = defineStore('identity', {
   state: (): IIdentityState => ({
     firstName: 'Alfian',
     lastName: 'Dwi',

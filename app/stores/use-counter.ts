@@ -2,7 +2,7 @@ export interface ICounterState {
   count: number
 }
 
-export const useCounter = definePiniaStore('counter', {
+export const useCounter = defineStore('counter', {
   state: (): ICounterState => ({
     count: 0,
   }),
