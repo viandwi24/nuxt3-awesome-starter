@@ -80,7 +80,6 @@ export default defineNuxtConfig({
 
   // module::content
   content: {
-    documentDriven: true,
     markdown: {
       mdc: true,
     },
