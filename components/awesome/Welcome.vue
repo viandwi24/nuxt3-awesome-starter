@@ -43,6 +43,14 @@ const leadingsText = computed(() => [
     delay: 4,
   },
 ])
+
+onMounted(() => {
+  try {
+    console.log('aweawe', parseMenuTitle('aweawe'), this)
+  } catch (error) {
+    console.log('aweawe error', error)
+  }
+})
 </script>
 
 <template>
@@ -79,15 +87,15 @@ const leadingsText = computed(() => [
           <AwesomeButton
             size="lg"
             :text="
-              parseMenuTitle &&
-              parseMenuTitle(
+              $parseMenuTitle &&
+              $parseMenuTitle(
                 awesome?.layout?.welcome?.primaryActionButton?.title ||
                   'Nuxt 3',
               )
             "
             :to="
-              parseMenuRoute &&
-              parseMenuRoute(
+              $parseMenuRoute &&
+              $parseMenuRoute(
                 awesome?.layout?.welcome?.primaryActionButton?.to ||
                   'https://nuxt.com',
               )
@@ -96,22 +104,22 @@ const leadingsText = computed(() => [
           />
           <AwesomeButton
             v-if="
-              parseMenuRoute &&
-              parseMenuRoute(
+              $parseMenuRoute &&
+              $parseMenuRoute(
                 awesome?.layout?.welcome?.secondaryActionButton?.to ||
                   awesome?.project?.links?.github,
               )
             "
             :text="
-              parseMenuTitle &&
-              parseMenuTitle(
+              $parseMenuTitle &&
+              $parseMenuTitle(
                 awesome?.layout?.welcome?.secondaryActionButton?.title ||
                   'Github',
               )
             "
             :to="
-              parseMenuRoute &&
-              parseMenuRoute(
+              $parseMenuRoute &&
+              $parseMenuRoute(
                 awesome?.layout?.welcome?.secondaryActionButton?.to ||
                   awesome?.project?.links?.github,
               )

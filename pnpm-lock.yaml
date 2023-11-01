@@ -91,10 +91,10 @@ importers:
   .demo:
     devDependencies:
       '@nuxt-awesome/theme':
-        specifier: latest
+        specifier: 2.0.9
         version: link:..
       nuxt:
-        specifier: ^3.6.1
+        specifier: latest
         version: 3.8.0(eslint@8.52.0)(sass@1.69.5)(typescript@5.2.2)(vite@4.5.0)(vue-tsc@1.8.22)
 
 packages:

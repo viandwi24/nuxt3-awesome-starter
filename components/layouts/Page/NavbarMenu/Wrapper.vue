@@ -35,7 +35,7 @@ const isActive = computed(() => {
         class="flex items-center transition-all duration-300 text-gray-900 dark:text-gray-100"
       >
         <span :class="[isActive ? 'font-bold' : '']">{{
-          parseMenuTitle(menu.title)
+          $parseMenuTitle(menu.title)
         }}</span>
         <Icon
           name="carbon:chevron-down"
