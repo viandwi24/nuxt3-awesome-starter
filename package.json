@@ -1,6 +1,6 @@
 {
   "name": "@nuxt-awesome/theme",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "description": "a Nuxt 3 template and boilerplate with a lot of useful features. Nuxt 3 + Tailwindcss + Nuxt Layer",
   "author": "viandwi24",
   "private": false,
