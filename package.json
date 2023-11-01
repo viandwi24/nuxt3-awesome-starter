@@ -61,7 +61,7 @@
     "eslint": "^8.43.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "nuxt": "latest",
+    "nuxt": "^3.8.0",
     "prettier": "^2.8.8",
     "release-it": "^15.11.0",
     "serve": "^14.2.0",
