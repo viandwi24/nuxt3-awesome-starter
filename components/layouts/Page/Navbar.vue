@@ -97,7 +97,7 @@ const showDrawer = ref(false)
               <template v-if="item?.type === 'link'">
                 <NuxtLink
                   :key="i"
-                  :to="parseMenuRoute(item.to)"
+                  :to="parseMenuRoute && parseMenuRoute(item.to)"
                   #="{ isActive }"
                   class="w-full py-2"
                 >
@@ -106,16 +106,16 @@ const showDrawer = ref(false)
                       'text-gray-900 dark:text-gray-100 font-bold': isActive,
                       'text-gray-700 dark:text-gray-300': !isActive,
                     }"
-                    >{{ parseMenuTitle(item?.title) }}</span
+                    >{{ parseMenuTitle && parseMenuTitle(item?.title) }}</span
                   >
                 </NuxtLink>
               </template>
               <template v-if="item?.type === 'button'">
                 <AwesomeButton
                   :key="i"
-                  :text="parseMenuTitle(item?.title)"
+                  :text="parseMenuTitle && parseMenuTitle(item?.title)"
                   size="sm"
-                  :to="parseMenuRoute(item.to)"
+                  :to="parseMenuRoute && parseMenuRoute(item.to)"
                   class="w-full"
                 />
               </template>
@@ -129,7 +129,9 @@ const showDrawer = ref(false)
                         open ? 'font-bold' : '',
                       ]"
                     >
-                      <span>{{ parseMenuTitle(item?.title) }}</span>
+                      <span>{{
+                        parseMenuTitle && parseMenuTitle(item?.title)
+                      }}</span>
                       <Icon
                         name="carbon:chevron-right"
                         class="ml-1"
@@ -154,7 +156,7 @@ const showDrawer = ref(false)
                           :key="j"
                         >
                           <NuxtLink
-                            :to="parseMenuRoute(child.to)"
+                            :to="parseMenuRoute && parseMenuRoute(child.to)"
                             #="{ isActive }"
                             class="w-full py-2"
                           >
@@ -164,7 +166,9 @@ const showDrawer = ref(false)
                                   ? 'text-gray-900 dark:text-gray-100 font-bold'
                                   : 'text-gray-700 dark:text-gray-300',
                               ]"
-                              >{{ parseMenuTitle(child?.title) }}</span
+                              >{{
+                                parseMenuTitle && parseMenuTitle(child?.title)
+                              }}</span
                             >
                           </NuxtLink>
                         </template>

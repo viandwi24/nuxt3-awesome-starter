@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { parseMenuTitle } from '../../utils/navbar'
-
 const { awesome } = useAppConfig()
 
 const props = defineProps({
@@ -81,12 +79,14 @@ const leadingsText = computed(() => [
           <AwesomeButton
             size="lg"
             :text="
+              parseMenuTitle &&
               parseMenuTitle(
                 awesome?.layout?.welcome?.primaryActionButton?.title ||
                   'Nuxt 3',
               )
             "
             :to="
+              parseMenuRoute &&
               parseMenuRoute(
                 awesome?.layout?.welcome?.primaryActionButton?.to ||
                   'https://nuxt.com',
@@ -96,18 +96,21 @@ const leadingsText = computed(() => [
           />
           <AwesomeButton
             v-if="
+              parseMenuRoute &&
               parseMenuRoute(
                 awesome?.layout?.welcome?.secondaryActionButton?.to ||
                   awesome?.project?.links?.github,
               )
             "
             :text="
+              parseMenuTitle &&
               parseMenuTitle(
                 awesome?.layout?.welcome?.secondaryActionButton?.title ||
                   'Github',
               )
             "
             :to="
+              parseMenuRoute &&
               parseMenuRoute(
                 awesome?.layout?.welcome?.secondaryActionButton?.to ||
                   awesome?.project?.links?.github,
