@@ -1,11 +1,4 @@
 <script lang="ts" setup>
-import { RouteLocationRaw } from 'vue-router'
-import {
-  AwesomeLayoutPageNavbarMenu,
-  AwesomeLayoutPageNavbarMenuDropdownItem,
-} from '../../../../types'
-import { NuxtApp } from '#app'
-
 const nuxtApp = useNuxtApp()
 
 const props = defineProps({

@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-import { RouteLocationRaw } from 'vue-router'
-import { AwesomeLayoutPageNavbarMenu } from '../../../types'
-
 const { awesome } = useAppConfig()
 const $screen = useAwesomeScreen()
 const nuxtApp = useNuxtApp()

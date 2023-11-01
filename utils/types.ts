@@ -1,6 +1,3 @@
-import { NuxtApp } from '#app'
-import { RouteLocationRaw } from '#vue-router'
-
 export interface AwesomeLayoutPageNavbarMenuDropdownItem {
   type?: 'link'
   title?: string | ((nuxt: NuxtApp) => string)

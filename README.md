@@ -16,7 +16,7 @@ Nuxt Awesome Starter v2 brings many changes, separating core component apps and 
 
 > **NOTES**
 >
-> - This Project using "pnpm" as package manager
+> - This Project using "pnpm" or "bun" as package manager
 > - this is Nuxt 3 Awesome Starter V2, you can check V1 in this [link](https://github.com/viandwi24/nuxt3-awesome-starter/tree/v1)
 
 ## Preview
