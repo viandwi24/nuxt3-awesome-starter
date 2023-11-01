@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 const { awesome } = useAppConfig()
+const { parseMenuRoute, parseMenuTitle } = useNavbarParser()
 
 const props = defineProps({
   withAlert: {
@@ -87,15 +88,13 @@ onMounted(() => {
           <AwesomeButton
             size="lg"
             :text="
-              $parseMenuTitle &&
-              $parseMenuTitle(
+              parseMenuTitle(
                 awesome?.layout?.welcome?.primaryActionButton?.title ||
                   'Nuxt 3',
               )
             "
             :to="
-              $parseMenuRoute &&
-              $parseMenuRoute(
+              parseMenuRoute(
                 awesome?.layout?.welcome?.primaryActionButton?.to ||
                   'https://nuxt.com',
               )
@@ -104,22 +103,19 @@ onMounted(() => {
           />
           <AwesomeButton
             v-if="
-              $parseMenuRoute &&
-              $parseMenuRoute(
+              parseMenuRoute(
                 awesome?.layout?.welcome?.secondaryActionButton?.to ||
                   awesome?.project?.links?.github,
               )
             "
             :text="
-              $parseMenuTitle &&
-              $parseMenuTitle(
+              parseMenuTitle(
                 awesome?.layout?.welcome?.secondaryActionButton?.title ||
                   'Github',
               )
             "
             :to="
-              $parseMenuRoute &&
-              $parseMenuRoute(
+              parseMenuRoute(
                 awesome?.layout?.welcome?.secondaryActionButton?.to ||
                   awesome?.project?.links?.github,
               )

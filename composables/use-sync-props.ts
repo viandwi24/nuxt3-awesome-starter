@@ -1,4 +1,4 @@
-import { WritableComputedRef } from 'vue'
+import type { WritableComputedRef } from 'vue'
 
 export const useSyncProps = <T>(
   props: any,
